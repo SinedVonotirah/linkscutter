@@ -1,0 +1,33 @@
+2016-02-22 15:09:30,856 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 806572546 to class by.vonotirah.linkscutter.dataaccess.impl.UserAccountDaoImpl
+2016-02-22 15:09:30,866 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 657998502 to class by.vonotirah.linkscutter.dataaccess.impl.DescriptionDaoImpl
+2016-02-22 15:09:30,869 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 766101 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDaoImpl
+2016-02-22 15:09:30,872 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1003307628 to class by.vonotirah.linkscutter.dataaccess.impl.StatisticsDaoImpl
+2016-02-22 15:09:30,875 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1416097444 to class by.vonotirah.linkscutter.dataaccess.impl.TagDaoImpl
+2016-02-22 15:13:27,666 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 806572546 to class by.vonotirah.linkscutter.dataaccess.impl.UserAccountDaoImpl
+2016-02-22 15:13:27,676 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 657998502 to class by.vonotirah.linkscutter.dataaccess.impl.DescriptionDaoImpl
+2016-02-22 15:13:27,679 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 766101 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDaoImpl
+2016-02-22 15:13:27,682 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1003307628 to class by.vonotirah.linkscutter.dataaccess.impl.StatisticsDaoImpl
+2016-02-22 15:13:27,685 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1416097444 to class by.vonotirah.linkscutter.dataaccess.impl.TagDaoImpl
+2016-02-22 15:13:27,784 INFO  service.impl.UserServiceImpl:29 [] -> User successfully created
+2016-02-22 17:07:16,867 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 657998502 to class by.vonotirah.linkscutter.dataaccess.impl.UserAccountDaoImpl
+2016-02-22 17:07:16,879 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 2032399795 to class by.vonotirah.linkscutter.dataaccess.impl.DescriptionDaoImpl
+2016-02-22 17:07:16,882 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 296204898 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDaoImpl
+2016-02-22 17:07:16,885 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 293870357 to class by.vonotirah.linkscutter.dataaccess.impl.StatisticsDaoImpl
+2016-02-22 17:07:16,888 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 65551384 to class by.vonotirah.linkscutter.dataaccess.impl.TagDaoImpl
+2016-02-22 17:07:16,989 INFO  service.impl.UserServiceImpl:29 [] -> User successfully created
+2016-02-22 17:07:17,127 INFO  service.impl.UserServiceImpl:36 [] -> UserAccount with 'LOGIN' -Login - -BXJeGiJAsuccessfully extracted
+2016-02-22 17:07:17,143 INFO  service.impl.UserServiceImpl:44 [] -> UserAccount successfully updated
+2016-02-22 17:07:17,149 INFO  service.impl.UserServiceImpl:51 [] -> UserAccount with 'ID' -3successfully extracted
+2016-02-22 17:07:17,152 INFO  service.impl.UserServiceImpl:59 [] -> UserAccount with 'ID' -3successfully deleted
+2016-02-22 17:07:17,157 INFO  service.impl.UserServiceImpl:51 [] -> UserAccount with 'ID' -3successfully extracted
+2016-02-22 17:08:16,078 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 657998502 to class by.vonotirah.linkscutter.dataaccess.impl.UserAccountDaoImpl
+2016-02-22 17:08:16,089 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 2032399795 to class by.vonotirah.linkscutter.dataaccess.impl.DescriptionDaoImpl
+2016-02-22 17:08:16,091 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 296204898 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDaoImpl
+2016-02-22 17:08:16,094 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 293870357 to class by.vonotirah.linkscutter.dataaccess.impl.StatisticsDaoImpl
+2016-02-22 17:08:16,098 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 65551384 to class by.vonotirah.linkscutter.dataaccess.impl.TagDaoImpl
+2016-02-22 17:08:16,197 INFO  service.impl.UserServiceImpl:29 [] -> User successfully created
+2016-02-22 17:08:16,337 INFO  service.impl.UserServiceImpl:36 [] -> UserAccount with 'LOGIN' -Login - -LVLrxNUc successfully extracted
+2016-02-22 17:08:16,354 INFO  service.impl.UserServiceImpl:44 [] -> UserAccount successfully updated
+2016-02-22 17:08:16,360 INFO  service.impl.UserServiceImpl:51 [] -> UserAccount with 'ID' -4 successfully extracted
+2016-02-22 17:08:16,365 INFO  service.impl.UserServiceImpl:59 [] -> UserAccount with 'ID' -4 successfully deleted
+2016-02-22 17:08:16,377 INFO  service.impl.UserServiceImpl:51 [] -> UserAccount with 'ID' -4 successfully extracted
