@@ -1,5 +1,7 @@
 package by.vonotirah.linkscutter.dataaccess.impl;
 
+import java.util.List;
+
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
@@ -27,5 +29,16 @@ public class LinkDaoImpl extends AbstractDaoImpl<Long, Link> implements LinkDao 
 		criteria.where(cBuilder.equal(root.get(Link_.genCode), code));
 		TypedQuery<Link> query = getEntityManager().createQuery(criteria);
 		return query.getSingleResult();		
+	}
+	
+	@Override
+	public boolean checkCodeExist(String code){
+		CriteriaBuilder cBuilder = getEntityManager().getCriteriaBuilder();
+		CriteriaQuery<Link> criteria = cBuilder.createQuery(Link.class);
+		Root<Link> root = criteria.from(Link.class);
+		criteria.select(root);
+		criteria.where(cBuilder.equal(root.get(Link_.genCode), code));
+		TypedQuery<Link> query = getEntityManager().createQuery(criteria);
+		return query.getResultList().size() == 1;
 	}
 }

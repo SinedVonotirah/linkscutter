@@ -4,9 +4,12 @@ import javax.annotation.Generated;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 
-@Generated(value="Dali", date="2016-02-22T15:35:43.664+0300")
+@Generated(value = "org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor")
 @StaticMetamodel(Tag.class)
-public class Tag_ extends AbstractEntity_ {
-	public static volatile SingularAttribute<Tag, Long> id;
+public abstract class Tag_ extends by.vonotirah.linkscutter.datamodel.AbstractEntity_ {
+
 	public static volatile SingularAttribute<Tag, String> name;
+	public static volatile SingularAttribute<Tag, Long> id;
+
 }
+

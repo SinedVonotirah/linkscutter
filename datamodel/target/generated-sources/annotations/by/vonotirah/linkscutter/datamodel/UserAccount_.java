@@ -5,11 +5,15 @@ import javax.persistence.metamodel.SetAttribute;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 
-@Generated(value="Dali", date="2016-02-22T15:35:43.664+0300")
+@Generated(value = "org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor")
 @StaticMetamodel(UserAccount.class)
-public class UserAccount_ extends AbstractEntity_ {
+public abstract class UserAccount_ extends by.vonotirah.linkscutter.datamodel.AbstractEntity_ {
+
+	public static volatile SingularAttribute<UserAccount, String> password;
+	public static volatile SingularAttribute<UserAccount, String> mail;
+	public static volatile SetAttribute<UserAccount, Link> links;
 	public static volatile SingularAttribute<UserAccount, Long> id;
 	public static volatile SingularAttribute<UserAccount, String> login;
-	public static volatile SingularAttribute<UserAccount, String> password;
-	public static volatile SetAttribute<UserAccount, Link> links;
+
 }
+

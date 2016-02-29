@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans 
+	xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+	http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security-4.0.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context-4.2.xsd
+	http://www.springframework.org/schema/tx
+	http://www.springframework.org/schema/tx/spring-tx-4.2.xsd">
+ 
+ 	<context:component-scan base-package="by.vonotirah.linkscutter" />
+ 	
+	<http auto-config="true">
+        <intercept-url pattern="/" access="permitAll" />
+        <intercept-url pattern="/homepage" access="hasRole('ROLE_USER')" />
+        <form-login  login-page="/"
+        			 login-processing-url="/j_spring_security_check"
+                     username-parameter="login"
+                     password-parameter="password"
+                     authentication-failure-url="/signin?error" />
+        <logout logout-success-url="/" />
+    	<csrf/>
+	</http>
+	
+	<authentication-manager >
+        <authentication-provider user-service-ref="customUserDetailsService"/>
+    </authentication-manager>
+    
+    <beans:bean id="customUserDetailsService" class="by.vonotirah.linkscutter.service.impl.CustomUserDetailsService" />
+    
+</beans:beans>

@@ -4,6 +4,7 @@ import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -22,7 +23,10 @@ public class UserAccount extends AbstractEntity {
 	@Column
 	private String password;
 	
-	@OneToMany(mappedBy = "userAccount")
+	@Column
+	private String mail;
+	
+	@OneToMany(fetch=FetchType.LAZY, mappedBy = "userAccount")
 	private Set<Link> links;
 
 	public Long getId() {
@@ -49,6 +53,14 @@ public class UserAccount extends AbstractEntity {
 		this.password = password;
 	}
 
+	public String getMail() {
+		return mail;
+	}
+
+	public void setMail(String mail) {
+		this.mail = mail;
+	}
+
 	public Set<Link> getLinks() {
 		return links;
 	}
@@ -56,4 +68,6 @@ public class UserAccount extends AbstractEntity {
 	public void setLinks(Set<Link> links) {
 		this.links = links;
 	}
+
+
 }

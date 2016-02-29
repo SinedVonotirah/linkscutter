@@ -15,6 +15,7 @@ import org.junit.runner.RunWith;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import by.vonotirah.linkscutter.datamodel.Link;
 import by.vonotirah.linkscutter.datamodel.UserAccount;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -104,6 +105,7 @@ public abstract class AbstractServiceTest {
     	final UserAccount userAccount = new UserAccount();
     	userAccount.setLogin(randomString("Login - "));
     	userAccount.setPassword(randomString("Password - "));
+    	userAccount.setMail(randomString("Mail - "));
     	return userAccount;
     }
     

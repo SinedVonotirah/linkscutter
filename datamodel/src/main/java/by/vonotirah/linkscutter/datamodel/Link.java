@@ -34,17 +34,9 @@ public class Link extends AbstractEntity {
 	@JoinColumn(name = "user_account_id")
 	private UserAccount userAccount;
 	
-	@JoinTable(name = "link_2_tag", joinColumns = { @JoinColumn(name = "link_id")}, inverseJoinColumns = { @JoinColumn(name = "tag_id") })
-	@ManyToMany(targetEntity = Tag.class, fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
-	private Set<Tag> tags = new TreeSet<Tag>();	
-	
     @OneToOne(cascade = CascadeType.ALL)
     @PrimaryKeyJoinColumn
-    private Statistics statistics;
-    
-    @OneToOne(cascade = CascadeType.ALL)
-    @PrimaryKeyJoinColumn
-    private Description description;
+    private LinkDetails linkDetails;
 
 	public Long getId() {
 		return id;
@@ -78,12 +70,12 @@ public class Link extends AbstractEntity {
 		this.userAccount = userAccount;
 	}
 
-	public Set<Tag> getTags() {
-		return tags;
+	public LinkDetails getLinkDetails() {
+		return linkDetails;
 	}
 
-	public void setTags(Set<Tag> tags) {
-		this.tags = tags;
+	public void setLinkDetails(LinkDetails linkDetails) {
+		this.linkDetails = linkDetails;
 	}
 	
 }

@@ -28,4 +28,15 @@ public class UserAccountDaoImpl extends AbstractDaoImpl<Long, UserAccount> imple
 		TypedQuery<UserAccount> query = getEntityManager().createQuery(criteria);
 		return query.getSingleResult();
 	}
+	
+	@Override
+	public UserAccount getUserByMail(String mail){
+		CriteriaBuilder cBuilder = getEntityManager().getCriteriaBuilder();
+		CriteriaQuery<UserAccount> criteria = cBuilder.createQuery(UserAccount.class);
+		Root<UserAccount> root = criteria.from(UserAccount.class);
+		criteria.select(root);
+		criteria.where(cBuilder.equal(root.get(UserAccount_.mail), mail));
+		TypedQuery<UserAccount> query = getEntityManager().createQuery(criteria);
+		return query.getSingleResult();		
+	}
 }

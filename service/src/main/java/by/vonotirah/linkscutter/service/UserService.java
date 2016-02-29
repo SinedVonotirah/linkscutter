@@ -6,9 +6,13 @@ public interface UserService {
 
 	void createNewUser(UserAccount userAccount);
 	
-	UserAccount getUserByLogin(String login);
+	void createNewUser(String login, String mail, String password);
 	
 	UserAccount getUserById(Long id);
+	
+	UserAccount getUserByLogin(String login);
+	
+	UserAccount getUserByMail(String mail);
 	
 	void updateUser(UserAccount userAccount);
 	

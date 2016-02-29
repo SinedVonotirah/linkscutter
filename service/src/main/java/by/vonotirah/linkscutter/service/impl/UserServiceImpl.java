@@ -31,17 +31,13 @@ public class UserServiceImpl implements UserService {
 	
 	@Override
 	@Transactional
-	public UserAccount getUserByLogin(String login){
-		UserAccount userAccount = userAccountDao.getUserByLogin(login);
-		LOGGER.info("UserAccount with 'LOGIN' - " +login+ " successfully extracted");
-		return userAccount;
-	}
-	
-	@Override
-	@Transactional
-	public void updateUser(UserAccount userAccount){
-		userAccountDao.updateEntity(userAccount);
-		LOGGER.info("UserAccount successfully updated");
+	public void createNewUser(String login, String mail, String password){
+		final UserAccount userAccount = new UserAccount();
+		userAccount.setLogin(login);
+		userAccount.setMail(mail);
+		userAccount.setPassword(password);
+		userAccountDao.insertEntity(userAccount);		
+		LOGGER.info("User successfully created");
 	}
 	
 	@Override
@@ -54,8 +50,36 @@ public class UserServiceImpl implements UserService {
 	
 	@Override
 	@Transactional
+	public UserAccount getUserByLogin(String login){
+		UserAccount userAccount = userAccountDao.getUserByLogin(login);
+		LOGGER.info("UserAccount with 'LOGIN' - " +login+ " successfully extracted");
+		return userAccount;
+	}
+	
+	@Override
+	@Transactional
+	public UserAccount getUserByMail(String mail){
+		UserAccount userAccount = userAccountDao.getUserByMail(mail);
+		LOGGER.info("UserAccount with 'MAIL' - " +mail+ " successfully extracted");
+		return userAccount;
+	}
+	
+	@Override
+	@Transactional
+	public void updateUser(UserAccount userAccount){
+		userAccountDao.updateEntity(userAccount);
+		LOGGER.info("UserAccount successfully updated");
+	}
+	
+	@Override
+	@Transactional
 	public void deleteUser(UserAccount userAccount){
 		userAccountDao.deleteEntityById(userAccount.getId());
 		LOGGER.info("UserAccount with 'ID' - " +userAccount.getId()+ " successfully deleted");		
+	}
+	
+	//TODO
+	private void userValidation(UserAccount userAccount){
+		
 	}
 }

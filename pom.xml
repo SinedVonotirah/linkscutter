@@ -9,7 +9,8 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<common.project.version>1.0</common.project.version>
-		<spring.version>4.0.3.RELEASE</spring.version>
+		<spring.version>4.2.5.RELEASE</spring.version>
+		<spring.security.version>4.0.4.RELEASE</spring.security.version>
 		<hibernate.version>4.3.8.Final</hibernate.version>
 		<jetty.version>7.6.13.v20130916</jetty.version>
 	</properties>
@@ -17,9 +18,8 @@
 	<modules>
 		<module>datamodel</module>
 		<module>dataaccess</module>
-		<module>services</module>
-		<module>webapp</module>
 		<module>service</module>
+		<module>webapp</module>
 	</modules>
   
 	<dependencyManagement>
@@ -37,7 +37,7 @@
 			</dependency>
 			<dependency>
 				<groupId>by.vonotirah</groupId>
-				<artifactId>services</artifactId>
+				<artifactId>service</artifactId>
 				<version>0.0.1-SNAPSHOT</version>
 			</dependency>
 			<dependency>
@@ -125,25 +125,25 @@
 			<dependency>
 				<groupId>org.springframework.security</groupId>
 				<artifactId>spring-security-core</artifactId>
-				<version>${spring.version}</version>
+				<version>${spring.security.version}</version>
 			</dependency>
 			
 			<dependency>
 				<groupId>org.springframework.security</groupId>
 				<artifactId>spring-security-web</artifactId>
-				<version>${spring.version}</version>
+				<version>${spring.security.version}</version>
 			</dependency>	
 					
 			<dependency>
 				<groupId>org.springframework.security</groupId>
 				<artifactId>spring-security-config</artifactId>
-				<version>${spring.version}</version>
+				<version>${spring.security.version}</version>
 			</dependency>
 			
 			<dependency>
             	<groupId>org.springframework.security</groupId>
             	<artifactId>spring-security-taglibs</artifactId>
-            	<version>${spring.version}</version>
+            	<version>${spring.security.version}</version>
         	</dependency>
 
 <!-- Hibernate -->

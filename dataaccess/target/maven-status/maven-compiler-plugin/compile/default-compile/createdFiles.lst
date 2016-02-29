@@ -1,0 +1,10 @@
+by\vonotirah\linkscutter\dataaccess\LinkDao.class
+by\vonotirah\linkscutter\dataaccess\AbstractDao.class
+by\vonotirah\linkscutter\dataaccess\impl\UserAccountDaoImpl.class
+by\vonotirah\linkscutter\dataaccess\TagDao.class
+by\vonotirah\linkscutter\dataaccess\impl\AbstractDaoImpl.class
+by\vonotirah\linkscutter\dataaccess\UserAccountDao.class
+by\vonotirah\linkscutter\dataaccess\impl\LinkDaoImpl.class
+by\vonotirah\linkscutter\dataaccess\LinkDetailsDao.class
+by\vonotirah\linkscutter\dataaccess\impl\TagDaoImpl.class
+by\vonotirah\linkscutter\dataaccess\impl\LinkDetailsDaoImpl.class
