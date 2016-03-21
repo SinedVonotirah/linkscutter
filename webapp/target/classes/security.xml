@@ -17,13 +17,16 @@
  	
 	<http auto-config="true">
         <intercept-url pattern="/" access="permitAll" />
+        <!-- <intercept-url pattern="/" access="hasRole('ROLE_ANONYMOUS')" /> -->
         <intercept-url pattern="/homepage" access="hasRole('ROLE_USER')" />
-        <form-login  login-page="/"
+        <form-login  login-page="/mainpage"
         			 login-processing-url="/j_spring_security_check"
                      username-parameter="login"
                      password-parameter="password"
-                     authentication-failure-url="/signin?error" />
-        <logout logout-success-url="/" />
+                     default-target-url="/homepage"
+                     authentication-failure-url="/?error" />
+	    <logout 	logout-success-url="/?logout" 
+	        		logout-url="/logout"/>
     	<csrf/>
 	</http>
 	

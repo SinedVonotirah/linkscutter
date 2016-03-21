@@ -53,7 +53,7 @@ public class AbstractDaoImpl<ID, Entity> implements AbstractDao<ID, Entity> {
 	public Entity updateEntity(Entity entity){
 		entity = entityManager.merge(entity);
 		entityManager.flush();
-		return entity;		
+		return entity;
 	}
 	
 	@Override

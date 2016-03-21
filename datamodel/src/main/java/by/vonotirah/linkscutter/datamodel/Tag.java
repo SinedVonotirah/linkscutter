@@ -31,7 +31,5 @@ public class Tag extends AbstractEntity {
 	public void setName(String name) {
 		this.name = name;
 	}
-	
-	
 
 }

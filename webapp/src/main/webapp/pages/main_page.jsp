@@ -24,12 +24,12 @@
           <a class="navbar-brand"></a>
         </div>
         <div class="collapse navbar-collapse" id="navbar-ex-collapse">
-          <form class="navbar-form navbar-left text-left" role="search">
+          <form:form class="navbar-form navbar-left text-left" role="search" method="POST" action="/webapp/search" commandName="searchLink">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Link Search">
+              <form:input path="searchUrl" type="text" class="form-control" placeholder="Link Search"/>
             </div>
             <button type="submit" class="btn btn-default">Search</button>
-          </form>
+          </form:form>
         </div>
       </div>
     </div>
@@ -44,6 +44,24 @@
     </div>
 	    <div class="section text-center">
 	      <div class="container">
+	      
+	      	<c:if test="${not empty error}">
+		      	<div class="row">
+			      <div class="col-md-12">
+		           	<div class="alert alert-danger alert-dismissable">
+		             	<strong>${error}!</strong></div>
+		          </div>
+		        </div>
+	        </c:if> 
+	        <c:if test="${not empty logout}">
+		        <div class="row">
+			      <div class="col-md-12">
+	            	<div class="alert alert-dismissable alert-info">
+	              	<strong>${logout}</strong></div>
+		          </div>
+		        </div>
+	        </c:if> 
+	       <sec:authorize access="isAnonymous()">
 	        <div class="row">
 	          <div class="col-md-12 text-center">
 	            <h2 class="text-center">Please Sign In</h2>
@@ -59,9 +77,11 @@
 	              </div>
 	              <input type="hidden" name="${_csrf.parameterName}"  value="${_csrf.token}" />
 	              <button type="submit" class="btn btn-lg btn-primary">Login</button>
+	              
+	         </sec:authorize>
 	              <br>
 	              <br>
-	              <strong>Registration</strong>
+	              <a href="/webapp/signup"><strong>Registration</strong></a>
 	              </form>
 	          </div>
 	        </div>

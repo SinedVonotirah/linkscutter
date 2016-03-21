@@ -75,11 +75,7 @@ public class UserServiceImpl implements UserService {
 	@Transactional
 	public void deleteUser(UserAccount userAccount){
 		userAccountDao.deleteEntityById(userAccount.getId());
-		LOGGER.info("UserAccount with 'ID' - " +userAccount.getId()+ " successfully deleted");		
+		LOGGER.info("UserAccount with 'ID' - " + userAccount.getId() + " successfully deleted");		
 	}
-	
-	//TODO
-	private void userValidation(UserAccount userAccount){
-		
-	}
+
 }

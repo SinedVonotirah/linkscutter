@@ -4,7 +4,6 @@ import java.util.Date;
 import java.util.Set;
 import java.util.TreeSet;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -17,22 +16,29 @@ import javax.persistence.ManyToMany;
 
 @Entity
 public class LinkDetails extends AbstractEntity {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
+
 	@Column
 	private String description;
-	
+
 	@Column
 	private Long counter;
-	
+
 	@Column
-	private Date created;	
-	
-	@JoinTable(name = "link_details_2_tag", joinColumns = { @JoinColumn(name = "link_details_id")}, inverseJoinColumns = { @JoinColumn(name = "tag_id") })
-	@ManyToMany(targetEntity = Tag.class, fetch = FetchType.EAGER, cascade = {CascadeType.ALL})
+	private Date created;
+
+	/*
+	 * @MapsId
+	 * 
+	 * @OneToOne(mappedBy = "linkDetails") private Link link;
+	 */
+
+	@JoinTable(name = "link_details_2_tag", joinColumns = {
+			@JoinColumn(name = "link_details_id") }, inverseJoinColumns = { @JoinColumn(name = "tag_id") })
+	@ManyToMany(targetEntity = Tag.class, fetch = FetchType.EAGER)
 	private Set<Tag> tags = new TreeSet<Tag>();
 
 	public Long getId() {
@@ -73,6 +79,6 @@ public class LinkDetails extends AbstractEntity {
 
 	public void setTags(Set<Tag> tags) {
 		this.tags = tags;
-	}	
+	}
 
 }

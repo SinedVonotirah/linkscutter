@@ -1,18 +1,12 @@
 package by.vonotirah.linkscutter.datamodel;
 
-import java.util.Set;
-import java.util.TreeSet;
-
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
@@ -76,6 +70,10 @@ public class Link extends AbstractEntity {
 
 	public void setLinkDetails(LinkDetails linkDetails) {
 		this.linkDetails = linkDetails;
+	}
+	
+	public String toString(){
+		return new String("Link id - " + this.id);
 	}
 	
 }

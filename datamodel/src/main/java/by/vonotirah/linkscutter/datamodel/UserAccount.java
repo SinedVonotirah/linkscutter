@@ -26,7 +26,7 @@ public class UserAccount extends AbstractEntity {
 	@Column
 	private String mail;
 	
-	@OneToMany(fetch=FetchType.LAZY, mappedBy = "userAccount")
+	@OneToMany(fetch=FetchType.EAGER, mappedBy = "userAccount")
 	private Set<Link> links;
 
 	public Long getId() {

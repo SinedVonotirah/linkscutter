@@ -60,7 +60,7 @@
               		</div>
 				</c:if>
 				<c:if test="${not empty msg}">
-					<div class="alert alert-danger alert-dismissable">
+					<div class="alert alert-dismissable alert-info">
               			<strong>Well done!</strong>
               		</div>
 					<div class="msg">${msg}</div>

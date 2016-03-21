@@ -1,6 +1,6 @@
-package by.vonotirah.linkscutter.webapp.controllers;
+package by.vonotirah.linkscutter.webapp.models;
 
-public class CreateLinkModel {
+public class NewLinkModel {
 
 	private String url;
 	

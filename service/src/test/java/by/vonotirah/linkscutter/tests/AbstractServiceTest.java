@@ -16,6 +16,7 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import by.vonotirah.linkscutter.datamodel.Link;
+import by.vonotirah.linkscutter.datamodel.LinkDetails;
 import by.vonotirah.linkscutter.datamodel.UserAccount;
 
 @RunWith(SpringJUnit4ClassRunner.class)

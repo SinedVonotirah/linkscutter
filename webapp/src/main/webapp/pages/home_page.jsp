@@ -2,7 +2,9 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%> 
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 <html><head>
+	<title>LinksCutter</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -30,7 +32,7 @@
               <a href="<c:url value="/logout" />">LogOut</a>
             </li>
           </ul>
-          <form class="navbar-form navbar-left text-left" role="search">
+          <form class="navbar-form navbar-left text-left" role="requiredlink">
             <div class="form-group">
               <input type="text" class="form-control" placeholder="Link Search">
             </div>
@@ -48,7 +50,7 @@
         </div>
         <div class="row">
           <div class="col-md-12 text-left">
-            <form:form class="form-horizontal text-left" role="form" action="cutlink" method="POST" commandName="link">
+            <form:form class="form-horizontal text-left" role="form" action="/webapp/homepage" method="POST" commandName="newLink">
               <div class="form-group has-feedback">
                 <div class="col-sm-2">
                   <label for="inputEmail3" class="control-label">Long Link</label>
@@ -67,14 +69,14 @@
               </div>
               <div class="form-group">
                 <div class="col-sm-2">
-                  <label class="control-label">Text</label>
+                  <label class="control-label">Tags</label>
                 </div>
                 <div class="col-sm-10">
                   <div class="input-group">
                     <span class="input-group-addon">
                       <i class="fa fa-check"></i>
                     </span>
-                    <input type="text" class="form-control">
+                    <form:input path="tags" type="text" class="form-control"/>
                   </div>
                 </div>
               </div>
@@ -88,23 +90,39 @@
         </div>
       </div>
     </div>
-    <div class="section">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="panel panel-primary">
-              <div class="panel-heading">
-                <h3 class="panel-title">Panel title</h3>
-              </div>
-              <div class="panel-body">
-                <p>Panel content</p>
-              </div>
-            </div>
-            <hr>
-          </div>
-        </div>
-      </div>
+    <c:if test="${not empty shortlink}">
+	    <div class="section">
+	      <div class="container">
+	        <div class="row">
+	          <div class="col-md-12">
+	            <div class="panel panel-primary text-center">
+	              <div class="panel-heading">
+	                <h3 class="panel-title">Link sucesful cutted!!!</h3>
+	              </div>
+	              <div class="panel-body">
+	                <p>Your short link is - <a href="${shortlink}">${shortlink}</a></p>
+	              </div>
+	            </div>
+	            <hr>
+	          </div>
+	        </div>
+	      </div>
+	    </div>
+	</c:if>    
+	<c:if test="${not empty urlerror}">
+		<div class="section text-center">
+	     <div class="container">
+	       <div class="row">
+	         <div class="col-md-12">
+	           <div class="alert alert-danger alert-dismissable">
+	             <strong>${urlerror}</strong></div>
+	         </div>
+	       </div>
+	     </div>
     </div>
+	</c:if>
+	
+	
     <div class="section">
       <div class="container">
         <div class="row">
@@ -116,43 +134,34 @@
           <div class="col-md-12">
             <table class="table">
               <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                </tr>
-                <tr>
-                  <td>2</td>
-                  <td>Jacob</td>
-                  <td>Thornton</td>
-                  <td>@fat</td>
-                </tr>
-                <tr>
-                  <td>3</td>
-                  <td>Larry</td>
-                  <td>the Bird</td>
-                  <td>@twitter</td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                </tr>
-                <tr>
-                  <td>1</td>
-                  <td>Mark</td>
-                  <td>Otto</td>
-                  <td>@mdo</td>
-                </tr>
+				
+				<c:forEach var="link" items="${links}">
+					<tr>
+						<td>
+							${link.url}
+						</td>
+						<td>
+							${link.linkDetails.created}
+						</td>
+						<td>
+							<a href="http://localhost:8080/webapp/${link.genCode}"><strong>${link.genCode}</strong></a>
+						</td>
+						<td>
+							${link.linkDetails.counter}
+						</td>			
+					
+					
+					</tr>				
+				</c:forEach>			
+				
+				
               </tbody>
               <thead>
                 <tr>
-                  <th>#</th>
-                  <th>First Name</th>
-                  <th>Last Name</th>
-                  <th>Username</th>
+                  <th>Long Url</th>
+                  <th>Created</th>
+                  <th>Short Url</th>
+                  <th>Counter</th>
                 </tr>
               </thead>
             </table>
