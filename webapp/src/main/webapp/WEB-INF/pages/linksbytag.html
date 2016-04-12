@@ -1,0 +1,30 @@
+<div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th width="40%">URL</th>
+                  <th width="10%">Created</th>
+                  <th width="40%">Cutted URL</th>
+                  <th width="5%">Clics</th>
+                  <th width="5%"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr ng-repeat="l in ctrl.links">
+                  <td class="setWidth concat"><a ng-href="{{l.url}}"><div>{{l.url}}</div></a></td>
+                  <td ><span >{{l.linkDetails.created | date:'mediumDate'}}</span></td>
+                  <td class="setWidth concat"><a href="http://localhost:8080/webapp/{{l.genCode}}"><div>http://localhost:8080/webapp/{{l.genCode}}</div></a></td>
+                  <td ><span ng-bind="l.linkDetails.counter"></span></td>
+                  <td>
+                    <button type="button" ng-click="ctrl.details(l.id)" class="btn btn-success custom-width">Details</button> 
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>

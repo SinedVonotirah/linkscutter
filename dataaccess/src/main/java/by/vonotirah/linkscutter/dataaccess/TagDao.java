@@ -4,8 +4,8 @@ import by.vonotirah.linkscutter.datamodel.Tag;
 
 public interface TagDao extends AbstractDao<Long, Tag> {
 
-	boolean tagExist (String name);
-	
-	Tag gatTagByName (String name);
-	
+	boolean tagExist(String name);
+
+	Tag gatTagByName(String name);
+
 }

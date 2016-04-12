@@ -1,14 +1,10 @@
 package by.vonotirah.linkscutter.datamodel;
 
-import java.util.Set;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
 
 @Entity
 public class UserAccount extends AbstractEntity {
@@ -16,18 +12,15 @@ public class UserAccount extends AbstractEntity {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
+
 	@Column
 	private String login;
 
 	@Column
 	private String password;
-	
+
 	@Column
 	private String mail;
-	
-	@OneToMany(fetch=FetchType.EAGER, mappedBy = "userAccount")
-	private Set<Link> links;
 
 	public Long getId() {
 		return id;
@@ -60,14 +53,4 @@ public class UserAccount extends AbstractEntity {
 	public void setMail(String mail) {
 		this.mail = mail;
 	}
-
-	public Set<Link> getLinks() {
-		return links;
-	}
-
-	public void setLinks(Set<Link> links) {
-		this.links = links;
-	}
-
-
 }

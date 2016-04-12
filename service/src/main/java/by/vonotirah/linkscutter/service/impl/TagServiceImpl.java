@@ -1,6 +1,7 @@
 package by.vonotirah.linkscutter.service.impl;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 import javax.inject.Inject;
@@ -15,40 +16,38 @@ import by.vonotirah.linkscutter.service.TagService;
 @Service
 public class TagServiceImpl implements TagService {
 
-	@Inject 
+	@Inject
 	private TagDao tagDao;
-	
+
 	@Override
 	@Transactional
-	public void saveOrUpdate(Tag tag){
-        if (tag.getId() == null) {
-            tagDao.insertEntity(tag);
-        } else {
-            tagDao.updateEntity(tag);
-        }
-	}
-	
-	@Override
-	@Transactional
-	public boolean tagExist (String name){
-		return tagDao.tagExist(name);
-	}
-	
-	@Override
-	@Transactional
-	public Tag getTagByName (String name){
-		return tagDao.gatTagByName(name);		
+	public void saveOrUpdate(Tag tag) {
+		if (tag.getId() == null) {
+			tagDao.insertEntity(tag);
+		} else {
+			tagDao.updateEntity(tag);
+		}
 	}
 
 	@Override
 	@Transactional
-	public Set<Tag> tagsProcessing(String tags){
-		String[] arr = tags.split(" ");
+	public boolean tagExist(String name) {
+		return tagDao.tagExist(name);
+	}
+
+	@Override
+	@Transactional
+	public Tag getTagByName(String name) {
+		return tagDao.gatTagByName(name);
+	}
+
+	@Override
+	@Transactional
+	public Set<Tag> tagsProcessing(List<String> tags) {
 		HashSet<Tag> tagSet = new HashSet<Tag>();
-		for(String s : arr){
-			System.out.println(s);			
-			if (this.tagExist(s)){
-				tagSet.add(this.getTagByName(s));				
+		for (String s : tags) {
+			if (this.tagExist(s)) {
+				tagSet.add(this.getTagByName(s));
 			} else {
 				Tag tag = new Tag();
 				tag.setName(s);
@@ -56,7 +55,13 @@ public class TagServiceImpl implements TagService {
 				tagSet.add(tag);
 			}
 		}
-		return tagSet;		
+		return tagSet;
 	}
-	
+
+	@Override
+	@Transactional
+	public void deleteTagById(Long id) {
+		tagDao.deleteEntityById(id);
+	}
+
 }

@@ -17,6 +17,7 @@ import by.vonotirah.linkscutter.datamodel.LinkDetails_;
 import by.vonotirah.linkscutter.datamodel.Link_;
 import by.vonotirah.linkscutter.datamodel.Tag;
 import by.vonotirah.linkscutter.datamodel.Tag_;
+import by.vonotirah.linkscutter.datamodel.UserAccount;
 
 @Repository
 public class LinkDaoImpl extends AbstractDaoImpl<Long, Link>implements LinkDao {
@@ -48,17 +49,40 @@ public class LinkDaoImpl extends AbstractDaoImpl<Long, Link>implements LinkDao {
 	}
 
 	@Override
-	public List<Link> getLinksByTag(String tag) {
-
+	public List<Link> getLinksByTag(Long tagId) {
 		CriteriaBuilder cBuilder = getEntityManager().getCriteriaBuilder();
 		CriteriaQuery<Link> criteria = cBuilder.createQuery(Link.class);
 		Root<Link> linkRoot = criteria.from(Link.class);
 		Join<Link, LinkDetails> linkDetailsJoin = linkRoot.join(Link_.linkDetails);
 		Join<LinkDetails, Tag> tagJoin = linkDetailsJoin.join(LinkDetails_.tags);
 		criteria.select(linkRoot);
-		criteria.where(cBuilder.equal(tagJoin.get(Tag_.name), tag));
+		criteria.where(cBuilder.equal(tagJoin.get(Tag_.id), tagId));
 		TypedQuery<Link> query = getEntityManager().createQuery(criteria);
 		return query.getResultList();
+	}
+
+	@Override
+	public List<Link> getAllLinks() {
+		CriteriaBuilder cBuilder = getEntityManager().getCriteriaBuilder();
+		CriteriaQuery<Link> criteria = cBuilder.createQuery(Link.class);
+		Root<Link> root = criteria.from(Link.class);
+		criteria.select(root);
+		TypedQuery<Link> query = getEntityManager().createQuery(criteria);
+		List<Link> results = query.getResultList();
+		return results;
+
+	}
+
+	@Override
+	public List<Link> getLinksByUser(UserAccount userAccount) {
+		CriteriaBuilder cBuilder = getEntityManager().getCriteriaBuilder();
+		CriteriaQuery<Link> criteria = cBuilder.createQuery(Link.class);
+		Root<Link> root = criteria.from(Link.class);
+		criteria.select(root);
+		criteria.where(cBuilder.equal(root.get(Link_.userAccount), userAccount));
+		TypedQuery<Link> query = getEntityManager().createQuery(criteria);
+		List<Link> results = query.getResultList();
+		return results;
 	}
 
 }

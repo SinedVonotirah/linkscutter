@@ -1,7 +1,6 @@
 package by.vonotirah.linkscutter.datamodel;
 
 import javax.annotation.Generated;
-import javax.persistence.metamodel.SetAttribute;
 import javax.persistence.metamodel.SingularAttribute;
 import javax.persistence.metamodel.StaticMetamodel;
 
@@ -11,7 +10,6 @@ public abstract class UserAccount_ extends by.vonotirah.linkscutter.datamodel.Ab
 
 	public static volatile SingularAttribute<UserAccount, String> password;
 	public static volatile SingularAttribute<UserAccount, String> mail;
-	public static volatile SetAttribute<UserAccount, Link> links;
 	public static volatile SingularAttribute<UserAccount, Long> id;
 	public static volatile SingularAttribute<UserAccount, String> login;
 

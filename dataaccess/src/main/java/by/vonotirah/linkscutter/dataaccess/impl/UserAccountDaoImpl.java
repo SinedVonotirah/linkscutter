@@ -12,14 +12,14 @@ import by.vonotirah.linkscutter.datamodel.UserAccount;
 import by.vonotirah.linkscutter.datamodel.UserAccount_;
 
 @Repository
-public class UserAccountDaoImpl extends AbstractDaoImpl<Long, UserAccount> implements UserAccountDao {
+public class UserAccountDaoImpl extends AbstractDaoImpl<Long, UserAccount>implements UserAccountDao {
 
-	protected UserAccountDaoImpl(){
-		super(UserAccount.class);		
+	protected UserAccountDaoImpl() {
+		super(UserAccount.class);
 	}
-	
+
 	@Override
-	public UserAccount getUserByLogin(String login){
+	public UserAccount getUserByLogin(String login) {
 		CriteriaBuilder cBuilder = getEntityManager().getCriteriaBuilder();
 		CriteriaQuery<UserAccount> criteria = cBuilder.createQuery(UserAccount.class);
 		Root<UserAccount> root = criteria.from(UserAccount.class);
@@ -28,15 +28,38 @@ public class UserAccountDaoImpl extends AbstractDaoImpl<Long, UserAccount> imple
 		TypedQuery<UserAccount> query = getEntityManager().createQuery(criteria);
 		return query.getSingleResult();
 	}
-	
+
 	@Override
-	public UserAccount getUserByMail(String mail){
+	public UserAccount getUserByMail(String mail) {
 		CriteriaBuilder cBuilder = getEntityManager().getCriteriaBuilder();
 		CriteriaQuery<UserAccount> criteria = cBuilder.createQuery(UserAccount.class);
 		Root<UserAccount> root = criteria.from(UserAccount.class);
 		criteria.select(root);
 		criteria.where(cBuilder.equal(root.get(UserAccount_.mail), mail));
 		TypedQuery<UserAccount> query = getEntityManager().createQuery(criteria);
-		return query.getSingleResult();		
+		return query.getSingleResult();
 	}
+
+	@Override
+	public boolean chekUserLoginExist(String login) {
+		CriteriaBuilder cBuilder = getEntityManager().getCriteriaBuilder();
+		CriteriaQuery<UserAccount> criteria = cBuilder.createQuery(UserAccount.class);
+		Root<UserAccount> root = criteria.from(UserAccount.class);
+		criteria.select(root);
+		criteria.where(cBuilder.equal(root.get(UserAccount_.login), login));
+		TypedQuery<UserAccount> query = getEntityManager().createQuery(criteria);
+		return query.getResultList().size() > 0;
+	}
+
+	@Override
+	public boolean chekUserEmailExist(String mail) {
+		CriteriaBuilder cBuilder = getEntityManager().getCriteriaBuilder();
+		CriteriaQuery<UserAccount> criteria = cBuilder.createQuery(UserAccount.class);
+		Root<UserAccount> root = criteria.from(UserAccount.class);
+		criteria.select(root);
+		criteria.where(cBuilder.equal(root.get(UserAccount_.mail), mail));
+		TypedQuery<UserAccount> query = getEntityManager().createQuery(criteria);
+		return query.getResultList().size() > 0;
+	}
+
 }

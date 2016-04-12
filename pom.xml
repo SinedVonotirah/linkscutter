@@ -12,7 +12,7 @@
 		<spring.version>4.2.5.RELEASE</spring.version>
 		<spring.security.version>4.0.4.RELEASE</spring.security.version>
 		<hibernate.version>4.3.8.Final</hibernate.version>
-		<jetty.version>7.6.13.v20130916</jetty.version>
+		<jetty.version>8.1.19.v20160209</jetty.version>
 	</properties>
   
 	<modules>
@@ -364,6 +364,7 @@
 				<includes>
 					<include>**</include>
 				</includes>
+				
 				<excludes>
 					<exclude>**/*.java</exclude>
 				</excludes>
@@ -381,6 +382,7 @@
 					<include>**</include>
 				</includes>
 				<excludes>
+				
 					<exclude>**/*.java</exclude>
 				</excludes>
 			</testResource>

@@ -10,6 +10,10 @@
 	<artifactId>datamodel</artifactId>
 	<packaging>jar</packaging>
 	
+	<properties>
+		<jackson.version>2.5.3</jackson.version>
+	</properties>
+	
 	<dependencies>
 		<dependency>
 			<scope>provided</scope>
@@ -46,6 +50,12 @@
 			<groupId>org.apache.logging.log4j</groupId>
 			<artifactId>log4j-core</artifactId>
 		</dependency>
+		
+		<dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
 
 
 		<dependency>

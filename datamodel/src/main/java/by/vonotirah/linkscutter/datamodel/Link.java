@@ -11,26 +11,29 @@ import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.PrimaryKeyJoinColumn;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 @Entity
 public class Link extends AbstractEntity {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
-	@Column 
+
+	@Column
 	private String genCode;
-	
+
 	@Column
 	private String url;
-	
+
+	@JsonIgnore
 	@ManyToOne
 	@JoinColumn(name = "user_account_id")
 	private UserAccount userAccount;
-	
-    @OneToOne(cascade = CascadeType.ALL)
-    @PrimaryKeyJoinColumn
-    private LinkDetails linkDetails;
+
+	@OneToOne(cascade = CascadeType.ALL)
+	@PrimaryKeyJoinColumn
+	private LinkDetails linkDetails;
 
 	public Long getId() {
 		return id;
@@ -71,9 +74,9 @@ public class Link extends AbstractEntity {
 	public void setLinkDetails(LinkDetails linkDetails) {
 		this.linkDetails = linkDetails;
 	}
-	
-	public String toString(){
+
+	public String toString() {
 		return new String("Link id - " + this.id);
 	}
-	
+
 }

@@ -1,12 +1,14 @@
 package by.vonotirah.linkscutter.service;
 
+import java.util.List;
+
 import by.vonotirah.linkscutter.datamodel.LinkDetails;
 
 public interface LinkDetailsService {
 
-	LinkDetails createLinkDetails();
+	LinkDetails createLinkDetails(String description, List<String> tags);
 
-	LinkDetails createLinkDetails(String description, String tags);
+	void updateLinkDetails(Long id, String description, List<String> tags);
 
-	void updateLinkDetails(Long id, String description, String tags);
+	LinkDetails getLinkDetailsById(Long id);
 }

@@ -16,6 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 import by.vonotirah.linkscutter.dataaccess.LinkDao;
 import by.vonotirah.linkscutter.datamodel.Link;
 import by.vonotirah.linkscutter.datamodel.LinkDetails;
+import by.vonotirah.linkscutter.datamodel.UserAccount;
 import by.vonotirah.linkscutter.service.LinkDetailsService;
 import by.vonotirah.linkscutter.service.LinkService;
 import by.vonotirah.linkscutter.service.UserService;
@@ -46,11 +47,19 @@ public class LinkServiceImpl implements LinkService {
 
 	@Override
 	@Transactional
-	public Link createNewLink(String url, String login, String description, String tags) {
+	public List<Link> getLinksByUser(UserAccount userAccount) {
+		List<Link> links = linkDao.getLinksByUser(userAccount);
+		LOGGER.info("Links by User - " + userAccount.getLogin() + " successfully extracted");
+		return links;
+	}
+
+	@Override
+	@Transactional
+	public Link createNewLink(String url, String login, String description, List<String> tags) {
 		final Link link = new Link();
 		final LinkDetails linkDetails = linkDetailsService.createLinkDetails(description, tags);
 		link.setLinkDetails(linkDetails);
-		link.setUrl(url);
+		link.setUrl(urlVerification(url));
 		link.setGenCode(generateLinkCode());
 		link.setUserAccount(userService.getUserByLogin(login));
 		createNewLink(link);
@@ -90,8 +99,20 @@ public class LinkServiceImpl implements LinkService {
 
 	@Override
 	@Transactional
-	public List<Link> getLinksByTag(String tag) {
-		return linkDao.getLinksByTag(tag);
+	public List<Link> getLinksByTag(Long tagId) {
+		return linkDao.getLinksByTag(tagId);
+	}
+
+	@Override
+	@Transactional
+	public List<Link> getAllLinks() {
+		return linkDao.getAllLinks();
+	}
+
+	@Override
+	@Transactional
+	public void deleteLinkById(Long id) {
+		linkDao.deleteEntityById(id);
 	}
 
 	@Transactional
@@ -108,6 +129,21 @@ public class LinkServiceImpl implements LinkService {
 			genCode = RandomStringUtils.randomAlphabetic(RANDOM_STRING_SIZE);
 		} while (linkDao.checkCodeExist(genCode));
 		return genCode;
+	}
+
+	private String urlVerification(String url) {
+
+		try {
+			URI uri = new URI(url);
+			if (uri.getScheme() == null) {
+				String protocol = "http://";
+				// uri = new URI(protocol.concat(uri.toString()));
+				url = protocol.concat(uri.toString());
+			}
+		} catch (URISyntaxException e) {
+			e.printStackTrace();
+		}
+		return url;
 	}
 
 }

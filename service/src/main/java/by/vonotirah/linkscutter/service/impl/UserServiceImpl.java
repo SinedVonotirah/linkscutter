@@ -17,65 +17,90 @@ public class UserServiceImpl implements UserService {
 
 	@Inject
 	private UserAccountDao userAccountDao;
-	
+
 	private static final Logger LOGGER = LoggerFactory.getLogger(UserServiceImpl.class);
 
-	
 	@Override
 	@Transactional
-	public void createNewUser(UserAccount userAccount){
+	public void createNewUser(UserAccount userAccount) {
 		Validate.isTrue(userAccount.getId() == null, "'createNewUser' method did not pass validation");
-		userAccountDao.insertEntity(userAccount);		
+		userAccountDao.insertEntity(userAccount);
 		LOGGER.info("User successfully created");
 	}
-	
+
+	// not use
 	@Override
 	@Transactional
-	public void createNewUser(String login, String mail, String password){
+	public void createNewUser(String login, String mail, String password) {
 		final UserAccount userAccount = new UserAccount();
 		userAccount.setLogin(login);
 		userAccount.setMail(mail);
 		userAccount.setPassword(password);
-		userAccountDao.insertEntity(userAccount);		
+		userAccountDao.insertEntity(userAccount);
 		LOGGER.info("User successfully created");
 	}
-	
+
 	@Override
 	@Transactional
-	public UserAccount getUserById(Long id){
+	public boolean chekUserLoginExist(UserAccount user) {
+		if (userAccountDao.chekUserLoginExist(user.getLogin())) {
+			return true;
+		} else
+			return false;
+	}
+
+	@Override
+	@Transactional
+	public boolean chekUserMailExist(UserAccount user) {
+		if (userAccountDao.chekUserEmailExist(user.getMail())) {
+			return true;
+		} else
+			return false;
+	}
+
+	@Override
+	@Transactional
+	public UserAccount userRegistration(UserAccount user) {
+		createNewUser(user);
+		return user;
+	}
+
+	@Override
+	@Transactional
+	public UserAccount getUserById(Long id) {
 		UserAccount userAccount = userAccountDao.getEntityById(id);
-		LOGGER.info("UserAccount with 'ID' - " +id+ " successfully extracted");
-		return userAccount;		
+		LOGGER.info("UserAccount with 'ID' - " + id + " successfully extracted");
+		return userAccount;
 	}
-	
+
 	@Override
 	@Transactional
-	public UserAccount getUserByLogin(String login){
+	public UserAccount getUserByLogin(String login) {
 		UserAccount userAccount = userAccountDao.getUserByLogin(login);
-		LOGGER.info("UserAccount with 'LOGIN' - " +login+ " successfully extracted");
+		LOGGER.info("UserAccount with 'LOGIN' - " + login + " successfully extracted");
 		return userAccount;
 	}
-	
+
 	@Override
 	@Transactional
-	public UserAccount getUserByMail(String mail){
+	public UserAccount getUserByMail(String mail) {
 		UserAccount userAccount = userAccountDao.getUserByMail(mail);
-		LOGGER.info("UserAccount with 'MAIL' - " +mail+ " successfully extracted");
+		LOGGER.info("UserAccount with 'MAIL' - " + mail + " successfully extracted");
 		return userAccount;
 	}
-	
+
 	@Override
 	@Transactional
-	public void updateUser(UserAccount userAccount){
+	public void updateUser(UserAccount userAccount) {
 		userAccountDao.updateEntity(userAccount);
 		LOGGER.info("UserAccount successfully updated");
 	}
-	
+
 	@Override
 	@Transactional
-	public void deleteUser(UserAccount userAccount){
+	public void deleteUser(UserAccount userAccount) {
 		userAccountDao.deleteEntityById(userAccount.getId());
-		LOGGER.info("UserAccount with 'ID' - " + userAccount.getId() + " successfully deleted");		
+		LOGGER.info("UserAccount with 'ID' - " + userAccount.getId() + " successfully deleted");
 	}
 
 }

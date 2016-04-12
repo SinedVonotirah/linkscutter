@@ -30,12 +30,6 @@ public class LinkDetails extends AbstractEntity {
 	@Column
 	private Date created;
 
-	/*
-	 * @MapsId
-	 * 
-	 * @OneToOne(mappedBy = "linkDetails") private Link link;
-	 */
-
 	@JoinTable(name = "link_details_2_tag", joinColumns = {
 			@JoinColumn(name = "link_details_id") }, inverseJoinColumns = { @JoinColumn(name = "tag_id") })
 	@ManyToMany(targetEntity = Tag.class, fetch = FetchType.EAGER)
