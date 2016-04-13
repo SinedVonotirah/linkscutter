@@ -5,7 +5,7 @@
 
 
 ## Following technologies being used in project:
-### Server side:
+#### Server side:
 * JDK 1.8
 * Eclipse Mars.2 Release(4.5.2)
 * PostreSQL 9.4
@@ -21,7 +21,7 @@
 * Mockito 1.10.19
 * Log4j 2.1
 
-### Client side:
+#### Client side:
 * HTML5
 * CSS
 * Bootstrap 3.3.4
@@ -29,7 +29,7 @@
 
 
 ## Project Structure
-###Project consists of 4 modules:
+####Project consists of 4 modules:
 * Module - datamodel
 
 ![datamodel](http://s019.radikal.ru/i609/1604/a2/691dd5cfc124.png)
@@ -52,3 +52,8 @@
 * Simple Database shema
 
 ![DatabaseShema](http://s018.radikal.ru/i512/1604/e8/5c2c0fbc86f3.png)
+
+#### Database relationship:
+* _OneToMany_. **user_account** to **link**
+* _OneToOne_. **link** to **link_details**
+* _ManyToMany_. **link_details** to **tag**
