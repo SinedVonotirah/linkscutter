@@ -9,6 +9,7 @@
 * JDK 1.8
 * Eclipse Mars.2 Release(4.5.2)
 * PostreSQL 9.4
+* Tomcat v8.0
 * Apache Maven 3.2.5
 * Spring 4.2.5.RELEASE
 * Spring Security 4.0.4.RELEASE
@@ -51,5 +52,3 @@
 * Simple Database shema
 
 ![DatabaseShema](http://s018.radikal.ru/i512/1604/e8/5c2c0fbc86f3.png)
-
-## RestApi
