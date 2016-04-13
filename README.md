@@ -57,3 +57,22 @@
 * _OneToMany_. **user_account** to **link**
 * _OneToOne_. **link** to **link_details**
 * _ManyToMany_. **link_details** to **tag**
+
+
+## REST Api
+
+* All requests must begin with the prefix "http: // localhost: 8080 / webapp"
+* All requests and responses contain data in JSON format
+
+|URL|Method|Description|
+|---|-----------|------|
+|/login|POST|User authorization|
+|/logout|GET|User logout|
+|/registration|POST|User registration|
+|/links|POST|Create new link|
+|/links/{id}|DELETE|Delete link|
+|/links|GET|Get All user links|
+|/links|PUT|Update link|
+|/link/{id}|GET|Get link by Id|
+|/tag/{tagId}|GET|Get links by tag|
+|/search|POST|Search link|
