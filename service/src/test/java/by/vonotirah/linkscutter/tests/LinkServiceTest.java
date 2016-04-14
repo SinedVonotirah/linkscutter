@@ -79,8 +79,9 @@ public class LinkServiceTest extends AbstractServiceTest {
 		LOGGER.info("----------------getAllLinksByUserTest()----------------------");
 		UserAccount userAccount = userService.getUserById(1L);
 
-		// -------Create 5 links for UserAccount with ID = 1
-		for (int i = 0; i < 5; i++) {
+		// -------Create n links for UserAccount with ID = 1
+		int linksCount = randomInteger(3, 5);
+		for (int i = 0; i < linksCount; i++) {
 			String url = randomString("http://");
 			String userLogin = userAccount.getLogin();
 			String description = randomString("Description ");
@@ -104,9 +105,10 @@ public class LinkServiceTest extends AbstractServiceTest {
 		String sameTag = randomString("Tag");
 		List<Link> createdLinks = new ArrayList<Link>();
 
-		// -------Create 5 links for UserAccount with ID = 1 and with the same
+		// -------Create n links for UserAccount with ID = 1 and with the same
 		// tag
-		for (int i = 0; i < 5; i++) {
+		int linksCount = randomInteger(3, 5);
+		for (int i = 0; i < linksCount; i++) {
 			String url = randomString("http://");
 			String userLogin = userAccount.getLogin();
 			String description = randomString("Description ");

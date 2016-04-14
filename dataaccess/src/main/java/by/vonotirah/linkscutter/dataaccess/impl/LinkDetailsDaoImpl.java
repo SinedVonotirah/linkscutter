@@ -14,13 +14,13 @@ import by.vonotirah.linkscutter.datamodel.LinkDetails;
 import by.vonotirah.linkscutter.datamodel.LinkDetails_;
 
 @Repository
-public class LinkDetailsDaoImpl extends AbstractDaoImpl<Long, LinkDetails>implements LinkDetailsDao {
+public class LinkDetailsDaoImpl extends AbstractDaoImpl<Long, LinkDetails> implements LinkDetailsDao {
 
 	protected LinkDetailsDaoImpl() {
 		super(LinkDetails.class);
 	}
 
-	public List<LinkDetails> getLinkDetailsByTag(String tag) {
+	public List<LinkDetails> getLinkDetailsByTag(final String tag) {
 		CriteriaBuilder cBuilder = getEntityManager().getCriteriaBuilder();
 		CriteriaQuery<LinkDetails> criteria = cBuilder.createQuery(LinkDetails.class);
 		Root<LinkDetails> root = criteria.from(LinkDetails.class);

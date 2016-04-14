@@ -85,7 +85,7 @@ public abstract class AbstractControllerTest {
 		userDetails = userDetailsService.loadUserByUsername(FIRST_TEST_LOGIN);
 	}
 
-	public static byte[] convertObjectToJsonBytes(Object object) throws IOException {
+	public static byte[] convertObjectToJsonBytes(final Object object) throws IOException {
 		ObjectMapper mapper = new ObjectMapper();
 		mapper.setSerializationInclusion(JsonInclude.Include.NON_NULL);
 		return mapper.writeValueAsBytes(object);
@@ -118,7 +118,7 @@ public abstract class AbstractControllerTest {
 		return linkModel;
 	}
 
-	protected Link createRandomLink(String login) {
+	protected Link createRandomLink(final String login) {
 		LinkModel linkModel = getLinkModel();
 		Link link = linkService.createNewLink(linkModel.getUrl(), login, linkModel.getDescription(),
 				linkModel.getTags());

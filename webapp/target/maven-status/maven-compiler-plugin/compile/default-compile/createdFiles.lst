@@ -1,0 +1,11 @@
+by\vonotirah\linkscutter\webapp\restcontrollers\IndexController.class
+by\vonotirah\linkscutter\webapp\models\LinkModel.class
+by\vonotirah\linkscutter\webapp\filters\CORSFilter.class
+by\vonotirah\linkscutter\webapp\security\LinksPermissionEvaluator.class
+by\vonotirah\linkscutter\webapp\security\RestLogoutSuccessHandler.class
+by\vonotirah\linkscutter\webapp\security\CustomUserDetailsService.class
+by\vonotirah\linkscutter\webapp\security\RestAuthenticationFailureHandler.class
+by\vonotirah\linkscutter\webapp\security\RestAuthenticationEntryPoint.class
+by\vonotirah\linkscutter\webapp\restcontrollers\TamplateController.class
+by\vonotirah\linkscutter\webapp\security\RestAuthenticationSuccessHandler.class
+by\vonotirah\linkscutter\webapp\restcontrollers\RestApiController.class

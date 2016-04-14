@@ -20,14 +20,14 @@ import by.vonotirah.linkscutter.datamodel.Tag_;
 import by.vonotirah.linkscutter.datamodel.UserAccount;
 
 @Repository
-public class LinkDaoImpl extends AbstractDaoImpl<Long, Link>implements LinkDao {
+public class LinkDaoImpl extends AbstractDaoImpl<Long, Link> implements LinkDao {
 
 	protected LinkDaoImpl() {
 		super(Link.class);
 	}
 
 	@Override
-	public Link getLinkByCode(String code) {
+	public Link getLinkByCode(final String code) {
 		CriteriaBuilder cBuilder = getEntityManager().getCriteriaBuilder();
 		CriteriaQuery<Link> criteria = cBuilder.createQuery(Link.class);
 		Root<Link> root = criteria.from(Link.class);
@@ -38,7 +38,7 @@ public class LinkDaoImpl extends AbstractDaoImpl<Long, Link>implements LinkDao {
 	}
 
 	@Override
-	public boolean checkCodeExist(String code) {
+	public boolean checkCodeExist(final String code) {
 		CriteriaBuilder cBuilder = getEntityManager().getCriteriaBuilder();
 		CriteriaQuery<Link> criteria = cBuilder.createQuery(Link.class);
 		Root<Link> root = criteria.from(Link.class);
@@ -49,7 +49,7 @@ public class LinkDaoImpl extends AbstractDaoImpl<Long, Link>implements LinkDao {
 	}
 
 	@Override
-	public List<Link> getLinksByTag(Long tagId) {
+	public List<Link> getLinksByTag(final Long tagId) {
 		CriteriaBuilder cBuilder = getEntityManager().getCriteriaBuilder();
 		CriteriaQuery<Link> criteria = cBuilder.createQuery(Link.class);
 		Root<Link> linkRoot = criteria.from(Link.class);
@@ -74,7 +74,7 @@ public class LinkDaoImpl extends AbstractDaoImpl<Long, Link>implements LinkDao {
 	}
 
 	@Override
-	public List<Link> getLinksByUser(UserAccount userAccount) {
+	public List<Link> getLinksByUser(final UserAccount userAccount) {
 		CriteriaBuilder cBuilder = getEntityManager().getCriteriaBuilder();
 		CriteriaQuery<Link> criteria = cBuilder.createQuery(Link.class);
 		Root<Link> root = criteria.from(Link.class);

@@ -12,14 +12,14 @@ import by.vonotirah.linkscutter.datamodel.Tag;
 import by.vonotirah.linkscutter.datamodel.Tag_;
 
 @Repository
-public class TagDaoImpl extends AbstractDaoImpl<Long, Tag>implements TagDao {
+public class TagDaoImpl extends AbstractDaoImpl<Long, Tag> implements TagDao {
 
 	protected TagDaoImpl() {
 		super(Tag.class);
 	}
 
 	@Override
-	public boolean tagExist(String name) {
+	public boolean tagExist(final String name) {
 		CriteriaBuilder cBuilder = getEntityManager().getCriteriaBuilder();
 		CriteriaQuery<Tag> criteria = cBuilder.createQuery(Tag.class);
 		Root<Tag> root = criteria.from(Tag.class);
@@ -31,7 +31,7 @@ public class TagDaoImpl extends AbstractDaoImpl<Long, Tag>implements TagDao {
 	}
 
 	@Override
-	public Tag gatTagByName(String name) {
+	public Tag gatTagByName(final String name) {
 		CriteriaBuilder cBuilder = getEntityManager().getCriteriaBuilder();
 		CriteriaQuery<Tag> criteria = cBuilder.createQuery(Tag.class);
 		Root<Tag> root = criteria.from(Tag.class);

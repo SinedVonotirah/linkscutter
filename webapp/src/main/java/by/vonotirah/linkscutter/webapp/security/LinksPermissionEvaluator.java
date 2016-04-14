@@ -31,7 +31,6 @@ public class LinksPermissionEvaluator implements PermissionEvaluator {
 	@Override
 	public boolean hasPermission(Authentication authentication, Serializable targetId, String targetType,
 			Object permission) {
-		// Not required here.
 		return false;
 	}
 

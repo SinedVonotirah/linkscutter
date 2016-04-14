@@ -1,19 +1,19 @@
 'use strict';
-var App = angular.module('linksCutter',['ngResource','ui.router']);
+var App = angular.module('linksCutter',['ngResource','ui.router', 'ui.bootstrap']);
 
 App.config(['$stateProvider', '$urlRouterProvider',  function($stateProvider, $urlRouterProvider){
-    // For any unmatched url, send to /business
-    $urlRouterProvider.otherwise("/login")
+	
+	$urlRouterProvider.otherwise("/login")
     
-    $stateProvider
-    .state('login', {
-        url: "/login",
-        templateUrl: 'login',
-        controller: "AuthController as ctrl"
+	$stateProvider
+	.state('login', {
+		url: "/login",
+		templateUrl: 'login',
+		controller: "AuthController as ctrl"
         
-    })
+	})
     
-    .state('registration', {
+	.state('registration', {
         url: "/registration",
         templateUrl: 'registration',
         controller: "UserController as ctrl"
@@ -36,21 +36,20 @@ App.config(['$stateProvider', '$urlRouterProvider',  function($stateProvider, $u
 	    templateUrl: function(params){ return 'link/2/'+params.tagId; },
 	    controller : "TagController as ctrl",
         resolve: {
-	        async: ['UserLinksService', '$stateParams', function(UserLinksService, $stateParams) {
-	            return UserLinksService.fetchLinksByTag($stateParams.tagId);
+        	async: ['UserLinksService', '$stateParams', function(UserLinksService, $stateParams) {
+        		return UserLinksService.fetchLinksByTag($stateParams.tagId);
 	        }]
-	    }
-	    
+	    }	    
     })
 
 
 
 }])
 	.factory('authHttpResponseInterceptor',['$q','$location',function($q,$location){
-	    return {
-	        response: function(response){
-	            if (response.status === 401) {
-	                console.log("Response 401");
+		return {
+			response: function(response){
+				if (response.status === 401) {
+					console.log("Response 401");
 	            }
 	            return response || $q.when(response);
 	        },
@@ -63,6 +62,7 @@ App.config(['$stateProvider', '$urlRouterProvider',  function($stateProvider, $u
 	        }
 	    }
 	}])
+	
 	.config(['$httpProvider',function($httpProvider) {
-	    $httpProvider.interceptors.push('authHttpResponseInterceptor');
+		$httpProvider.interceptors.push('authHttpResponseInterceptor');
 	}]);

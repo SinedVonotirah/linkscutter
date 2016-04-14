@@ -12,14 +12,14 @@ import by.vonotirah.linkscutter.datamodel.UserAccount;
 import by.vonotirah.linkscutter.datamodel.UserAccount_;
 
 @Repository
-public class UserAccountDaoImpl extends AbstractDaoImpl<Long, UserAccount>implements UserAccountDao {
+public class UserAccountDaoImpl extends AbstractDaoImpl<Long, UserAccount> implements UserAccountDao {
 
 	protected UserAccountDaoImpl() {
 		super(UserAccount.class);
 	}
 
 	@Override
-	public UserAccount getUserByLogin(String login) {
+	public UserAccount getUserByLogin(final String login) {
 		CriteriaBuilder cBuilder = getEntityManager().getCriteriaBuilder();
 		CriteriaQuery<UserAccount> criteria = cBuilder.createQuery(UserAccount.class);
 		Root<UserAccount> root = criteria.from(UserAccount.class);
@@ -30,7 +30,7 @@ public class UserAccountDaoImpl extends AbstractDaoImpl<Long, UserAccount>implem
 	}
 
 	@Override
-	public UserAccount getUserByMail(String mail) {
+	public UserAccount getUserByMail(final String mail) {
 		CriteriaBuilder cBuilder = getEntityManager().getCriteriaBuilder();
 		CriteriaQuery<UserAccount> criteria = cBuilder.createQuery(UserAccount.class);
 		Root<UserAccount> root = criteria.from(UserAccount.class);
@@ -41,7 +41,7 @@ public class UserAccountDaoImpl extends AbstractDaoImpl<Long, UserAccount>implem
 	}
 
 	@Override
-	public boolean chekUserLoginExist(String login) {
+	public boolean chekUserLoginExist(final String login) {
 		CriteriaBuilder cBuilder = getEntityManager().getCriteriaBuilder();
 		CriteriaQuery<UserAccount> criteria = cBuilder.createQuery(UserAccount.class);
 		Root<UserAccount> root = criteria.from(UserAccount.class);
@@ -52,7 +52,7 @@ public class UserAccountDaoImpl extends AbstractDaoImpl<Long, UserAccount>implem
 	}
 
 	@Override
-	public boolean chekUserEmailExist(String mail) {
+	public boolean chekUserEmailExist(final String mail) {
 		CriteriaBuilder cBuilder = getEntityManager().getCriteriaBuilder();
 		CriteriaQuery<UserAccount> criteria = cBuilder.createQuery(UserAccount.class);
 		Root<UserAccount> root = criteria.from(UserAccount.class);

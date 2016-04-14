@@ -76,7 +76,7 @@ public class RestApiController {
 
 	@PreAuthorize("hasPermission('Links', 'deleteLink')")
 	@RequestMapping(value = "/links/{id}", method = RequestMethod.DELETE)
-	public ResponseEntity<Link> deleteLink(@PathVariable("id") long id) {
+	public ResponseEntity<Link> deleteLink(@PathVariable("id") final long id) {
 
 		LOGGER.info("REST API --- deleteLink");
 
@@ -93,7 +93,7 @@ public class RestApiController {
 	}
 
 	@RequestMapping(value = "/link/{id}", method = RequestMethod.GET)
-	public ResponseEntity<Link> getLinkById(@PathVariable("id") long id) {
+	public ResponseEntity<Link> getLinkById(@PathVariable("id") final long id) {
 
 		LOGGER.info("REST API --- getLinkById");
 
@@ -108,7 +108,7 @@ public class RestApiController {
 
 	@PreAuthorize("hasPermission('Links', 'updateLink')")
 	@RequestMapping(value = "/links/", method = RequestMethod.PUT)
-	public ResponseEntity<Link> updateLink(@RequestBody LinkModel linkModel) {
+	public ResponseEntity<Link> updateLink(@RequestBody final LinkModel linkModel) {
 
 		LOGGER.info("REST API --- updateLink");
 
@@ -128,7 +128,7 @@ public class RestApiController {
 	}
 
 	@RequestMapping(value = "/tag/{tagId}", method = RequestMethod.GET)
-	public ResponseEntity<List<Link>> getLinksByTag(@PathVariable("tagId") long tagId) {
+	public ResponseEntity<List<Link>> getLinksByTag(@PathVariable("tagId") final long tagId) {
 
 		LOGGER.info("REST API --- getLinksByTag");
 
@@ -156,7 +156,7 @@ public class RestApiController {
 	}
 
 	@RequestMapping(value = "/registration", method = RequestMethod.POST)
-	public @ResponseBody ResponseEntity<UserAccount> createUser(@RequestBody UserAccount user) {
+	public @ResponseBody ResponseEntity<UserAccount> createUser(@RequestBody final UserAccount user) {
 
 		LOGGER.info("REST API --- createUser");
 
@@ -172,7 +172,7 @@ public class RestApiController {
 	}
 
 	@RequestMapping(value = "/{code}", method = RequestMethod.GET)
-	public ResponseEntity<Object> redirectToUrl(@PathVariable("code") String code) throws URISyntaxException {
+	public ResponseEntity<Object> redirectToUrl(@PathVariable("code") final String code) throws URISyntaxException {
 
 		LOGGER.info("REST API --- redirectToUrl");
 
@@ -191,7 +191,7 @@ public class RestApiController {
 	}
 
 	@RequestMapping(value = "/search", method = RequestMethod.POST)
-	public ResponseEntity<Link> searchLink(@RequestBody String searchUrl) {
+	public ResponseEntity<Link> searchLink(@RequestBody final String searchUrl) {
 
 		LOGGER.info("REST API --- searchLink");
 

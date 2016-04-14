@@ -4,7 +4,6 @@ import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Collection;
 import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
@@ -25,7 +24,7 @@ import by.vonotirah.linkscutter.datamodel.UserAccount;
 @TestPropertySource("classpath:test_application.properties")
 public abstract class AbstractServiceTest {
 
-	private final static Random random = new Random();
+	private static final Random RANDOM = new Random();
 
 	protected static final RandomData RANDOM_DATA = new RandomDataImpl();
 
@@ -68,25 +67,9 @@ public abstract class AbstractServiceTest {
 	}
 
 	public static double randomDouble() {
-		final double value = random.nextDouble() + randomInteger();
+		final double value = RANDOM.nextDouble() + randomInteger();
 		return Math.round(value * 1e2) / 1e2;
 
-	}
-
-	public static <T> T randomFromCollection(final Collection<T> all) {
-		final int size = all.size();
-		final int item = new Random().nextInt(size); // In real life, the Random
-														// object should be
-														// rather more shared
-														// than this
-		int i = 0;
-		for (final T obj : all) {
-			if (i == item) {
-				return obj;
-			}
-			i = i + 1;
-		}
-		return null;
 	}
 
 	public static Date randomDate() {
@@ -110,34 +93,10 @@ public abstract class AbstractServiceTest {
 		return userAccount;
 	}
 
-	/*
-	 * public Link getRandomLink() { Link link = new Link();
-	 * link.setGenCode(randomString()); link.setUrl(randomString("http://"));
-	 * link.setLinkDetails(getRandomLinkDetails()); return link;
-	 * 
-	 * }
-	 */
-
-	/*
-	 * public LinkDetails getRandomLinkDetails() { LinkDetails linkDetails = new
-	 * LinkDetails(); linkDetails.setCreated(randomDate());
-	 * linkDetails.setCounter(0L);
-	 * linkDetails.setDescription(randomString("description"));
-	 * linkDetails.setTags(getRandomTagsList()); return linkDetails;
-	 * 
-	 * }
-	 */
-
-	/*
-	 * public Set<Tag> getRandomTagsList() { Set<Tag> tagList = new
-	 * HashSet<Tag>(); for (int i = 0; i < 3; i++) { Tag tag = new Tag();
-	 * tag.setName(randomString("Tag - ")); tagList.add(tag); } return tagList;
-	 * }
-	 */
-
 	public List<String> getRandomTagsList() {
 		List<String> tags = new ArrayList<String>();
-		for (int i = 0; i < 3; i++) {
+		int tagsCounter = randomInteger(2, 4);
+		for (int i = 0; i < tagsCounter; i++) {
 			tags.add(randomString("Tag"));
 		}
 		return tags;

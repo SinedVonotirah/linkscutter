@@ -1,0 +1,10 @@
+by\vonotirah\linkscutter\webapp\tests\AbstractControllerTest.class
+by\vonotirah\linkscutter\webapp\tests\GetLinkByIdControllerTest.class
+by\vonotirah\linkscutter\webapp\tests\GetLinksByTagControllerTest.class
+by\vonotirah\linkscutter\webapp\tests\CreateUserControllerTest.class
+by\vonotirah\linkscutter\webapp\tests\DeleteLinkControllerTest.class
+by\vonotirah\linkscutter\webapp\tests\SearchLinkControllerTest.class
+by\vonotirah\linkscutter\webapp\tests\CreateLinkControllerTest.class
+by\vonotirah\linkscutter\webapp\tests\GetAllLinksControllerTest.class
+by\vonotirah\linkscutter\webapp\tests\AuthControllerTest.class
+by\vonotirah\linkscutter\webapp\tests\UpdateLinkControllerTest.class

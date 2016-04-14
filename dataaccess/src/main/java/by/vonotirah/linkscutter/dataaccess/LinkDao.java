@@ -9,7 +9,7 @@ public interface LinkDao extends AbstractDao<Long, Link> {
 
 	Link getLinkByCode(String code);
 
-	boolean checkCodeExist(String code);
+	abstract boolean checkCodeExist(String code);
 
 	List<Link> getLinksByTag(Long tagId);
 

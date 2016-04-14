@@ -81,7 +81,7 @@
           <div class="col-md-12">
             <table class="table">
 				<tbody>
-                  <tr ng-repeat="l in ctrl.links">
+                  <tr ng-repeat="l in ctrl.links.slice(((currentPage-1)*itemsPerPage), ((currentPage)*itemsPerPage))">
                       <td class="setWidth concat"><a ng-href="{{l.url}}"><div ng-bind="l.url"></div></a></td>
                       <td ><span >{{l.linkDetails.created | date:'mediumDate'}}</span></td>
                       <td class="setWidth concat"><a href="http://localhost:8080/webapp/{{l.genCode}}"><div>http://localhost:8080/webapp/{{l.genCode}}</div></a></td>
@@ -103,6 +103,9 @@
                 </tr>
               </thead>
             </table>
+            <div class="col-md-12 text-center">
+            <uib-pagination total-items="totalItems" ng-model="currentPage" max-size="maxSize" class="pagination-sm" boundary-links-numbers="true" items-per-page="itemsPerPage" rotate="false"></uib-pagination> 
+            </div>
           </div>
         </div>
         </div>
