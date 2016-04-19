@@ -58,6 +58,6 @@ public class CreateUserControllerTest extends AbstractControllerTest {
 		userAccount.setLogin(FIRST_TEST_LOGIN);
 
 		mockMvc.perform(post("/registration/").contentType(APPLICATION_JSON_UTF8)
-				.content(convertObjectToJsonBytes(userAccount))).andExpect(status().isBadRequest());
+				.content(convertObjectToJsonBytes(userAccount))).andExpect(status().isConflict());
 	}
 }

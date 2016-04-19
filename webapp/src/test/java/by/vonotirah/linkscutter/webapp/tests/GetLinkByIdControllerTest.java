@@ -45,7 +45,7 @@ public class GetLinkByIdControllerTest extends AbstractControllerTest {
 	}
 
 	@Test
-	public void getNonExistenLinkById() throws Exception {
+	public void getNonExistingLinkById() throws Exception {
 		LOGGER.info("----------------getNonExistenLinkById()----------------------");
 
 		mockMvc.perform(get("/link/{id}", 0L)).andExpect(status().isNotFound());

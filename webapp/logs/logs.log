@@ -1,0 +1,466 @@
+2016-04-19 04:04:20,344 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1329492804 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDaoImpl
+2016-04-19 04:04:20,360 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1181947538 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDetailsDaoImpl
+2016-04-19 04:04:20,375 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 769986276 to class by.vonotirah.linkscutter.dataaccess.impl.TagDaoImpl
+2016-04-19 04:04:20,405 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1063423209 to class by.vonotirah.linkscutter.dataaccess.impl.UserAccountDaoImpl
+2016-04-19 04:04:22,497 INFO  service.impl.UserServiceImpl:77 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 04:04:22,512 INFO  webapp.tests.AuthControllerTest:56 [] -> ----------------createUserWithExistingLogin()----------------------
+2016-04-19 04:04:22,668 INFO  webapp.restcontrollers.RestApiController:162 [] -> REST API --- createUser
+2016-04-19 04:04:22,699 INFO  service.impl.UserServiceImpl:77 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 04:04:22,699 INFO  webapp.tests.AuthControllerTest:36 [] -> ----------------createUser()----------------------
+2016-04-19 04:04:22,715 INFO  webapp.restcontrollers.RestApiController:162 [] -> REST API --- createUser
+2016-04-19 04:04:22,746 INFO  service.impl.UserServiceImpl:36 [] -> User successfully created
+2016-04-19 04:04:22,793 INFO  service.impl.UserServiceImpl:100 [] -> UserAccount with 'ID' - 24 successfully deleted
+2016-04-19 04:07:41,861 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1181947538 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDaoImpl
+2016-04-19 04:07:41,876 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 75480150 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDetailsDaoImpl
+2016-04-19 04:07:41,892 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 750795985 to class by.vonotirah.linkscutter.dataaccess.impl.TagDaoImpl
+2016-04-19 04:07:41,908 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 40177529 to class by.vonotirah.linkscutter.dataaccess.impl.UserAccountDaoImpl
+2016-04-19 04:07:43,832 INFO  service.impl.UserServiceImpl:77 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 04:07:43,847 INFO  webapp.tests.AuthControllerTest:56 [] -> ----------------createUserWithExistingLogin()----------------------
+2016-04-19 04:07:44,003 INFO  webapp.restcontrollers.RestApiController:163 [] -> REST API --- createUser
+2016-04-19 04:07:44,034 INFO  service.impl.UserServiceImpl:77 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 04:07:44,034 INFO  webapp.tests.AuthControllerTest:36 [] -> ----------------createUser()----------------------
+2016-04-19 04:07:44,050 INFO  webapp.restcontrollers.RestApiController:163 [] -> REST API --- createUser
+2016-04-19 04:07:44,081 INFO  service.impl.UserServiceImpl:36 [] -> User successfully created
+2016-04-19 04:07:44,144 INFO  service.impl.UserServiceImpl:100 [] -> UserAccount with 'ID' - 25 successfully deleted
+2016-04-19 04:08:24,349 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1181947538 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDaoImpl
+2016-04-19 04:08:24,349 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 75480150 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDetailsDaoImpl
+2016-04-19 04:08:24,365 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 750795985 to class by.vonotirah.linkscutter.dataaccess.impl.TagDaoImpl
+2016-04-19 04:08:24,380 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 40177529 to class by.vonotirah.linkscutter.dataaccess.impl.UserAccountDaoImpl
+2016-04-19 04:08:26,249 INFO  service.impl.UserServiceImpl:77 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 04:08:26,264 INFO  webapp.tests.AuthControllerTest:56 [] -> ----------------createUserWithExistingLogin()----------------------
+2016-04-19 04:08:26,420 INFO  webapp.restcontrollers.RestApiController:163 [] -> REST API --- createUser
+2016-04-19 04:08:26,436 INFO  service.impl.UserServiceImpl:77 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 04:08:26,436 INFO  webapp.tests.AuthControllerTest:36 [] -> ----------------createUser()----------------------
+2016-04-19 04:08:26,436 INFO  webapp.restcontrollers.RestApiController:163 [] -> REST API --- createUser
+2016-04-19 04:08:26,467 INFO  service.impl.UserServiceImpl:36 [] -> User successfully created
+2016-04-19 04:08:26,514 INFO  service.impl.UserServiceImpl:100 [] -> UserAccount with 'ID' - 26 successfully deleted
+2016-04-19 05:12:11,266 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 609825180 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDaoImpl
+2016-04-19 05:12:11,284 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1329492804 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDetailsDaoImpl
+2016-04-19 05:12:11,294 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 579660439 to class by.vonotirah.linkscutter.dataaccess.impl.TagDaoImpl
+2016-04-19 05:12:11,325 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 345780740 to class by.vonotirah.linkscutter.dataaccess.impl.UserAccountDaoImpl
+2016-04-19 05:12:13,468 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:12:13,530 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:12:13,544 INFO  service.impl.LinkServiceImpl:46 [] -> Link successfuly created
+2016-04-19 05:12:13,589 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin2 successfully extracted
+2016-04-19 05:12:13,592 INFO  service.impl.LinkServiceImpl:46 [] -> Link successfuly created
+2016-04-19 05:12:13,597 INFO  webapp.tests.AuthControllerTest:62 [] -> ----------------deleteForeignLink()----------------------
+2016-04-19 05:12:13,718 INFO  webapp.restcontrollers.RestApiController:86 [] -> REST API --- deleteLink
+2016-04-19 05:12:13,721 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:12:13,741 INFO  service.impl.LinkServiceImpl:80 [] -> Link with 'ID' - 182 successfully extracted
+2016-04-19 05:12:13,841 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:12:13,862 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:12:13,865 INFO  service.impl.LinkServiceImpl:46 [] -> Link successfuly created
+2016-04-19 05:12:13,903 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin2 successfully extracted
+2016-04-19 05:12:13,911 INFO  service.impl.LinkServiceImpl:46 [] -> Link successfuly created
+2016-04-19 05:12:13,915 INFO  webapp.tests.AuthControllerTest:40 [] -> ----------------deleteLinkAsAnon()----------------------
+2016-04-19 05:12:13,973 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:12:13,989 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:12:13,993 INFO  service.impl.LinkServiceImpl:46 [] -> Link successfuly created
+2016-04-19 05:12:14,017 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin2 successfully extracted
+2016-04-19 05:12:14,019 INFO  service.impl.LinkServiceImpl:46 [] -> Link successfuly created
+2016-04-19 05:12:14,024 INFO  webapp.tests.AuthControllerTest:55 [] -> ----------------deleteNonExistenLink()----------------------
+2016-04-19 05:12:14,026 INFO  webapp.restcontrollers.RestApiController:86 [] -> REST API --- deleteLink
+2016-04-19 05:12:14,041 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:12:14,116 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:12:14,168 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:12:14,171 INFO  service.impl.LinkServiceImpl:46 [] -> Link successfuly created
+2016-04-19 05:12:14,205 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin2 successfully extracted
+2016-04-19 05:12:14,208 INFO  service.impl.LinkServiceImpl:46 [] -> Link successfuly created
+2016-04-19 05:12:14,217 INFO  webapp.tests.AuthControllerTest:47 [] -> ----------------deleteLink()----------------------
+2016-04-19 05:12:14,219 INFO  webapp.restcontrollers.RestApiController:86 [] -> REST API --- deleteLink
+2016-04-19 05:12:14,223 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:12:14,228 INFO  service.impl.LinkServiceImpl:80 [] -> Link with 'ID' - 187 successfully extracted
+2016-04-19 05:14:08,846 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 609825180 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDaoImpl
+2016-04-19 05:14:08,862 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1329492804 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDetailsDaoImpl
+2016-04-19 05:14:08,870 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 579660439 to class by.vonotirah.linkscutter.dataaccess.impl.TagDaoImpl
+2016-04-19 05:14:08,893 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 345780740 to class by.vonotirah.linkscutter.dataaccess.impl.UserAccountDaoImpl
+2016-04-19 05:14:10,727 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:14:10,841 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:14:10,863 INFO  service.impl.LinkServiceImpl:46 [] -> Link successfuly created
+2016-04-19 05:14:10,905 INFO  webapp.tests.AuthControllerTest:49 [] -> ----------------getNonExistenLinkById()----------------------
+2016-04-19 05:14:11,058 INFO  webapp.restcontrollers.RestApiController:104 [] -> REST API --- getLinkById
+2016-04-19 05:14:11,110 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:14:11,126 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:14:11,129 INFO  service.impl.LinkServiceImpl:46 [] -> Link successfuly created
+2016-04-19 05:14:11,139 INFO  webapp.tests.AuthControllerTest:36 [] -> ----------------getLinkByIdTest()----------------------
+2016-04-19 05:14:11,140 INFO  webapp.restcontrollers.RestApiController:104 [] -> REST API --- getLinkById
+2016-04-19 05:14:11,144 INFO  service.impl.LinkServiceImpl:80 [] -> Link with 'ID' - 190 successfully extracted
+2016-04-19 05:17:48,063 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 609825180 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDaoImpl
+2016-04-19 05:17:48,086 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1329492804 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDetailsDaoImpl
+2016-04-19 05:17:48,097 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 579660439 to class by.vonotirah.linkscutter.dataaccess.impl.TagDaoImpl
+2016-04-19 05:17:48,121 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 345780740 to class by.vonotirah.linkscutter.dataaccess.impl.UserAccountDaoImpl
+2016-04-19 05:17:49,986 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:17:50,050 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:17:50,068 INFO  service.impl.LinkServiceImpl:46 [] -> Link successfuly created
+2016-04-19 05:17:50,116 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin2 successfully extracted
+2016-04-19 05:17:50,119 INFO  service.impl.LinkServiceImpl:46 [] -> Link successfuly created
+2016-04-19 05:17:50,124 INFO  webapp.tests.GetLinksByTagControllerTest:69 [] -> ----------------getLinkByExistenTag----------------------
+2016-04-19 05:17:50,220 INFO  webapp.restcontrollers.RestApiController:138 [] -> REST API --- getLinksByTag
+2016-04-19 05:17:50,318 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:17:50,336 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:17:50,338 INFO  service.impl.LinkServiceImpl:46 [] -> Link successfuly created
+2016-04-19 05:17:50,361 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin2 successfully extracted
+2016-04-19 05:17:50,364 INFO  service.impl.LinkServiceImpl:46 [] -> Link successfuly created
+2016-04-19 05:17:50,368 INFO  webapp.tests.GetLinksByTagControllerTest:52 [] -> ----------------getLinksByTag()----------------------
+2016-04-19 05:17:50,373 INFO  webapp.restcontrollers.RestApiController:138 [] -> REST API --- getLinksByTag
+2016-04-19 05:22:25,085 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 609825180 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDaoImpl
+2016-04-19 05:22:25,108 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1329492804 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDetailsDaoImpl
+2016-04-19 05:22:25,118 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 579660439 to class by.vonotirah.linkscutter.dataaccess.impl.TagDaoImpl
+2016-04-19 05:22:25,143 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 345780740 to class by.vonotirah.linkscutter.dataaccess.impl.UserAccountDaoImpl
+2016-04-19 05:22:27,288 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:22:27,348 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:22:27,360 INFO  service.impl.LinkServiceImpl:46 [] -> Link successfuly created
+2016-04-19 05:22:27,398 INFO  webapp.tests.AuthControllerTest:52 [] -> ----------------searchNonExistenLink()----------------------
+2016-04-19 05:22:27,513 INFO  webapp.restcontrollers.RestApiController:194 [] -> REST API --- searchLink
+2016-04-19 05:22:27,591 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:22:27,609 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:22:27,615 INFO  service.impl.LinkServiceImpl:46 [] -> Link successfuly created
+2016-04-19 05:22:27,620 INFO  webapp.tests.AuthControllerTest:38 [] -> ----------------searchLink()----------------------
+2016-04-19 05:22:27,622 INFO  webapp.restcontrollers.RestApiController:194 [] -> REST API --- searchLink
+2016-04-19 05:22:27,626 INFO  service.impl.LinkServiceImpl:91 [] -> Link with 'GenCode' - xxoeJU successfully extracted
+2016-04-19 05:25:28,907 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 609825180 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDaoImpl
+2016-04-19 05:25:28,923 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1329492804 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDetailsDaoImpl
+2016-04-19 05:25:28,932 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 579660439 to class by.vonotirah.linkscutter.dataaccess.impl.TagDaoImpl
+2016-04-19 05:25:28,954 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 345780740 to class by.vonotirah.linkscutter.dataaccess.impl.UserAccountDaoImpl
+2016-04-19 05:25:30,862 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:25:30,910 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:25:30,924 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:25:30,956 INFO  webapp.tests.AuthControllerTest:52 [] -> ----------------searchNonExistenLink()----------------------
+2016-04-19 05:25:31,040 INFO  webapp.restcontrollers.RestApiController:194 [] -> REST API --- searchLink
+2016-04-19 05:25:31,086 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:25:31,102 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:25:31,105 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:25:31,110 INFO  webapp.tests.AuthControllerTest:38 [] -> ----------------searchLink()----------------------
+2016-04-19 05:25:31,111 INFO  webapp.restcontrollers.RestApiController:194 [] -> REST API --- searchLink
+2016-04-19 05:25:31,116 INFO  service.impl.LinkServiceImpl:90 [] -> Link with 'GenCode' - vvHIlT successfully extracted
+2016-04-19 05:30:44,113 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 609825180 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDaoImpl
+2016-04-19 05:30:44,132 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1329492804 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDetailsDaoImpl
+2016-04-19 05:30:44,140 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 579660439 to class by.vonotirah.linkscutter.dataaccess.impl.TagDaoImpl
+2016-04-19 05:30:44,160 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 345780740 to class by.vonotirah.linkscutter.dataaccess.impl.UserAccountDaoImpl
+2016-04-19 05:30:45,934 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:30:45,990 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:30:46,002 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:30:46,041 INFO  webapp.tests.AuthControllerTest:36 [] -> ----------------getLinkByIdTest()----------------------
+2016-04-19 05:30:46,118 INFO  webapp.restcontrollers.RestApiController:103 [] -> REST API --- getLinkById
+2016-04-19 05:30:46,138 INFO  service.impl.LinkServiceImpl:81 [] -> Link with 'ID' - 199 successfully extracted
+2016-04-19 05:30:46,309 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:30:46,326 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:30:46,329 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:30:46,336 INFO  webapp.tests.AuthControllerTest:49 [] -> ----------------getNonExistenLinkById()----------------------
+2016-04-19 05:30:46,339 INFO  webapp.restcontrollers.RestApiController:103 [] -> REST API --- getLinkById
+2016-04-19 05:34:03,686 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1816326817 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDaoImpl
+2016-04-19 05:34:03,706 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 2144282958 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDetailsDaoImpl
+2016-04-19 05:34:03,716 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1508130444 to class by.vonotirah.linkscutter.dataaccess.impl.TagDaoImpl
+2016-04-19 05:34:03,743 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1278196189 to class by.vonotirah.linkscutter.dataaccess.impl.UserAccountDaoImpl
+2016-04-19 05:34:05,753 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:05,763 INFO  webapp.tests.AuthControllerTest:35 [] -> ----------------logout()----------------------
+2016-04-19 05:34:05,766 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:05,808 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:05,809 INFO  webapp.tests.AuthControllerTest:20 [] -> ----------------loginWithIncorrectCredentials()----------------------
+2016-04-19 05:34:05,834 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:05,838 INFO  webapp.tests.AuthControllerTest:28 [] -> ----------------loginWithCorrectCredentials()----------------------
+2016-04-19 05:34:05,843 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:05,860 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:05,901 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:05,912 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:34:05,929 INFO  webapp.tests.AuthControllerTest:52 [] -> ----------------searchNonExistenLink()----------------------
+2016-04-19 05:34:05,971 INFO  webapp.restcontrollers.RestApiController:193 [] -> REST API --- searchLink
+2016-04-19 05:34:06,004 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:06,013 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:06,015 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:34:06,018 INFO  webapp.tests.AuthControllerTest:38 [] -> ----------------searchLink()----------------------
+2016-04-19 05:34:06,019 INFO  webapp.restcontrollers.RestApiController:193 [] -> REST API --- searchLink
+2016-04-19 05:34:06,023 INFO  service.impl.LinkServiceImpl:90 [] -> Link with 'GenCode' - HhHpyz successfully extracted
+2016-04-19 05:34:06,185 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:06,205 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:06,209 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:34:06,245 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:06,250 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:34:06,258 INFO  webapp.tests.AuthControllerTest:46 [] -> ----------------getAllLinks()----------------------
+2016-04-19 05:34:06,271 INFO  webapp.restcontrollers.RestApiController:53 [] -> REST API --- getAllLinks
+2016-04-19 05:34:06,275 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:06,286 INFO  service.impl.LinkServiceImpl:57 [] -> Links by User - testLogin successfully extracted
+2016-04-19 05:34:06,338 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:06,356 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:06,359 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:34:06,383 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:06,385 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:34:06,389 INFO  webapp.tests.AuthControllerTest:63 [] -> ----------------getAllLinksAsAnon()----------------------
+2016-04-19 05:34:06,434 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:06,446 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:06,449 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:34:06,496 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin2 successfully extracted
+2016-04-19 05:34:06,500 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:34:06,509 INFO  webapp.tests.GetLinksByTagControllerTest:69 [] -> ----------------getLinkByExistenTag----------------------
+2016-04-19 05:34:06,514 INFO  webapp.restcontrollers.RestApiController:137 [] -> REST API --- getLinksByTag
+2016-04-19 05:34:06,559 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:06,569 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:06,571 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:34:06,583 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin2 successfully extracted
+2016-04-19 05:34:06,585 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:34:06,588 INFO  webapp.tests.GetLinksByTagControllerTest:52 [] -> ----------------getLinksByTag()----------------------
+2016-04-19 05:34:06,589 INFO  webapp.restcontrollers.RestApiController:137 [] -> REST API --- getLinksByTag
+2016-04-19 05:34:06,624 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:06,632 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:06,634 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:34:06,646 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin2 successfully extracted
+2016-04-19 05:34:06,648 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:34:06,658 INFO  webapp.tests.AuthControllerTest:62 [] -> ----------------deleteForeignLink()----------------------
+2016-04-19 05:34:06,665 INFO  webapp.restcontrollers.RestApiController:85 [] -> REST API --- deleteLink
+2016-04-19 05:34:06,668 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:06,672 INFO  service.impl.LinkServiceImpl:81 [] -> Link with 'ID' - 212 successfully extracted
+2016-04-19 05:34:06,697 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:06,705 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:06,707 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:34:06,717 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin2 successfully extracted
+2016-04-19 05:34:06,719 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:34:06,724 INFO  webapp.tests.AuthControllerTest:40 [] -> ----------------deleteLinkAsAnon()----------------------
+2016-04-19 05:34:06,783 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:06,805 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:06,811 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:34:06,843 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin2 successfully extracted
+2016-04-19 05:34:06,846 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:34:06,884 INFO  webapp.tests.AuthControllerTest:55 [] -> ----------------deleteNonExistenLink()----------------------
+2016-04-19 05:34:06,885 INFO  webapp.restcontrollers.RestApiController:85 [] -> REST API --- deleteLink
+2016-04-19 05:34:06,912 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:06,938 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:06,947 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:06,949 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:34:06,975 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin2 successfully extracted
+2016-04-19 05:34:06,977 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:34:06,979 INFO  webapp.tests.AuthControllerTest:47 [] -> ----------------deleteLink()----------------------
+2016-04-19 05:34:06,981 INFO  webapp.restcontrollers.RestApiController:85 [] -> REST API --- deleteLink
+2016-04-19 05:34:06,982 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:06,986 INFO  service.impl.LinkServiceImpl:81 [] -> Link with 'ID' - 217 successfully extracted
+2016-04-19 05:34:07,033 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:07,049 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:07,051 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:34:07,063 INFO  webapp.tests.AuthControllerTest:36 [] -> ----------------getLinkByIdTest()----------------------
+2016-04-19 05:34:07,066 INFO  webapp.restcontrollers.RestApiController:103 [] -> REST API --- getLinkById
+2016-04-19 05:34:07,078 INFO  service.impl.LinkServiceImpl:81 [] -> Link with 'ID' - 219 successfully extracted
+2016-04-19 05:34:07,139 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:07,148 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:07,150 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:34:07,204 INFO  webapp.tests.AuthControllerTest:49 [] -> ----------------getNonExistenLinkById()----------------------
+2016-04-19 05:34:07,205 INFO  webapp.restcontrollers.RestApiController:103 [] -> REST API --- getLinkById
+2016-04-19 05:34:07,232 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:07,247 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:07,250 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:34:07,261 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin2 successfully extracted
+2016-04-19 05:34:07,263 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:34:07,283 INFO  webapp.restcontrollers.RestApiController:118 [] -> REST API --- updateLink
+2016-04-19 05:34:07,318 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:07,326 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:07,328 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:34:07,340 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin2 successfully extracted
+2016-04-19 05:34:07,341 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:34:07,376 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:07,387 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:07,389 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:34:07,426 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin2 successfully extracted
+2016-04-19 05:34:07,428 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:34:07,435 INFO  webapp.restcontrollers.RestApiController:118 [] -> REST API --- updateLink
+2016-04-19 05:34:07,439 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:07,444 INFO  service.impl.LinkServiceImpl:81 [] -> Link with 'ID' - 225 successfully extracted
+2016-04-19 05:34:07,473 INFO  service.impl.LinkServiceImpl:81 [] -> Link with 'ID' - 225 successfully extracted
+2016-04-19 05:34:07,514 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:07,525 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:07,527 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:34:07,535 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin2 successfully extracted
+2016-04-19 05:34:07,537 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:34:07,543 INFO  webapp.restcontrollers.RestApiController:118 [] -> REST API --- updateLink
+2016-04-19 05:34:07,544 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:07,548 INFO  service.impl.LinkServiceImpl:81 [] -> Link with 'ID' - 228 successfully extracted
+2016-04-19 05:34:07,569 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:07,570 INFO  webapp.tests.AuthControllerTest:25 [] -> ----------------createLinkAsAnon()----------------------
+2016-04-19 05:34:07,579 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:07,579 INFO  webapp.tests.AuthControllerTest:54 [] -> ----------------createLinkWithoutUrl()----------------------
+2016-04-19 05:34:07,582 INFO  webapp.restcontrollers.RestApiController:70 [] -> REST API --- createLink
+2016-04-19 05:34:07,588 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:07,589 INFO  webapp.tests.AuthControllerTest:35 [] -> ----------------createLink()----------------------
+2016-04-19 05:34:07,591 INFO  webapp.restcontrollers.RestApiController:70 [] -> REST API --- createLink
+2016-04-19 05:34:07,593 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:07,601 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:07,603 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:34:07,719 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:07,720 INFO  webapp.tests.AuthControllerTest:56 [] -> ----------------createUserWithExistingLogin()----------------------
+2016-04-19 05:34:07,729 INFO  webapp.restcontrollers.RestApiController:163 [] -> REST API --- createUser
+2016-04-19 05:34:07,742 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:34:07,744 INFO  webapp.tests.AuthControllerTest:36 [] -> ----------------createUser()----------------------
+2016-04-19 05:34:07,751 INFO  webapp.restcontrollers.RestApiController:163 [] -> REST API --- createUser
+2016-04-19 05:34:07,763 INFO  service.impl.UserServiceImpl:37 [] -> User successfully created
+2016-04-19 05:34:07,768 INFO  service.impl.UserServiceImpl:72 [] -> UserAccount with 'ID' - 27 successfully deleted
+2016-04-19 05:36:37,296 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 609825180 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDaoImpl
+2016-04-19 05:36:37,304 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1329492804 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDetailsDaoImpl
+2016-04-19 05:36:37,310 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 579660439 to class by.vonotirah.linkscutter.dataaccess.impl.TagDaoImpl
+2016-04-19 05:36:37,347 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 345780740 to class by.vonotirah.linkscutter.dataaccess.impl.UserAccountDaoImpl
+2016-04-19 05:36:39,714 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:36:39,793 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:36:39,810 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:36:39,881 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin2 successfully extracted
+2016-04-19 05:36:39,884 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:36:40,066 INFO  webapp.restcontrollers.RestApiController:117 [] -> REST API --- updateLink
+2016-04-19 05:36:40,137 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:36:40,156 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:36:40,161 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:36:40,185 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin2 successfully extracted
+2016-04-19 05:36:40,188 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:36:40,254 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:36:40,282 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:36:40,286 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:36:40,320 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin2 successfully extracted
+2016-04-19 05:36:40,326 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:36:40,355 INFO  webapp.restcontrollers.RestApiController:117 [] -> REST API --- updateLink
+2016-04-19 05:36:40,358 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:36:40,366 INFO  service.impl.LinkServiceImpl:81 [] -> Link with 'ID' - 234 successfully extracted
+2016-04-19 05:36:40,432 INFO  service.impl.LinkServiceImpl:81 [] -> Link with 'ID' - 234 successfully extracted
+2016-04-19 05:36:40,483 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:36:40,515 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:36:40,519 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:36:40,544 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin2 successfully extracted
+2016-04-19 05:36:40,546 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:36:40,570 INFO  webapp.restcontrollers.RestApiController:117 [] -> REST API --- updateLink
+2016-04-19 05:36:40,574 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:36:40,581 INFO  service.impl.LinkServiceImpl:81 [] -> Link with 'ID' - 237 successfully extracted
+2016-04-19 05:37:23,038 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1816326817 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDaoImpl
+2016-04-19 05:37:23,067 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 2144282958 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDetailsDaoImpl
+2016-04-19 05:37:23,074 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1508130444 to class by.vonotirah.linkscutter.dataaccess.impl.TagDaoImpl
+2016-04-19 05:37:23,094 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1278196189 to class by.vonotirah.linkscutter.dataaccess.impl.UserAccountDaoImpl
+2016-04-19 05:37:24,873 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:24,883 INFO  webapp.tests.AuthControllerTest:35 [] -> ----------------logout()----------------------
+2016-04-19 05:37:24,891 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:24,938 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:24,938 INFO  webapp.tests.AuthControllerTest:20 [] -> ----------------loginWithIncorrectCredentials()----------------------
+2016-04-19 05:37:25,014 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:25,016 INFO  webapp.tests.AuthControllerTest:28 [] -> ----------------loginWithCorrectCredentials()----------------------
+2016-04-19 05:37:25,021 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:25,038 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:25,121 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:25,132 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:37:25,155 INFO  webapp.tests.AuthControllerTest:52 [] -> ----------------searchNonExistenLink()----------------------
+2016-04-19 05:37:25,218 INFO  webapp.restcontrollers.RestApiController:194 [] -> REST API --- searchLink
+2016-04-19 05:37:25,265 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:25,279 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:25,283 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:37:25,289 INFO  webapp.tests.AuthControllerTest:38 [] -> ----------------searchLink()----------------------
+2016-04-19 05:37:25,290 INFO  webapp.restcontrollers.RestApiController:194 [] -> REST API --- searchLink
+2016-04-19 05:37:25,297 INFO  service.impl.LinkServiceImpl:90 [] -> Link with 'GenCode' - hCxoPa successfully extracted
+2016-04-19 05:37:25,468 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:25,490 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:25,493 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:37:25,514 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:25,517 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:37:25,521 INFO  webapp.tests.AuthControllerTest:46 [] -> ----------------getAllLinks()----------------------
+2016-04-19 05:37:25,533 INFO  webapp.restcontrollers.RestApiController:53 [] -> REST API --- getAllLinks
+2016-04-19 05:37:25,537 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:25,546 INFO  service.impl.LinkServiceImpl:57 [] -> Links by User - testLogin successfully extracted
+2016-04-19 05:37:25,586 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:25,604 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:25,607 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:37:25,631 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:25,647 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:37:25,656 INFO  webapp.tests.AuthControllerTest:63 [] -> ----------------getAllLinksAsAnon()----------------------
+2016-04-19 05:37:25,688 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:25,725 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:25,728 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:37:25,756 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin2 successfully extracted
+2016-04-19 05:37:25,758 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:37:25,764 INFO  webapp.tests.GetLinksByTagControllerTest:69 [] -> ----------------getLinkByExistenTag----------------------
+2016-04-19 05:37:25,770 INFO  webapp.restcontrollers.RestApiController:138 [] -> REST API --- getLinksByTag
+2016-04-19 05:37:25,821 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:25,837 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:25,840 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:37:25,863 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin2 successfully extracted
+2016-04-19 05:37:25,866 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:37:25,870 INFO  webapp.tests.GetLinksByTagControllerTest:52 [] -> ----------------getLinksByTag()----------------------
+2016-04-19 05:37:25,871 INFO  webapp.restcontrollers.RestApiController:138 [] -> REST API --- getLinksByTag
+2016-04-19 05:37:25,943 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:25,966 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:25,973 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:37:26,012 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin2 successfully extracted
+2016-04-19 05:37:26,058 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:37:26,062 INFO  webapp.tests.AuthControllerTest:62 [] -> ----------------deleteForeignLink()----------------------
+2016-04-19 05:37:26,064 INFO  webapp.restcontrollers.RestApiController:84 [] -> REST API --- deleteLink
+2016-04-19 05:37:26,078 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:26,086 INFO  service.impl.LinkServiceImpl:81 [] -> Link with 'ID' - 249 successfully extracted
+2016-04-19 05:37:26,140 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:26,160 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:26,166 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:37:26,182 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin2 successfully extracted
+2016-04-19 05:37:26,184 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:37:26,187 INFO  webapp.tests.AuthControllerTest:40 [] -> ----------------deleteLinkAsAnon()----------------------
+2016-04-19 05:37:26,226 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:26,242 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:26,245 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:37:26,261 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin2 successfully extracted
+2016-04-19 05:37:26,264 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:37:26,267 INFO  webapp.tests.AuthControllerTest:55 [] -> ----------------deleteNonExistenLink()----------------------
+2016-04-19 05:37:26,268 INFO  webapp.restcontrollers.RestApiController:84 [] -> REST API --- deleteLink
+2016-04-19 05:37:26,270 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:26,298 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:26,358 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:26,371 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:37:26,391 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin2 successfully extracted
+2016-04-19 05:37:26,397 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:37:26,402 INFO  webapp.tests.AuthControllerTest:47 [] -> ----------------deleteLink()----------------------
+2016-04-19 05:37:26,404 INFO  webapp.restcontrollers.RestApiController:84 [] -> REST API --- deleteLink
+2016-04-19 05:37:26,409 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:26,414 INFO  service.impl.LinkServiceImpl:81 [] -> Link with 'ID' - 254 successfully extracted
+2016-04-19 05:37:26,456 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:26,468 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:26,483 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:37:26,487 INFO  webapp.tests.AuthControllerTest:36 [] -> ----------------getLinkByIdTest()----------------------
+2016-04-19 05:37:26,490 INFO  webapp.restcontrollers.RestApiController:102 [] -> REST API --- getLinkById
+2016-04-19 05:37:26,503 INFO  service.impl.LinkServiceImpl:81 [] -> Link with 'ID' - 256 successfully extracted
+2016-04-19 05:37:26,540 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:26,573 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:26,575 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:37:26,580 INFO  webapp.tests.AuthControllerTest:49 [] -> ----------------getNonExistenLinkById()----------------------
+2016-04-19 05:37:26,581 INFO  webapp.restcontrollers.RestApiController:102 [] -> REST API --- getLinkById
+2016-04-19 05:37:26,611 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:26,632 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:26,634 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:37:26,688 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin2 successfully extracted
+2016-04-19 05:37:26,691 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:37:26,719 INFO  webapp.restcontrollers.RestApiController:116 [] -> REST API --- updateLink
+2016-04-19 05:37:26,776 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:26,795 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:26,797 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:37:26,838 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin2 successfully extracted
+2016-04-19 05:37:26,840 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:37:26,868 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:26,892 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:26,895 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:37:26,912 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin2 successfully extracted
+2016-04-19 05:37:26,915 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:37:26,920 INFO  webapp.restcontrollers.RestApiController:116 [] -> REST API --- updateLink
+2016-04-19 05:37:26,923 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:26,926 INFO  service.impl.LinkServiceImpl:81 [] -> Link with 'ID' - 262 successfully extracted
+2016-04-19 05:37:26,951 INFO  service.impl.LinkServiceImpl:81 [] -> Link with 'ID' - 262 successfully extracted
+2016-04-19 05:37:26,998 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:27,035 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:27,038 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:37:27,068 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin2 successfully extracted
+2016-04-19 05:37:27,070 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:37:27,081 INFO  webapp.restcontrollers.RestApiController:116 [] -> REST API --- updateLink
+2016-04-19 05:37:27,084 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:27,087 INFO  service.impl.LinkServiceImpl:81 [] -> Link with 'ID' - 265 successfully extracted
+2016-04-19 05:37:27,114 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:27,115 INFO  webapp.tests.AuthControllerTest:25 [] -> ----------------createLinkAsAnon()----------------------
+2016-04-19 05:37:27,123 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:27,124 INFO  webapp.tests.AuthControllerTest:54 [] -> ----------------createLinkWithoutUrl()----------------------
+2016-04-19 05:37:27,129 INFO  webapp.restcontrollers.RestApiController:69 [] -> REST API --- createLink
+2016-04-19 05:37:27,143 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:27,144 INFO  webapp.tests.AuthControllerTest:35 [] -> ----------------createLink()----------------------
+2016-04-19 05:37:27,148 INFO  webapp.restcontrollers.RestApiController:69 [] -> REST API --- createLink
+2016-04-19 05:37:27,168 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:27,180 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:27,182 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:37:27,274 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:27,275 INFO  webapp.tests.AuthControllerTest:56 [] -> ----------------createUserWithExistingLogin()----------------------
+2016-04-19 05:37:27,282 INFO  webapp.restcontrollers.RestApiController:164 [] -> REST API --- createUser
+2016-04-19 05:37:27,294 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:27,296 INFO  webapp.tests.AuthControllerTest:36 [] -> ----------------createUser()----------------------
+2016-04-19 05:37:27,298 INFO  webapp.restcontrollers.RestApiController:164 [] -> REST API --- createUser
+2016-04-19 05:37:27,304 INFO  service.impl.UserServiceImpl:37 [] -> User successfully created
+2016-04-19 05:37:27,314 INFO  service.impl.UserServiceImpl:72 [] -> UserAccount with 'ID' - 28 successfully deleted

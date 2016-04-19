@@ -9,8 +9,6 @@ import by.vonotirah.linkscutter.datamodel.UserAccount;
 
 public interface LinkService {
 
-	void createNewLink(Link link);
-
 	Link getLinkById(Long id);
 
 	Link getLinkByCode(String code);
@@ -18,8 +16,6 @@ public interface LinkService {
 	URI linkRedirect(String code) throws URISyntaxException;
 
 	boolean chekLinkExistByCode(String code);
-
-	List<Link> getAllLinks();
 
 	List<Link> getLinksByUser(UserAccount userAccount);
 

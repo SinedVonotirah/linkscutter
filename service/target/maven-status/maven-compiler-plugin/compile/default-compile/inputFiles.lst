@@ -1,7 +1,10 @@
+D:\instinctoolsWorkspace\linkscutter\service\src\main\java\by\vonotirah\linkscutter\service\exceptions\LinkNotFoundException.java
+D:\instinctoolsWorkspace\linkscutter\service\src\main\java\by\vonotirah\linkscutter\service\exceptions\AccountDoesNotExistException.java
 D:\instinctoolsWorkspace\linkscutter\service\src\main\java\by\vonotirah\linkscutter\service\impl\LinkServiceImpl.java
 D:\instinctoolsWorkspace\linkscutter\service\src\main\java\by\vonotirah\linkscutter\service\impl\TagServiceImpl.java
 D:\instinctoolsWorkspace\linkscutter\service\src\main\java\by\vonotirah\linkscutter\service\TagService.java
 D:\instinctoolsWorkspace\linkscutter\service\src\main\java\by\vonotirah\linkscutter\service\LinkService.java
+D:\instinctoolsWorkspace\linkscutter\service\src\main\java\by\vonotirah\linkscutter\service\exceptions\AccountExistsException.java
 D:\instinctoolsWorkspace\linkscutter\service\src\main\java\by\vonotirah\linkscutter\service\LinkDetailsService.java
 D:\instinctoolsWorkspace\linkscutter\service\src\main\java\by\vonotirah\linkscutter\service\impl\LinkDetailsServiceImpl.java
 D:\instinctoolsWorkspace\linkscutter\service\src\main\java\by\vonotirah\linkscutter\service\impl\UserServiceImpl.java

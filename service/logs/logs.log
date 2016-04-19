@@ -1,0 +1,402 @@
+2016-04-19 03:46:27,130 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 924915581 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDetailsDaoImpl
+2016-04-19 03:46:27,138 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1625428489 to class by.vonotirah.linkscutter.dataaccess.impl.TagDaoImpl
+2016-04-19 03:46:27,169 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1407428730 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDaoImpl
+2016-04-19 03:46:27,180 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1322484262 to class by.vonotirah.linkscutter.dataaccess.impl.UserAccountDaoImpl
+2016-04-19 03:46:27,285 INFO  linkscutter.tests.LinkServiceTest:79 [] -> ----------------getAllLinksByUserTest()----------------------
+2016-04-19 03:46:27,394 INFO  service.impl.UserServiceImpl:72 [] -> UserAccount with 'ID' - 1 successfully extracted
+2016-04-19 03:46:27,578 INFO  service.impl.UserServiceImpl:80 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 03:46:27,590 INFO  service.impl.LinkServiceImpl:45 [] -> Link successfuly created
+2016-04-19 03:46:27,632 INFO  service.impl.UserServiceImpl:80 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 03:46:27,635 INFO  service.impl.LinkServiceImpl:45 [] -> Link successfuly created
+2016-04-19 03:46:27,645 INFO  service.impl.UserServiceImpl:80 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 03:46:27,648 INFO  service.impl.LinkServiceImpl:45 [] -> Link successfuly created
+2016-04-19 03:46:27,657 INFO  service.impl.UserServiceImpl:80 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 03:46:27,659 INFO  service.impl.LinkServiceImpl:45 [] -> Link successfuly created
+2016-04-19 03:46:27,693 INFO  service.impl.LinkServiceImpl:52 [] -> Links by User - testLogin successfully extracted
+2016-04-19 03:46:27,747 INFO  linkscutter.tests.LinkServiceTest:103 [] -> ----------------getLinksByTagTest()----------------------
+2016-04-19 03:46:27,768 INFO  service.impl.UserServiceImpl:72 [] -> UserAccount with 'ID' - 1 successfully extracted
+2016-04-19 03:46:27,778 INFO  service.impl.UserServiceImpl:80 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 03:46:27,780 INFO  service.impl.LinkServiceImpl:45 [] -> Link successfuly created
+2016-04-19 03:46:27,793 INFO  service.impl.LinkServiceImpl:81 [] -> Link with 'GenCode' - KdxhBS successfully extracted
+2016-04-19 03:46:27,805 INFO  service.impl.UserServiceImpl:80 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 03:46:27,808 INFO  service.impl.LinkServiceImpl:45 [] -> Link successfuly created
+2016-04-19 03:46:27,818 INFO  service.impl.LinkServiceImpl:81 [] -> Link with 'GenCode' - YoFMce successfully extracted
+2016-04-19 03:46:27,832 INFO  service.impl.UserServiceImpl:80 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 03:46:27,835 INFO  service.impl.LinkServiceImpl:45 [] -> Link successfuly created
+2016-04-19 03:46:27,842 INFO  service.impl.LinkServiceImpl:81 [] -> Link with 'GenCode' - jHkbEJ successfully extracted
+2016-04-19 03:46:27,946 INFO  linkscutter.tests.LinkServiceTest:39 [] -> ----------------linkCrudTest()----------------------
+2016-04-19 03:46:27,947 INFO  service.impl.UserServiceImpl:72 [] -> UserAccount with 'ID' - 1 successfully extracted
+2016-04-19 03:46:27,955 INFO  service.impl.UserServiceImpl:80 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 03:46:27,971 INFO  service.impl.LinkServiceImpl:45 [] -> Link successfuly created
+2016-04-19 03:46:27,977 INFO  service.impl.LinkServiceImpl:81 [] -> Link with 'GenCode' - oNylkn successfully extracted
+2016-04-19 03:46:28,012 INFO  service.impl.LinkServiceImpl:81 [] -> Link with 'GenCode' - oNylkn successfully extracted
+2016-04-19 03:46:28,030 INFO  service.impl.LinkServiceImpl:73 [] -> Link with 'ID' - 180 successfully extracted
+2016-04-19 03:46:28,051 INFO  linkscutter.tests.UserServiceTest:22 [] -> ----------------userAccountCRUDTest()----------------------
+2016-04-19 03:46:28,063 INFO  service.impl.UserServiceImpl:28 [] -> User successfully created
+2016-04-19 03:46:28,067 INFO  service.impl.UserServiceImpl:80 [] -> UserAccount with 'LOGIN' - Login - -YSMKpQ successfully extracted
+2016-04-19 03:46:28,073 INFO  service.impl.UserServiceImpl:96 [] -> UserAccount successfully updated
+2016-04-19 03:46:28,075 INFO  service.impl.UserServiceImpl:72 [] -> UserAccount with 'ID' - 22 successfully extracted
+2016-04-19 03:46:28,078 INFO  service.impl.UserServiceImpl:103 [] -> UserAccount with 'ID' - 22 successfully deleted
+2016-04-19 03:46:28,081 INFO  service.impl.UserServiceImpl:72 [] -> UserAccount with 'ID' - 22 successfully extracted
+2016-04-19 04:04:03,818 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 540206885 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDetailsDaoImpl
+2016-04-19 04:04:03,818 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1726515679 to class by.vonotirah.linkscutter.dataaccess.impl.TagDaoImpl
+2016-04-19 04:04:03,833 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1747702724 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDaoImpl
+2016-04-19 04:04:03,864 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1589214445 to class by.vonotirah.linkscutter.dataaccess.impl.UserAccountDaoImpl
+2016-04-19 04:04:03,942 INFO  linkscutter.tests.UserServiceTest:22 [] -> ----------------userAccountCRUDTest()----------------------
+2016-04-19 04:04:04,239 INFO  service.impl.UserServiceImpl:36 [] -> User successfully created
+2016-04-19 04:04:04,475 INFO  service.impl.UserServiceImpl:77 [] -> UserAccount with 'LOGIN' - Login - -yEcasN successfully extracted
+2016-04-19 04:04:04,490 INFO  service.impl.UserServiceImpl:93 [] -> UserAccount successfully updated
+2016-04-19 04:04:04,506 INFO  service.impl.UserServiceImpl:69 [] -> UserAccount with 'ID' - 23 successfully extracted
+2016-04-19 04:04:04,506 INFO  service.impl.UserServiceImpl:100 [] -> UserAccount with 'ID' - 23 successfully deleted
+2016-04-19 04:04:04,506 INFO  service.impl.UserServiceImpl:69 [] -> UserAccount with 'ID' - 23 successfully extracted
+2016-04-19 05:37:39,200 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 2000421523 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDetailsDaoImpl
+2016-04-19 05:37:39,208 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 836621476 to class by.vonotirah.linkscutter.dataaccess.impl.TagDaoImpl
+2016-04-19 05:37:39,238 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 2007138812 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDaoImpl
+2016-04-19 05:37:39,250 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1985869725 to class by.vonotirah.linkscutter.dataaccess.impl.UserAccountDaoImpl
+2016-04-19 05:37:39,360 INFO  linkscutter.tests.LinkServiceTest:79 [] -> ----------------getAllLinksByUserTest()----------------------
+2016-04-19 05:37:39,503 INFO  service.impl.UserServiceImpl:57 [] -> UserAccount with 'ID' - 1 successfully extracted
+2016-04-19 05:37:39,719 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:39,728 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:37:39,754 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:39,757 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:37:39,772 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:39,775 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:37:39,791 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:39,794 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:37:39,811 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:39,815 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:37:39,845 INFO  service.impl.LinkServiceImpl:57 [] -> Links by User - testLogin successfully extracted
+2016-04-19 05:37:39,898 INFO  linkscutter.tests.LinkServiceTest:103 [] -> ----------------getLinksByTagTest()----------------------
+2016-04-19 05:37:39,901 INFO  service.impl.UserServiceImpl:57 [] -> UserAccount with 'ID' - 1 successfully extracted
+2016-04-19 05:37:39,916 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:39,921 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:37:39,935 INFO  service.impl.LinkServiceImpl:90 [] -> Link with 'GenCode' - LULitj successfully extracted
+2016-04-19 05:37:39,972 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:39,977 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:37:39,987 INFO  service.impl.LinkServiceImpl:90 [] -> Link with 'GenCode' - ouQGRQ successfully extracted
+2016-04-19 05:37:40,010 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:40,012 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:37:40,019 INFO  service.impl.LinkServiceImpl:90 [] -> Link with 'GenCode' - hivhzJ successfully extracted
+2016-04-19 05:37:40,035 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:40,037 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:37:40,051 INFO  service.impl.LinkServiceImpl:90 [] -> Link with 'GenCode' - PlBgRT successfully extracted
+2016-04-19 05:37:40,071 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:40,073 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:37:40,083 INFO  service.impl.LinkServiceImpl:90 [] -> Link with 'GenCode' - OAlBqm successfully extracted
+2016-04-19 05:37:40,166 INFO  linkscutter.tests.LinkServiceTest:39 [] -> ----------------linkCrudTest()----------------------
+2016-04-19 05:37:40,168 INFO  service.impl.UserServiceImpl:57 [] -> UserAccount with 'ID' - 1 successfully extracted
+2016-04-19 05:37:40,175 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:37:40,177 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:37:40,182 INFO  service.impl.LinkServiceImpl:90 [] -> Link with 'GenCode' - SrNEcf successfully extracted
+2016-04-19 05:37:40,207 INFO  service.impl.LinkServiceImpl:90 [] -> Link with 'GenCode' - SrNEcf successfully extracted
+2016-04-19 05:37:40,224 INFO  linkscutter.tests.UserServiceTest:22 [] -> ----------------userAccountCRUDTest()----------------------
+2016-04-19 05:37:40,232 INFO  service.impl.UserServiceImpl:37 [] -> User successfully created
+2016-04-19 05:37:40,236 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - Login - -zlaXAq successfully extracted
+2016-04-19 05:37:40,240 INFO  service.impl.UserServiceImpl:65 [] -> UserAccount successfully updated
+2016-04-19 05:37:40,242 INFO  service.impl.UserServiceImpl:57 [] -> UserAccount with 'ID' - 29 successfully extracted
+2016-04-19 05:37:40,245 INFO  service.impl.UserServiceImpl:72 [] -> UserAccount with 'ID' - 29 successfully deleted
+2016-04-19 05:37:40,248 INFO  service.impl.UserServiceImpl:57 [] -> UserAccount with 'ID' - 29 successfully extracted
+2016-04-19 05:43:34,410 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 2000421523 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDetailsDaoImpl
+2016-04-19 05:43:34,418 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 836621476 to class by.vonotirah.linkscutter.dataaccess.impl.TagDaoImpl
+2016-04-19 05:43:34,439 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 2007138812 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDaoImpl
+2016-04-19 05:43:34,447 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1985869725 to class by.vonotirah.linkscutter.dataaccess.impl.UserAccountDaoImpl
+2016-04-19 05:43:34,538 INFO  linkscutter.tests.LinkServiceTest:80 [] -> ----------------getAllLinksByUserTest()----------------------
+2016-04-19 05:43:34,635 INFO  service.impl.UserServiceImpl:57 [] -> UserAccount with 'ID' - 1 successfully extracted
+2016-04-19 05:43:34,830 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:43:34,843 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:43:34,886 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:43:34,902 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:43:34,917 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:43:34,919 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:43:34,937 INFO  service.impl.LinkServiceImpl:57 [] -> Links by User - testLogin successfully extracted
+2016-04-19 05:43:34,967 INFO  linkscutter.tests.LinkServiceTest:104 [] -> ----------------getLinksByTagTest()----------------------
+2016-04-19 05:43:34,970 INFO  service.impl.UserServiceImpl:57 [] -> UserAccount with 'ID' - 1 successfully extracted
+2016-04-19 05:43:34,986 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:43:34,988 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:43:34,999 INFO  service.impl.LinkServiceImpl:90 [] -> Link with 'GenCode' - BLxGFZ successfully extracted
+2016-04-19 05:43:35,047 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:43:35,050 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:43:35,063 INFO  service.impl.LinkServiceImpl:90 [] -> Link with 'GenCode' - wuEWvg successfully extracted
+2016-04-19 05:43:35,076 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:43:35,079 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:43:35,086 INFO  service.impl.LinkServiceImpl:90 [] -> Link with 'GenCode' - tKietg successfully extracted
+2016-04-19 05:43:35,095 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:43:35,096 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:43:35,106 INFO  service.impl.LinkServiceImpl:90 [] -> Link with 'GenCode' - dgJmqd successfully extracted
+2016-04-19 05:43:35,118 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:43:35,121 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:43:35,129 INFO  service.impl.LinkServiceImpl:90 [] -> Link with 'GenCode' - JJjCOM successfully extracted
+2016-04-19 05:43:35,192 INFO  linkscutter.tests.LinkServiceTest:40 [] -> ----------------linkCrudTest()----------------------
+2016-04-19 05:43:35,194 INFO  service.impl.UserServiceImpl:57 [] -> UserAccount with 'ID' - 1 successfully extracted
+2016-04-19 05:43:35,204 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:43:35,207 INFO  service.impl.LinkServiceImpl:47 [] -> Link successfuly created
+2016-04-19 05:43:35,219 INFO  service.impl.LinkServiceImpl:90 [] -> Link with 'GenCode' - iVhNun successfully extracted
+2016-04-19 05:43:35,241 INFO  service.impl.LinkServiceImpl:90 [] -> Link with 'GenCode' - iVhNun successfully extracted
+2016-04-19 05:43:35,255 INFO  linkscutter.tests.UserServiceTest:22 [] -> ----------------userAccountCRUDTest()----------------------
+2016-04-19 05:43:35,261 INFO  service.impl.UserServiceImpl:37 [] -> User successfully created
+2016-04-19 05:43:35,264 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - Login - -QLemzE successfully extracted
+2016-04-19 05:43:35,271 INFO  service.impl.UserServiceImpl:65 [] -> UserAccount successfully updated
+2016-04-19 05:43:35,276 INFO  service.impl.UserServiceImpl:57 [] -> UserAccount with 'ID' - 30 successfully extracted
+2016-04-19 05:43:35,280 INFO  service.impl.UserServiceImpl:72 [] -> UserAccount with 'ID' - 30 successfully deleted
+2016-04-19 05:43:35,285 INFO  service.impl.UserServiceImpl:57 [] -> UserAccount with 'ID' - 30 successfully extracted
+2016-04-19 05:49:40,546 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1145391264 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDetailsDaoImpl
+2016-04-19 05:49:40,568 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 767393855 to class by.vonotirah.linkscutter.dataaccess.impl.TagDaoImpl
+2016-04-19 05:49:40,601 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1449987177 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDaoImpl
+2016-04-19 05:49:40,615 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 2007138812 to class by.vonotirah.linkscutter.dataaccess.impl.UserAccountDaoImpl
+2016-04-19 05:49:40,771 INFO  linkscutter.tests.LinkServiceTest:80 [] -> ----------------getAllLinksByUserTest()----------------------
+2016-04-19 05:49:40,868 INFO  service.impl.UserServiceImpl:57 [] -> UserAccount with 'ID' - 1 successfully extracted
+2016-04-19 05:49:41,132 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:49:41,148 INFO  service.impl.LinkServiceImpl:60 [] -> Link successfuly created
+2016-04-19 05:49:41,198 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:49:41,208 INFO  service.impl.LinkServiceImpl:60 [] -> Link successfuly created
+2016-04-19 05:49:41,231 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:49:41,234 INFO  service.impl.LinkServiceImpl:60 [] -> Link successfuly created
+2016-04-19 05:49:41,255 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:49:41,262 INFO  service.impl.LinkServiceImpl:60 [] -> Link successfuly created
+2016-04-19 05:49:41,275 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:49:41,277 INFO  service.impl.LinkServiceImpl:60 [] -> Link successfuly created
+2016-04-19 05:49:41,335 INFO  service.impl.LinkServiceImpl:71 [] -> Links by User - testLogin successfully extracted
+2016-04-19 05:49:41,501 INFO  linkscutter.tests.LinkServiceTest:104 [] -> ----------------getLinksByTagTest()----------------------
+2016-04-19 05:49:41,502 INFO  service.impl.UserServiceImpl:57 [] -> UserAccount with 'ID' - 1 successfully extracted
+2016-04-19 05:49:41,511 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:49:41,513 INFO  service.impl.LinkServiceImpl:60 [] -> Link successfuly created
+2016-04-19 05:49:41,520 INFO  service.impl.LinkServiceImpl:91 [] -> Link with 'GenCode' - LWJhir successfully extracted
+2016-04-19 05:49:41,578 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:49:41,580 INFO  service.impl.LinkServiceImpl:60 [] -> Link successfuly created
+2016-04-19 05:49:41,592 INFO  service.impl.LinkServiceImpl:91 [] -> Link with 'GenCode' - rqoVQA successfully extracted
+2016-04-19 05:49:41,615 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:49:41,617 INFO  service.impl.LinkServiceImpl:60 [] -> Link successfuly created
+2016-04-19 05:49:41,634 INFO  service.impl.LinkServiceImpl:91 [] -> Link with 'GenCode' - GxONyi successfully extracted
+2016-04-19 05:49:41,653 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:49:41,655 INFO  service.impl.LinkServiceImpl:60 [] -> Link successfuly created
+2016-04-19 05:49:41,663 INFO  service.impl.LinkServiceImpl:91 [] -> Link with 'GenCode' - TUGCJb successfully extracted
+2016-04-19 05:49:41,677 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:49:41,681 INFO  service.impl.LinkServiceImpl:60 [] -> Link successfuly created
+2016-04-19 05:49:41,688 INFO  service.impl.LinkServiceImpl:91 [] -> Link with 'GenCode' - VTaCmP successfully extracted
+2016-04-19 05:49:41,751 INFO  linkscutter.tests.LinkServiceTest:40 [] -> ----------------linkCrudTest()----------------------
+2016-04-19 05:49:41,753 INFO  service.impl.UserServiceImpl:57 [] -> UserAccount with 'ID' - 1 successfully extracted
+2016-04-19 05:49:41,762 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:49:41,765 INFO  service.impl.LinkServiceImpl:60 [] -> Link successfuly created
+2016-04-19 05:49:41,774 INFO  service.impl.LinkServiceImpl:91 [] -> Link with 'GenCode' - MygqGa successfully extracted
+2016-04-19 05:49:41,804 INFO  service.impl.LinkServiceImpl:91 [] -> Link with 'GenCode' - MygqGa successfully extracted
+2016-04-19 05:49:41,816 INFO  linkscutter.tests.UserServiceTest:22 [] -> ----------------userAccountCRUDTest()----------------------
+2016-04-19 05:49:41,828 INFO  service.impl.UserServiceImpl:37 [] -> User successfully created
+2016-04-19 05:49:41,832 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - Login - -qkTqlQ successfully extracted
+2016-04-19 05:49:41,836 INFO  service.impl.UserServiceImpl:65 [] -> UserAccount successfully updated
+2016-04-19 05:49:41,839 INFO  service.impl.UserServiceImpl:57 [] -> UserAccount with 'ID' - 31 successfully extracted
+2016-04-19 05:49:41,842 INFO  service.impl.UserServiceImpl:72 [] -> UserAccount with 'ID' - 31 successfully deleted
+2016-04-19 05:49:41,848 INFO  service.impl.UserServiceImpl:57 [] -> UserAccount with 'ID' - 31 successfully extracted
+2016-04-19 05:51:15,618 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 652007616 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDetailsDaoImpl
+2016-04-19 05:51:15,625 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 995531141 to class by.vonotirah.linkscutter.dataaccess.impl.TagDaoImpl
+2016-04-19 05:51:15,643 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 2058174333 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDaoImpl
+2016-04-19 05:51:15,655 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 948650013 to class by.vonotirah.linkscutter.dataaccess.impl.UserAccountDaoImpl
+2016-04-19 05:51:15,776 INFO  linkscutter.tests.LinkServiceTest:80 [] -> ----------------getAllLinksByUserTest()----------------------
+2016-04-19 05:51:15,870 INFO  service.impl.UserServiceImpl:57 [] -> UserAccount with 'ID' - 1 successfully extracted
+2016-04-19 05:51:16,186 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:51:16,197 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 05:51:16,221 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:51:16,223 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 05:51:16,233 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:51:16,236 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 05:51:16,256 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:51:16,258 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 05:51:16,273 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:51:16,276 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 05:51:16,301 INFO  service.impl.LinkServiceImpl:73 [] -> Links by User - testLogin successfully extracted
+2016-04-19 05:51:16,338 INFO  linkscutter.tests.LinkServiceTest:104 [] -> ----------------getLinksByTagTest()----------------------
+2016-04-19 05:51:16,340 INFO  service.impl.UserServiceImpl:57 [] -> UserAccount with 'ID' - 1 successfully extracted
+2016-04-19 05:51:16,357 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:51:16,360 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 05:51:16,368 INFO  service.impl.LinkServiceImpl:82 [] -> Link with 'GenCode' - oCheHc successfully extracted
+2016-04-19 05:51:16,378 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:51:16,380 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 05:51:16,386 INFO  service.impl.LinkServiceImpl:82 [] -> Link with 'GenCode' - jsdior successfully extracted
+2016-04-19 05:51:16,402 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:51:16,405 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 05:51:16,413 INFO  service.impl.LinkServiceImpl:82 [] -> Link with 'GenCode' - fMZKFK successfully extracted
+2016-04-19 05:51:16,426 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:51:16,428 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 05:51:16,436 INFO  service.impl.LinkServiceImpl:82 [] -> Link with 'GenCode' - xafVIm successfully extracted
+2016-04-19 05:51:16,450 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:51:16,453 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 05:51:16,461 INFO  service.impl.LinkServiceImpl:82 [] -> Link with 'GenCode' - BoscKv successfully extracted
+2016-04-19 05:51:16,513 INFO  linkscutter.tests.LinkServiceTest:40 [] -> ----------------linkCrudTest()----------------------
+2016-04-19 05:51:16,515 INFO  service.impl.UserServiceImpl:57 [] -> UserAccount with 'ID' - 1 successfully extracted
+2016-04-19 05:51:16,523 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 05:51:16,526 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 05:51:16,531 INFO  service.impl.LinkServiceImpl:82 [] -> Link with 'GenCode' - FoBROU successfully extracted
+2016-04-19 05:51:16,556 INFO  service.impl.LinkServiceImpl:82 [] -> Link with 'GenCode' - FoBROU successfully extracted
+2016-04-19 05:51:16,571 INFO  linkscutter.tests.UserServiceTest:22 [] -> ----------------userAccountCRUDTest()----------------------
+2016-04-19 05:51:16,578 INFO  service.impl.UserServiceImpl:37 [] -> User successfully created
+2016-04-19 05:51:16,580 INFO  service.impl.UserServiceImpl:48 [] -> UserAccount with 'LOGIN' - Login - -MsmYAk successfully extracted
+2016-04-19 05:51:16,584 INFO  service.impl.UserServiceImpl:65 [] -> UserAccount successfully updated
+2016-04-19 05:51:16,586 INFO  service.impl.UserServiceImpl:57 [] -> UserAccount with 'ID' - 32 successfully extracted
+2016-04-19 05:51:16,589 INFO  service.impl.UserServiceImpl:72 [] -> UserAccount with 'ID' - 32 successfully deleted
+2016-04-19 05:51:16,591 INFO  service.impl.UserServiceImpl:57 [] -> UserAccount with 'ID' - 32 successfully extracted
+2016-04-19 06:03:20,453 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1726780304 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDetailsDaoImpl
+2016-04-19 06:03:20,466 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1527906606 to class by.vonotirah.linkscutter.dataaccess.impl.TagDaoImpl
+2016-04-19 06:03:20,492 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1688917723 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDaoImpl
+2016-04-19 06:03:20,535 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1724399560 to class by.vonotirah.linkscutter.dataaccess.impl.UserAccountDaoImpl
+2016-04-19 06:03:20,652 INFO  linkscutter.tests.LinkServiceTest:80 [] -> ----------------getAllLinksByUserTest()----------------------
+2016-04-19 06:03:20,776 INFO  service.impl.UserServiceImpl:45 [] -> UserAccount with 'ID' - 1 successfully extracted
+2016-04-19 06:03:21,017 INFO  service.impl.UserServiceImpl:56 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 06:03:21,039 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 06:03:21,136 INFO  service.impl.UserServiceImpl:56 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 06:03:21,146 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 06:03:21,231 INFO  service.impl.UserServiceImpl:56 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 06:03:21,265 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 06:03:21,298 INFO  service.impl.LinkServiceImpl:73 [] -> Links by User - testLogin successfully extracted
+2016-04-19 06:03:21,356 INFO  linkscutter.tests.LinkServiceTest:104 [] -> ----------------getLinksByTagTest()----------------------
+2016-04-19 06:03:21,390 INFO  service.impl.UserServiceImpl:45 [] -> UserAccount with 'ID' - 1 successfully extracted
+2016-04-19 06:03:21,408 INFO  service.impl.UserServiceImpl:56 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 06:03:21,412 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 06:03:21,428 INFO  service.impl.LinkServiceImpl:82 [] -> Link with 'GenCode' - kExOWy successfully extracted
+2016-04-19 06:03:21,463 INFO  service.impl.UserServiceImpl:56 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 06:03:21,466 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 06:03:21,477 INFO  service.impl.LinkServiceImpl:82 [] -> Link with 'GenCode' - aIfalv successfully extracted
+2016-04-19 06:03:21,493 INFO  service.impl.UserServiceImpl:56 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 06:03:21,495 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 06:03:21,504 INFO  service.impl.LinkServiceImpl:82 [] -> Link with 'GenCode' - yMYfyd successfully extracted
+2016-04-19 06:03:21,518 INFO  service.impl.UserServiceImpl:56 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 06:03:21,520 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 06:03:21,531 INFO  service.impl.LinkServiceImpl:82 [] -> Link with 'GenCode' - oEIfJC successfully extracted
+2016-04-19 06:03:21,566 INFO  service.impl.UserServiceImpl:56 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 06:03:21,573 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 06:03:21,582 INFO  service.impl.LinkServiceImpl:82 [] -> Link with 'GenCode' - atiYXy successfully extracted
+2016-04-19 06:03:21,669 INFO  linkscutter.tests.LinkServiceTest:40 [] -> ----------------linkCrudTest()----------------------
+2016-04-19 06:03:21,673 INFO  service.impl.UserServiceImpl:45 [] -> UserAccount with 'ID' - 1 successfully extracted
+2016-04-19 06:03:21,684 INFO  service.impl.UserServiceImpl:56 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 06:03:21,686 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 06:03:21,692 INFO  service.impl.LinkServiceImpl:82 [] -> Link with 'GenCode' - VAtBil successfully extracted
+2016-04-19 06:03:21,717 INFO  service.impl.LinkServiceImpl:82 [] -> Link with 'GenCode' - VAtBil successfully extracted
+2016-04-19 06:03:21,744 INFO  linkscutter.tests.UserServiceTest:22 [] -> ----------------userAccountCRUDTest()----------------------
+2016-04-19 06:03:21,753 INFO  service.impl.UserServiceImpl:37 [] -> User successfully created
+2016-04-19 06:03:21,797 INFO  service.impl.UserServiceImpl:56 [] -> UserAccount with 'LOGIN' - Login - -pmYzsg successfully extracted
+2016-04-19 06:03:21,807 INFO  service.impl.UserServiceImpl:64 [] -> UserAccount successfully updated
+2016-04-19 06:03:21,812 INFO  service.impl.UserServiceImpl:45 [] -> UserAccount with 'ID' - 33 successfully extracted
+2016-04-19 06:03:21,825 INFO  service.impl.UserServiceImpl:71 [] -> UserAccount with 'ID' - 33 successfully deleted
+2016-04-19 06:03:21,832 INFO  service.impl.UserServiceImpl:45 [] -> UserAccount with 'ID' - 33 successfully extracted
+2016-04-19 06:08:01,490 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 985679444 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDetailsDaoImpl
+2016-04-19 06:08:01,506 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1007664442 to class by.vonotirah.linkscutter.dataaccess.impl.TagDaoImpl
+2016-04-19 06:08:01,532 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1248598189 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDaoImpl
+2016-04-19 06:08:01,555 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1311315651 to class by.vonotirah.linkscutter.dataaccess.impl.UserAccountDaoImpl
+2016-04-19 06:08:01,657 INFO  linkscutter.tests.LinkServiceTest:80 [] -> ----------------getAllLinksByUserTest()----------------------
+2016-04-19 06:08:01,756 INFO  service.impl.UserServiceImpl:45 [] -> UserAccount with 'ID' - 1 successfully extracted
+2016-04-19 06:08:01,953 INFO  service.impl.UserServiceImpl:56 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 06:08:01,964 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 06:08:02,024 INFO  service.impl.UserServiceImpl:56 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 06:08:02,029 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 06:08:02,086 INFO  service.impl.UserServiceImpl:56 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 06:08:02,096 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 06:08:02,132 INFO  service.impl.LinkServiceImpl:73 [] -> Links by User - testLogin successfully extracted
+2016-04-19 06:08:02,200 INFO  linkscutter.tests.LinkServiceTest:104 [] -> ----------------getLinksByTagTest()----------------------
+2016-04-19 06:08:02,231 INFO  service.impl.UserServiceImpl:45 [] -> UserAccount with 'ID' - 1 successfully extracted
+2016-04-19 06:08:02,258 INFO  service.impl.UserServiceImpl:56 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 06:08:02,266 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 06:08:02,279 INFO  service.impl.LinkServiceImpl:82 [] -> Link with 'GenCode' - eqKyAc successfully extracted
+2016-04-19 06:08:02,314 INFO  service.impl.UserServiceImpl:56 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 06:08:02,319 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 06:08:02,336 INFO  service.impl.LinkServiceImpl:82 [] -> Link with 'GenCode' - bZClwf successfully extracted
+2016-04-19 06:08:02,350 INFO  service.impl.UserServiceImpl:56 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 06:08:02,353 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 06:08:02,367 INFO  service.impl.LinkServiceImpl:82 [] -> Link with 'GenCode' - mKVyKV successfully extracted
+2016-04-19 06:08:02,379 INFO  service.impl.UserServiceImpl:56 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 06:08:02,381 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 06:08:02,389 INFO  service.impl.LinkServiceImpl:82 [] -> Link with 'GenCode' - dOlBpH successfully extracted
+2016-04-19 06:08:02,402 INFO  service.impl.UserServiceImpl:56 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 06:08:02,404 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 06:08:02,412 INFO  service.impl.LinkServiceImpl:82 [] -> Link with 'GenCode' - nmmIKh successfully extracted
+2016-04-19 06:08:02,492 INFO  linkscutter.tests.LinkServiceTest:40 [] -> ----------------linkCrudTest()----------------------
+2016-04-19 06:08:02,494 INFO  service.impl.UserServiceImpl:45 [] -> UserAccount with 'ID' - 1 successfully extracted
+2016-04-19 06:08:02,511 INFO  service.impl.UserServiceImpl:56 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 06:08:02,513 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 06:08:02,523 INFO  service.impl.LinkServiceImpl:82 [] -> Link with 'GenCode' - kCKFhj successfully extracted
+2016-04-19 06:08:02,559 INFO  service.impl.LinkServiceImpl:82 [] -> Link with 'GenCode' - kCKFhj successfully extracted
+2016-04-19 06:08:02,577 INFO  linkscutter.tests.UserServiceTest:22 [] -> ----------------userAccountCRUDTest()----------------------
+2016-04-19 06:08:02,595 INFO  service.impl.UserServiceImpl:37 [] -> User successfully created
+2016-04-19 06:08:02,598 INFO  service.impl.UserServiceImpl:56 [] -> UserAccount with 'LOGIN' - Login - -vBbjee successfully extracted
+2016-04-19 06:08:02,604 INFO  service.impl.UserServiceImpl:64 [] -> UserAccount successfully updated
+2016-04-19 06:08:02,611 INFO  service.impl.UserServiceImpl:45 [] -> UserAccount with 'ID' - 34 successfully extracted
+2016-04-19 06:08:02,616 INFO  service.impl.UserServiceImpl:71 [] -> UserAccount with 'ID' - 34 successfully deleted
+2016-04-19 06:08:02,633 INFO  service.impl.UserServiceImpl:45 [] -> UserAccount with 'ID' - 34 successfully extracted
+2016-04-19 06:15:36,667 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 985679444 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDetailsDaoImpl
+2016-04-19 06:15:36,690 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1007664442 to class by.vonotirah.linkscutter.dataaccess.impl.TagDaoImpl
+2016-04-19 06:15:36,723 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1248598189 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDaoImpl
+2016-04-19 06:15:36,740 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1311315651 to class by.vonotirah.linkscutter.dataaccess.impl.UserAccountDaoImpl
+2016-04-19 06:15:36,846 INFO  linkscutter.tests.LinkServiceTest:80 [] -> ----------------getAllLinksByUserTest()----------------------
+2016-04-19 06:15:36,981 INFO  service.impl.UserServiceImpl:45 [] -> UserAccount with 'ID' - 1 successfully extracted
+2016-04-19 06:15:37,189 INFO  service.impl.UserServiceImpl:56 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 06:15:37,202 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 06:15:37,237 INFO  service.impl.UserServiceImpl:56 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 06:15:37,241 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 06:15:37,339 INFO  service.impl.UserServiceImpl:56 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 06:15:37,352 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 06:15:37,386 INFO  service.impl.LinkServiceImpl:73 [] -> Links by User - testLogin successfully extracted
+2016-04-19 06:15:37,453 INFO  linkscutter.tests.LinkServiceTest:104 [] -> ----------------getLinksByTagTest()----------------------
+2016-04-19 06:15:37,479 INFO  service.impl.UserServiceImpl:45 [] -> UserAccount with 'ID' - 1 successfully extracted
+2016-04-19 06:15:37,508 INFO  service.impl.UserServiceImpl:56 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 06:15:37,516 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 06:15:37,543 INFO  service.impl.LinkServiceImpl:82 [] -> Link with 'GenCode' - ZHqLql successfully extracted
+2016-04-19 06:15:37,554 INFO  service.impl.UserServiceImpl:56 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 06:15:37,560 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 06:15:37,569 INFO  service.impl.LinkServiceImpl:82 [] -> Link with 'GenCode' - XCRKkU successfully extracted
+2016-04-19 06:15:37,586 INFO  service.impl.UserServiceImpl:56 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 06:15:37,589 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 06:15:37,600 INFO  service.impl.LinkServiceImpl:82 [] -> Link with 'GenCode' - YJWTLn successfully extracted
+2016-04-19 06:15:37,678 INFO  linkscutter.tests.LinkServiceTest:40 [] -> ----------------linkCrudTest()----------------------
+2016-04-19 06:15:37,695 INFO  service.impl.UserServiceImpl:45 [] -> UserAccount with 'ID' - 1 successfully extracted
+2016-04-19 06:15:37,719 INFO  service.impl.UserServiceImpl:56 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 06:15:37,722 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 06:15:37,745 INFO  service.impl.LinkServiceImpl:82 [] -> Link with 'GenCode' - iAqanG successfully extracted
+2016-04-19 06:15:37,784 INFO  service.impl.LinkServiceImpl:82 [] -> Link with 'GenCode' - iAqanG successfully extracted
+2016-04-19 06:15:37,814 INFO  linkscutter.tests.UserServiceTest:22 [] -> ----------------userAccountCRUDTest()----------------------
+2016-04-19 06:15:37,834 INFO  service.impl.UserServiceImpl:37 [] -> User successfully created
+2016-04-19 06:15:37,840 INFO  service.impl.UserServiceImpl:56 [] -> UserAccount with 'LOGIN' - Login - -WmIvNH successfully extracted
+2016-04-19 06:15:37,845 INFO  service.impl.UserServiceImpl:64 [] -> UserAccount successfully updated
+2016-04-19 06:15:37,852 INFO  service.impl.UserServiceImpl:45 [] -> UserAccount with 'ID' - 35 successfully extracted
+2016-04-19 06:15:37,858 INFO  service.impl.UserServiceImpl:71 [] -> UserAccount with 'ID' - 35 successfully deleted
+2016-04-19 06:15:37,861 INFO  service.impl.UserServiceImpl:45 [] -> UserAccount with 'ID' - 35 successfully extracted
+2016-04-19 06:17:26,980 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 985679444 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDetailsDaoImpl
+2016-04-19 06:17:26,989 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1007664442 to class by.vonotirah.linkscutter.dataaccess.impl.TagDaoImpl
+2016-04-19 06:17:27,006 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1248598189 to class by.vonotirah.linkscutter.dataaccess.impl.LinkDaoImpl
+2016-04-19 06:17:27,019 INFO  dataaccess.impl.AbstractDaoImpl:29 [] -> Set EntityManager 1311315651 to class by.vonotirah.linkscutter.dataaccess.impl.UserAccountDaoImpl
+2016-04-19 06:17:27,093 INFO  linkscutter.tests.LinkServiceTest:80 [] -> ----------------getAllLinksByUserTest()----------------------
+2016-04-19 06:17:27,189 INFO  service.impl.UserServiceImpl:45 [] -> UserAccount with 'ID' - 1 successfully extracted
+2016-04-19 06:17:27,361 INFO  service.impl.UserServiceImpl:56 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 06:17:27,378 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 06:17:27,416 INFO  service.impl.UserServiceImpl:56 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 06:17:27,420 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 06:17:27,447 INFO  service.impl.UserServiceImpl:56 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 06:17:27,465 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 06:17:27,489 INFO  service.impl.UserServiceImpl:56 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 06:17:27,494 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 06:17:27,524 INFO  service.impl.UserServiceImpl:56 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 06:17:27,529 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 06:17:27,597 INFO  service.impl.LinkServiceImpl:73 [] -> Links by User - testLogin successfully extracted
+2016-04-19 06:17:27,691 INFO  linkscutter.tests.LinkServiceTest:104 [] -> ----------------getLinksByTagTest()----------------------
+2016-04-19 06:17:27,736 INFO  service.impl.UserServiceImpl:45 [] -> UserAccount with 'ID' - 1 successfully extracted
+2016-04-19 06:17:27,761 INFO  service.impl.UserServiceImpl:56 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 06:17:27,771 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 06:17:27,793 INFO  service.impl.LinkServiceImpl:82 [] -> Link with 'GenCode' - CBMGPm successfully extracted
+2016-04-19 06:17:27,813 INFO  service.impl.UserServiceImpl:56 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 06:17:27,817 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 06:17:27,840 INFO  service.impl.LinkServiceImpl:82 [] -> Link with 'GenCode' - XJBUrA successfully extracted
+2016-04-19 06:17:27,861 INFO  service.impl.UserServiceImpl:56 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 06:17:27,867 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 06:17:27,874 INFO  service.impl.LinkServiceImpl:82 [] -> Link with 'GenCode' - cReZIt successfully extracted
+2016-04-19 06:17:27,895 INFO  service.impl.UserServiceImpl:56 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 06:17:27,901 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 06:17:27,910 INFO  service.impl.LinkServiceImpl:82 [] -> Link with 'GenCode' - KxtJlO successfully extracted
+2016-04-19 06:17:27,978 INFO  linkscutter.tests.LinkServiceTest:40 [] -> ----------------linkCrudTest()----------------------
+2016-04-19 06:17:27,980 INFO  service.impl.UserServiceImpl:45 [] -> UserAccount with 'ID' - 1 successfully extracted
+2016-04-19 06:17:28,000 INFO  service.impl.UserServiceImpl:56 [] -> UserAccount with 'LOGIN' - testLogin successfully extracted
+2016-04-19 06:17:28,002 INFO  service.impl.LinkServiceImpl:51 [] -> Link successfuly created
+2016-04-19 06:17:28,008 INFO  service.impl.LinkServiceImpl:82 [] -> Link with 'GenCode' - LwLVqw successfully extracted
+2016-04-19 06:17:28,053 INFO  service.impl.LinkServiceImpl:82 [] -> Link with 'GenCode' - LwLVqw successfully extracted
+2016-04-19 06:17:28,077 INFO  linkscutter.tests.UserServiceTest:22 [] -> ----------------userAccountCRUDTest()----------------------
+2016-04-19 06:17:28,087 INFO  service.impl.UserServiceImpl:37 [] -> User successfully created
+2016-04-19 06:17:28,093 INFO  service.impl.UserServiceImpl:56 [] -> UserAccount with 'LOGIN' - Login - -RLdkxI successfully extracted
+2016-04-19 06:17:28,104 INFO  service.impl.UserServiceImpl:64 [] -> UserAccount successfully updated
+2016-04-19 06:17:28,107 INFO  service.impl.UserServiceImpl:45 [] -> UserAccount with 'ID' - 36 successfully extracted
+2016-04-19 06:17:28,113 INFO  service.impl.UserServiceImpl:71 [] -> UserAccount with 'ID' - 36 successfully deleted
+2016-04-19 06:17:28,125 INFO  service.impl.UserServiceImpl:45 [] -> UserAccount with 'ID' - 36 successfully extracted

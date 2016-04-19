@@ -24,6 +24,9 @@ App.controller('UserLinksController', ['$scope', 'UserLinksService', '$state', '
 	                   },
 	                    function(errResponse){
 	                        console.error('Error while fetching Currencies');
+	                        if (errResponse.status === 404){
+	                        	self.links =null;
+	                        }
 	                    }
 	                   );
       };

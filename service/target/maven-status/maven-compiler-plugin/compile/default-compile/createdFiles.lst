@@ -1,7 +1,10 @@
+by\vonotirah\linkscutter\service\exceptions\AccountExistsException.class
 by\vonotirah\linkscutter\service\impl\UserServiceImpl.class
+by\vonotirah\linkscutter\service\exceptions\AccountDoesNotExistException.class
 by\vonotirah\linkscutter\service\impl\LinkServiceImpl.class
-by\vonotirah\linkscutter\service\impl\LinkDetailsServiceImpl.class
 by\vonotirah\linkscutter\service\LinkService.class
+by\vonotirah\linkscutter\service\exceptions\LinkNotFoundException.class
+by\vonotirah\linkscutter\service\impl\LinkDetailsServiceImpl.class
 by\vonotirah\linkscutter\service\LinkDetailsService.class
 by\vonotirah\linkscutter\service\UserService.class
 by\vonotirah\linkscutter\service\impl\TagServiceImpl.class

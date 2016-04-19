@@ -11,6 +11,8 @@ import org.springframework.transaction.annotation.Transactional;
 import by.vonotirah.linkscutter.dataaccess.UserAccountDao;
 import by.vonotirah.linkscutter.datamodel.UserAccount;
 import by.vonotirah.linkscutter.service.UserService;
+import by.vonotirah.linkscutter.service.exceptions.AccountDoesNotExistException;
+import by.vonotirah.linkscutter.service.exceptions.AccountExistsException;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -22,47 +24,18 @@ public class UserServiceImpl implements UserService {
 
 	@Override
 	@Transactional
-	public void createNewUser(UserAccount userAccount) {
+	public UserAccount createNewUser(UserAccount userAccount) {
 		Validate.isTrue(userAccount.getId() == null, "'createNewUser' method did not pass validation");
+
+		if (userAccountDao.chekUserLoginExist(userAccount.getLogin())) {
+			throw new AccountExistsException("Login exist");
+		}
+		if (userAccountDao.chekUserEmailExist(userAccount.getMail())) {
+			throw new AccountExistsException("Mail exist");
+		}
 		userAccountDao.insertEntity(userAccount);
 		LOGGER.info("User successfully created");
-	}
-
-	// not use
-	@Override
-	@Transactional
-	public void createNewUser(String login, String mail, String password) {
-		final UserAccount userAccount = new UserAccount();
-		userAccount.setLogin(login);
-		userAccount.setMail(mail);
-		userAccount.setPassword(password);
-		userAccountDao.insertEntity(userAccount);
-		LOGGER.info("User successfully created");
-	}
-
-	@Override
-	@Transactional
-	public boolean chekUserLoginExist(UserAccount user) {
-		if (userAccountDao.chekUserLoginExist(user.getLogin())) {
-			return true;
-		} else
-			return false;
-	}
-
-	@Override
-	@Transactional
-	public boolean chekUserMailExist(UserAccount user) {
-		if (userAccountDao.chekUserEmailExist(user.getMail())) {
-			return true;
-		} else
-			return false;
-	}
-
-	@Override
-	@Transactional
-	public UserAccount userRegistration(UserAccount user) {
-		createNewUser(user);
-		return user;
+		return userAccount;
 	}
 
 	@Override
@@ -77,15 +50,10 @@ public class UserServiceImpl implements UserService {
 	@Transactional
 	public UserAccount getUserByLogin(String login) {
 		UserAccount userAccount = userAccountDao.getUserByLogin(login);
+		if (userAccount == null) {
+			throw new AccountDoesNotExistException("UserAccount with Login - " + login + " does not exist");
+		}
 		LOGGER.info("UserAccount with 'LOGIN' - " + login + " successfully extracted");
-		return userAccount;
-	}
-
-	@Override
-	@Transactional
-	public UserAccount getUserByMail(String mail) {
-		UserAccount userAccount = userAccountDao.getUserByMail(mail);
-		LOGGER.info("UserAccount with 'MAIL' - " + mail + " successfully extracted");
 		return userAccount;
 	}
 

@@ -21,6 +21,23 @@ public class TagServiceImpl implements TagService {
 
 	@Override
 	@Transactional
+	public Set<Tag> tagsProcessing(List<String> tags) {
+		HashSet<Tag> tagSet = new HashSet<Tag>();
+		for (String s : tags) {
+			if (this.tagExist(s)) {
+				tagSet.add(this.getTagByName(s));
+			} else {
+				Tag tag = new Tag();
+				tag.setName(s);
+				this.saveOrUpdate(tag);
+				tagSet.add(tag);
+			}
+		}
+		return tagSet;
+	}
+
+	@Override
+	@Transactional
 	public void saveOrUpdate(Tag tag) {
 		if (tag.getId() == null) {
 			tagDao.insertEntity(tag);
@@ -39,23 +56,6 @@ public class TagServiceImpl implements TagService {
 	@Transactional
 	public Tag getTagByName(String name) {
 		return tagDao.gatTagByName(name);
-	}
-
-	@Override
-	@Transactional
-	public Set<Tag> tagsProcessing(List<String> tags) {
-		HashSet<Tag> tagSet = new HashSet<Tag>();
-		for (String s : tags) {
-			if (this.tagExist(s)) {
-				tagSet.add(this.getTagByName(s));
-			} else {
-				Tag tag = new Tag();
-				tag.setName(s);
-				this.saveOrUpdate(tag);
-				tagSet.add(tag);
-			}
-		}
-		return tagSet;
 	}
 
 	@Override

@@ -5,15 +5,28 @@ App.controller('UserLinksController', ['$scope', 'UserLinksService', '$state', '
       self.link={id:null,url:'',description:'',tags:[]};
       self.links=[];
       self.createdLink={id:null,url:'',description:'',tags:[]};
+            
+      $scope.totalItems = 0;
+      $scope.currentPage = 1;
+      $scope.itemsPerPage = 10;
+      $scope.maxSize = 5; //Number of pager buttons to show
+
+      $scope.setPage = function (pageNo) {
+        $scope.currentPage = pageNo;
+      };      
            
       self.fetchAllLinks = function(){
     	  UserLinksService.fetchAllLinks()
               .then(
 	                   function(d) {
 	                        self.links = d;
+	                        $scope.totalItems = self.links.length;
 	                   },
 	                    function(errResponse){
 	                        console.error('Error while fetching Currencies');
+	                        if (errResponse.status === 404){
+	                        	self.links =null;
+	                        }
 	                    }
 	                   );
       };

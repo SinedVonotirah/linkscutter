@@ -68,7 +68,7 @@ public class GetLinksByTagControllerTest extends AbstractControllerTest {
 	public void getLinkByExistenTag() throws Exception {
 		LOGGER.info("----------------getLinkByExistenTag----------------------");
 
-		mockMvc.perform(get("/tag/{tagId}", 0L)).andExpect(status().isNoContent()).andReturn();
+		mockMvc.perform(get("/tag/{tagId}", 0L)).andExpect(status().isNotFound()).andReturn();
 
 	}
 }

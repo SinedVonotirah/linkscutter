@@ -17,6 +17,7 @@ import by.vonotirah.linkscutter.service.LinkDetailsService;
 import by.vonotirah.linkscutter.service.LinkService;
 import by.vonotirah.linkscutter.service.TagService;
 import by.vonotirah.linkscutter.service.UserService;
+import by.vonotirah.linkscutter.service.exceptions.LinkNotFoundException;
 
 public class LinkServiceTest extends AbstractServiceTest {
 
@@ -34,7 +35,7 @@ public class LinkServiceTest extends AbstractServiceTest {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(LinkServiceTest.class);
 
-	@Test
+	@Test(expected = LinkNotFoundException.class)
 	public void linkCrudTest() {
 		LOGGER.info("----------------linkCrudTest()----------------------");
 		UserAccount userAccount = userService.getUserById(1L);

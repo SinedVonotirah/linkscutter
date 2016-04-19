@@ -27,6 +27,8 @@ public class GetAllLinksControllerTest extends AbstractControllerTest {
 
 	private Link secondLink;
 
+	// TODO create test for NotFoundException
+
 	@Before
 	public void createLinks() {
 		firstLink = createRandomLink("testLogin");
