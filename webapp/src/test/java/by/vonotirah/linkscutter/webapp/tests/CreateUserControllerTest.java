@@ -32,9 +32,6 @@ public class CreateUserControllerTest extends AbstractControllerTest {
 
 	@Test
 	public void createUser() throws Exception {
-
-		LOGGER.info("----------------createUser()----------------------");
-
 		MvcResult result = mockMvc.perform(post("/registration/").contentType(APPLICATION_JSON_UTF8)
 				.content(convertObjectToJsonBytes(userAccount))).andExpect(status().isOk()).andReturn();
 
@@ -52,12 +49,66 @@ public class CreateUserControllerTest extends AbstractControllerTest {
 
 	@Test
 	public void createUserWithExistingLogin() throws Exception {
-
-		LOGGER.info("----------------createUserWithExistingLogin()----------------------");
-
 		userAccount.setLogin(FIRST_TEST_LOGIN);
 
 		mockMvc.perform(post("/registration/").contentType(APPLICATION_JSON_UTF8)
 				.content(convertObjectToJsonBytes(userAccount))).andExpect(status().isConflict());
+	}
+
+	@Test
+	public void createUserWithExistingMail() throws Exception {
+		userAccount.setLogin(FIRST_TEST_LOGIN);
+
+		mockMvc.perform(post("/registration/").contentType(APPLICATION_JSON_UTF8)
+				.content(convertObjectToJsonBytes(userAccount))).andExpect(status().isConflict());
+	}
+
+	@Test
+	public void createUserWithEmptyLogin() throws Exception {
+		userAccount.setLogin(null);
+		mockMvc.perform(post("/registration/").contentType(APPLICATION_JSON_UTF8)
+				.content(convertObjectToJsonBytes(userAccount))).andExpect(status().isBadRequest());
+	}
+
+	@Test
+	public void createUserWithEmptyMail() throws Exception {
+		userAccount.setMail(null);
+		mockMvc.perform(post("/registration/").contentType(APPLICATION_JSON_UTF8)
+				.content(convertObjectToJsonBytes(userAccount))).andExpect(status().isBadRequest());
+	}
+
+	@Test
+	public void createUserWithEmptyPassword() throws Exception {
+		userAccount.setPassword(null);
+		mockMvc.perform(post("/registration/").contentType(APPLICATION_JSON_UTF8)
+				.content(convertObjectToJsonBytes(userAccount))).andExpect(status().isBadRequest());
+	}
+
+	@Test
+	public void createUserWithShortLogin() throws Exception {
+		userAccount.setLogin("");
+		mockMvc.perform(post("/registration/").contentType(APPLICATION_JSON_UTF8)
+				.content(convertObjectToJsonBytes(userAccount))).andExpect(status().isBadRequest());
+	}
+
+	@Test
+	public void createUserWithShortMail() throws Exception {
+		userAccount.setMail("");
+		mockMvc.perform(post("/registration/").contentType(APPLICATION_JSON_UTF8)
+				.content(convertObjectToJsonBytes(userAccount))).andExpect(status().isBadRequest());
+	}
+
+	@Test
+	public void createUserWithShortPassword() throws Exception {
+		userAccount.setPassword("");
+		mockMvc.perform(post("/registration/").contentType(APPLICATION_JSON_UTF8)
+				.content(convertObjectToJsonBytes(userAccount))).andExpect(status().isBadRequest());
+	}
+
+	@Test
+	public void createUserWithWrongEmail() throws Exception {
+		userAccount.setMail("wrongEmailPattern");
+		mockMvc.perform(post("/registration/").contentType(APPLICATION_JSON_UTF8)
+				.content(convertObjectToJsonBytes(userAccount))).andExpect(status().isBadRequest());
 	}
 }

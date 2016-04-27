@@ -14,7 +14,7 @@ public class LinksPermissionEvaluator implements PermissionEvaluator {
 	public boolean hasPermission(Authentication authentication, Object targetDomainObject, Object permission) {
 		boolean hasPermission = false;
 
-		if (targetDomainObject.equals("Links")) {
+		if (targetDomainObject.equals("Link")) {
 			Object principal = authentication.getPrincipal();
 			if (principal instanceof UserDetails) {
 				UserDetails userDetails = (UserDetails) principal;

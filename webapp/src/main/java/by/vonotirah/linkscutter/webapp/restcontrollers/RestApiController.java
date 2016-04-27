@@ -6,6 +6,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 import javax.persistence.NoResultException;
+import javax.validation.Valid;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,7 +20,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import by.vonotirah.linkscutter.datamodel.Link;
@@ -47,7 +47,7 @@ public class RestApiController {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(RestApiController.class);
 
-	@PreAuthorize("hasPermission('Links', 'getAllLinks')")
+	@PreAuthorize("hasPermission('Link', 'getAllLinks')")
 	@RequestMapping(value = "/links/", method = RequestMethod.GET)
 	public ResponseEntity<List<Link>> getAllLinks() {
 		LOGGER.info("REST API --- getAllLinks");
@@ -63,9 +63,9 @@ public class RestApiController {
 
 	}
 
-	@PreAuthorize("hasPermission('Links', 'createLink')")
+	@PreAuthorize("hasPermission('Link', 'createLink')")
 	@RequestMapping(value = "/links/", method = RequestMethod.POST)
-	public ResponseEntity<Link> createLink(@RequestBody LinkModel link) {
+	public ResponseEntity<Link> createLink(@Valid @RequestBody LinkModel link) {
 		LOGGER.info("REST API --- createLink");
 
 		if (link.getUrl() == null || link.getUrl().length() == 0) {
@@ -78,7 +78,7 @@ public class RestApiController {
 		}
 	}
 
-	@PreAuthorize("hasPermission('Links', 'deleteLink')")
+	@PreAuthorize("hasPermission('Link', 'deleteLink')")
 	@RequestMapping(value = "/links/{id}", method = RequestMethod.DELETE)
 	public ResponseEntity<Link> deleteLink(@PathVariable("id") final long id) {
 		LOGGER.info("REST API --- deleteLink");
@@ -110,7 +110,7 @@ public class RestApiController {
 
 	}
 
-	@PreAuthorize("hasPermission('Links', 'updateLink')")
+	@PreAuthorize("hasPermission('Link', 'updateLink')")
 	@RequestMapping(value = "/links/", method = RequestMethod.PUT)
 	public ResponseEntity<Link> updateLink(@RequestBody final LinkModel linkModel) {
 		LOGGER.info("REST API --- updateLink");
@@ -160,7 +160,7 @@ public class RestApiController {
 	}
 
 	@RequestMapping(value = "/registration", method = RequestMethod.POST)
-	public @ResponseBody ResponseEntity<UserAccount> createUser(@RequestBody final UserAccount user) {
+	public ResponseEntity<UserAccount> createUser(@Valid @RequestBody final UserAccount user) {
 		LOGGER.info("REST API --- createUser");
 
 		try {
@@ -178,14 +178,13 @@ public class RestApiController {
 		URI uri;
 		try {
 			uri = linkService.linkRedirect(code);
+			HttpHeaders httpHeaders = new HttpHeaders();
+			httpHeaders.setLocation(uri);
+			return new ResponseEntity<>(httpHeaders, HttpStatus.SEE_OTHER);
 		} catch (NoResultException e) {
 			e.printStackTrace();
 			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
 		}
-
-		HttpHeaders httpHeaders = new HttpHeaders();
-		httpHeaders.setLocation(uri);
-		return new ResponseEntity<>(httpHeaders, HttpStatus.SEE_OTHER);
 
 	}
 

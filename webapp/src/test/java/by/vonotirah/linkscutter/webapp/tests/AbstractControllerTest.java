@@ -60,16 +60,16 @@ public abstract class AbstractControllerTest {
 
 	protected MockMvc mockMvc;
 
-	protected static final MediaType APPLICATION_JSON_UTF8 = new MediaType(MediaType.APPLICATION_JSON.getType(),
-			MediaType.APPLICATION_JSON.getSubtype(), Charset.forName("utf8"));
-
 	protected UserDetails userDetails;
 
 	protected static final String FIRST_TEST_LOGIN = "testLogin";
 
 	protected static final String SECOND_TEST_LOGIN = "testLogin2";
 
-	private final static Random random = new Random();
+	protected static final MediaType APPLICATION_JSON_UTF8 = new MediaType(MediaType.APPLICATION_JSON.getType(),
+			MediaType.APPLICATION_JSON.getSubtype(), Charset.forName("utf8"));
+
+	private static final Random RANDOM = new Random();
 
 	private static final RandomData RANDOM_DATA = new RandomDataImpl();
 
@@ -129,7 +129,7 @@ public abstract class AbstractControllerTest {
 		UserAccount userAccount = new UserAccount();
 
 		userAccount.setLogin(randomString("Login "));
-		userAccount.setMail(randomString("Mail "));
+		userAccount.setMail(randomString("Mail@"));
 		userAccount.setPassword(randomString("Password "));
 		return userAccount;
 	}

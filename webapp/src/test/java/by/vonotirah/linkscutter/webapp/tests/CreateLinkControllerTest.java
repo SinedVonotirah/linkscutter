@@ -22,8 +22,6 @@ public class CreateLinkControllerTest extends AbstractControllerTest {
 
 	@Test
 	public void createLinkAsAnon() throws Exception {
-		LOGGER.info("----------------createLinkAsAnon()----------------------");
-
 		LinkModel linkModel = getLinkModel();
 
 		mockMvc.perform(post("/links/").contentType(APPLICATION_JSON_UTF8).content(convertObjectToJsonBytes(linkModel)))
@@ -32,8 +30,6 @@ public class CreateLinkControllerTest extends AbstractControllerTest {
 
 	@Test
 	public void createLink() throws Exception {
-		LOGGER.info("----------------createLink()----------------------");
-
 		LinkModel linkModel = getLinkModel();
 
 		MvcResult result = mockMvc
@@ -51,13 +47,11 @@ public class CreateLinkControllerTest extends AbstractControllerTest {
 
 	@Test
 	public void createLinkWithoutUrl() throws Exception {
-		LOGGER.info("----------------createLinkWithoutUrl()----------------------");
-
 		LinkModel linkModel = getLinkModel();
-		linkModel.setUrl("");
+		linkModel.setUrl(null);
 
 		mockMvc.perform(post("/links/").contentType(APPLICATION_JSON_UTF8).content(convertObjectToJsonBytes(linkModel))
-				.with(user(userDetails))).andExpect(status().isNoContent());
+				.with(user(userDetails))).andExpect(status().isBadRequest());
 	}
 
 }

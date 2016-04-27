@@ -3,6 +3,8 @@ var App = angular.module('linksCutter',['ngResource','ui.router', 'ui.bootstrap'
 
 App.config(['$stateProvider', '$urlRouterProvider',  function($stateProvider, $urlRouterProvider){
 	
+
+	
 	$urlRouterProvider.otherwise("/login")
     
 	$stateProvider

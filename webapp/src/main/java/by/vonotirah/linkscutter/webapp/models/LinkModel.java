@@ -2,10 +2,15 @@ package by.vonotirah.linkscutter.webapp.models;
 
 import java.util.List;
 
+import javax.validation.constraints.NotNull;
+import javax.validation.constraints.Size;
+
 public class LinkModel {
 
 	private Long id;
 
+	@NotNull
+	@Size(min = 1)
 	private String url;
 
 	private String description;

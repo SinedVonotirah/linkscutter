@@ -23,7 +23,7 @@ App.controller('IndexController', ['IndexService', '$state', function(IndexServi
           .then(
                   function(d) {
                 	  localStorage.removeItem("authenticated");
-                	    $state.go("login");
+                	  $state.go("login");
                      
                   },
                    function(errResponse){
