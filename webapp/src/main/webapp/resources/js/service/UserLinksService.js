@@ -4,8 +4,12 @@ App.factory('UserLinksService', ['$http', '$q', function($http, $q){
  
     return {
          
-        fetchAllLinks: function() {
-            return $http.get('http://localhost:8080/webapp/links/')
+        fetchAllLinks: function(page) {
+            return $http.get('http://localhost:8080/webapp/links/', {
+		                params: {
+		                    page: page
+		                }
+		             })
                 .then(
                         function(response){
                             return response.data;

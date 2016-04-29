@@ -14,13 +14,21 @@ App.controller('UserLinksController', ['$scope', 'UserLinksService', '$state', '
       $scope.setPage = function (pageNo) {
         $scope.currentPage = pageNo;
       };      
+      
+      $scope.pageChanged = function() {
+    	  	console.log("pageChange");
+    	    self.fetchAllLinks();
+      };
+      
+      
            
       self.fetchAllLinks = function(){
-    	  UserLinksService.fetchAllLinks()
+    	  UserLinksService.fetchAllLinks($scope.currentPage)
               .then(
 	                   function(d) {
-	                        self.links = d;
-	                        $scope.totalItems = self.links.length;
+	                	    console.log(d.count);
+	                        self.links = d.links;
+	                        $scope.totalItems = d.count;
 	                   },
 	                    function(errResponse){
 	                        console.error('Error while fetching Currencies');
@@ -30,19 +38,22 @@ App.controller('UserLinksController', ['$scope', 'UserLinksService', '$state', '
 	                    }
 	                   );
       };
-        
-      self.createLink = function(link){
-    	  UserLinksService.createLink(link)
-              .then(                      
+      
+      
+      self.fetchAllLinks();
+    
+  	  self.createLink = function(link){
+		  UserLinksService.createLink(link)
+	          .then(                      
 	          		  function(data){
 	        	  			self.fetchAllLinks();
 	        	  			self.createdLink = data;
 	          		  },
 	                  function(errResponse){
 	                       console.error('Error while creating Link.');
-	                      } 
-              );
-          };
+		                      } 
+	              );
+      };
  
          self.updateLink = function(link, id){
         	 UserLinksService.updateLink(link, id)
@@ -64,10 +75,10 @@ App.controller('UserLinksController', ['$scope', 'UserLinksService', '$state', '
                   );
           };
  
-          self.fetchAllLinks();
+          
  
-          self.submit = function() {
-        	  self.createdLink={id:null,url:'',description:'',tags:[]};
+      self.submit = function() {
+    	  self.createdLink={id:null,url:'',description:'',tags:[]};
           if(self.link.id===null){
               console.log('Saving New Link', self.link);    
               self.createLink(self.link);
@@ -78,7 +89,7 @@ App.controller('UserLinksController', ['$scope', 'UserLinksService', '$state', '
           self.reset();
           self.fetchAllLinks();
       };
-           
+       
       self.edit = function(id){
     	  self.createdLink={id:null,url:'',description:'',tags:[]};
     	  self.reset();
@@ -116,6 +127,6 @@ App.controller('UserLinksController', ['$scope', 'UserLinksService', '$state', '
       
       self.details = function(id){
     	  $state.go("details", { id: id});
-          };
+      };
  
 }]);

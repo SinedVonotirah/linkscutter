@@ -6,6 +6,7 @@ import java.util.List;
 
 import javax.inject.Inject;
 import javax.persistence.NoResultException;
+import javax.persistence.metamodel.SingularAttribute;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import org.slf4j.Logger;
@@ -126,6 +127,7 @@ public class LinkServiceImpl implements LinkService {
 		linkDao.updateEntity(link);
 	}
 
+	@Transactional
 	private String generateLinkCode() {
 		String genCode;
 		do {
@@ -145,6 +147,30 @@ public class LinkServiceImpl implements LinkService {
 			e.printStackTrace();
 		}
 		return url;
+	}
+
+	@Override
+	@Transactional
+	public List<Link> getLinksByUser(UserAccount userAccount, SingularAttribute<Link, ?> attr, boolean ascending,
+			int startRecord, int pageSize) {
+
+		List<Link> links = linkDao.getLinksByUser(userAccount, attr, ascending, startRecord, pageSize);
+		if (links.isEmpty()) {
+			throw new LinkNotFoundException("Links by User with login" + userAccount.getLogin() + "not found");
+		}
+		LOGGER.info("Links by User - " + userAccount.getLogin() + " successfully extracted");
+		return links;
+	}
+
+	@Override
+	@Transactional
+	public Long getLinksCountByUser(UserAccount userAccount) {
+		Long count = linkDao.getLinksCountByUser(userAccount);
+		if (count == null) {
+			throw new LinkNotFoundException("Links by User with login" + userAccount.getLogin() + "not found");
+		}
+		LOGGER.info("LinksCount by User - " + userAccount.getLogin() + " successfully extracted");
+		return count;
 	}
 
 }

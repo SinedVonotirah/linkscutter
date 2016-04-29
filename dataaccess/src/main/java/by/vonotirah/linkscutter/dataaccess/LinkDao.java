@@ -2,6 +2,8 @@ package by.vonotirah.linkscutter.dataaccess;
 
 import java.util.List;
 
+import javax.persistence.metamodel.SingularAttribute;
+
 import by.vonotirah.linkscutter.datamodel.Link;
 import by.vonotirah.linkscutter.datamodel.UserAccount;
 
@@ -16,4 +18,9 @@ public interface LinkDao extends AbstractDao<Long, Link> {
 	List<Link> getAllLinks();
 
 	List<Link> getLinksByUser(UserAccount userAccount);
+
+	List<Link> getLinksByUser(UserAccount userAccount, SingularAttribute<Link, ?> attr, boolean ascending,
+			int startRecord, int pageSize);
+
+	Long getLinksCountByUser(UserAccount userAccount);
 }

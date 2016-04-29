@@ -20,9 +20,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import by.vonotirah.linkscutter.datamodel.Link;
+import by.vonotirah.linkscutter.datamodel.Link_;
 import by.vonotirah.linkscutter.datamodel.UserAccount;
 import by.vonotirah.linkscutter.service.LinkDetailsService;
 import by.vonotirah.linkscutter.service.LinkService;
@@ -32,6 +34,7 @@ import by.vonotirah.linkscutter.service.exceptions.LinkNotFoundException;
 import by.vonotirah.linkscutter.webapp.exceptions.ConflictException;
 import by.vonotirah.linkscutter.webapp.exceptions.NotFoundException;
 import by.vonotirah.linkscutter.webapp.models.LinkModel;
+import by.vonotirah.linkscutter.webapp.models.LinksModel;
 
 @RestController
 public class RestApiController {
@@ -48,6 +51,25 @@ public class RestApiController {
 	private static final Logger LOGGER = LoggerFactory.getLogger(RestApiController.class);
 
 	@PreAuthorize("hasPermission('Link', 'getAllLinks')")
+	@RequestMapping(value = "/links/", method = RequestMethod.GET, params = "page")
+	public ResponseEntity<LinksModel> getAllLinks(@RequestParam("page") long page) {
+		LOGGER.info("REST API --- getAllLinks paggination");
+
+		UserAccount userAccount = getAuthUserAccount();
+		LinksModel linksModel = new LinksModel();
+
+		try {
+			List<Link> links = linkService.getLinksByUser(userAccount, Link_.id, false, (int) ((page - 1) * 10L), 10);
+			Long count = linkService.getLinksCountByUser(userAccount);
+			linksModel.setLinks(links);
+			linksModel.setCount(count);
+			return new ResponseEntity<LinksModel>(linksModel, HttpStatus.OK);
+		} catch (LinkNotFoundException exception) {
+			throw new NotFoundException(exception);
+		}
+	}
+
+	@PreAuthorize("hasPermission('Link', 'getAllLinks')")
 	@RequestMapping(value = "/links/", method = RequestMethod.GET)
 	public ResponseEntity<List<Link>> getAllLinks() {
 		LOGGER.info("REST API --- getAllLinks");
@@ -60,7 +82,6 @@ public class RestApiController {
 		} catch (LinkNotFoundException exception) {
 			throw new NotFoundException(exception);
 		}
-
 	}
 
 	@PreAuthorize("hasPermission('Link', 'createLink')")

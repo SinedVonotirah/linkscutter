@@ -7,7 +7,9 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Join;
 import javax.persistence.criteria.Root;
+import javax.persistence.metamodel.SingularAttribute;
 
+import org.hibernate.jpa.criteria.OrderImpl;
 import org.springframework.stereotype.Repository;
 
 import by.vonotirah.linkscutter.dataaccess.LinkDao;
@@ -29,8 +31,10 @@ public class LinkDaoImpl extends AbstractDaoImpl<Long, Link> implements LinkDao 
 	@Override
 	public Link getLinkByCode(final String code) {
 		CriteriaBuilder cBuilder = getEntityManager().getCriteriaBuilder();
+
 		CriteriaQuery<Link> criteria = cBuilder.createQuery(Link.class);
 		Root<Link> root = criteria.from(Link.class);
+
 		criteria.select(root);
 		criteria.where(cBuilder.equal(root.get(Link_.genCode), code));
 		TypedQuery<Link> query = getEntityManager().createQuery(criteria);
@@ -40,8 +44,10 @@ public class LinkDaoImpl extends AbstractDaoImpl<Long, Link> implements LinkDao 
 	@Override
 	public boolean checkCodeExist(final String code) {
 		CriteriaBuilder cBuilder = getEntityManager().getCriteriaBuilder();
+
 		CriteriaQuery<Link> criteria = cBuilder.createQuery(Link.class);
 		Root<Link> root = criteria.from(Link.class);
+
 		criteria.select(root);
 		criteria.where(cBuilder.equal(root.get(Link_.genCode), code));
 		TypedQuery<Link> query = getEntityManager().createQuery(criteria);
@@ -51,10 +57,12 @@ public class LinkDaoImpl extends AbstractDaoImpl<Long, Link> implements LinkDao 
 	@Override
 	public List<Link> getLinksByTag(final Long tagId) {
 		CriteriaBuilder cBuilder = getEntityManager().getCriteriaBuilder();
+
 		CriteriaQuery<Link> criteria = cBuilder.createQuery(Link.class);
 		Root<Link> linkRoot = criteria.from(Link.class);
 		Join<Link, LinkDetails> linkDetailsJoin = linkRoot.join(Link_.linkDetails);
 		Join<LinkDetails, Tag> tagJoin = linkDetailsJoin.join(LinkDetails_.tags);
+
 		criteria.select(linkRoot);
 		criteria.where(cBuilder.equal(tagJoin.get(Tag_.id), tagId));
 		TypedQuery<Link> query = getEntityManager().createQuery(criteria);
@@ -64,8 +72,10 @@ public class LinkDaoImpl extends AbstractDaoImpl<Long, Link> implements LinkDao 
 	@Override
 	public List<Link> getAllLinks() {
 		CriteriaBuilder cBuilder = getEntityManager().getCriteriaBuilder();
+
 		CriteriaQuery<Link> criteria = cBuilder.createQuery(Link.class);
 		Root<Link> root = criteria.from(Link.class);
+
 		criteria.select(root);
 		TypedQuery<Link> query = getEntityManager().createQuery(criteria);
 		List<Link> results = query.getResultList();
@@ -74,15 +84,50 @@ public class LinkDaoImpl extends AbstractDaoImpl<Long, Link> implements LinkDao 
 	}
 
 	@Override
-	public List<Link> getLinksByUser(final UserAccount userAccount) {
+	public List<Link> getLinksByUser(UserAccount userAccount) {
 		CriteriaBuilder cBuilder = getEntityManager().getCriteriaBuilder();
+
 		CriteriaQuery<Link> criteria = cBuilder.createQuery(Link.class);
 		Root<Link> root = criteria.from(Link.class);
+
 		criteria.select(root);
 		criteria.where(cBuilder.equal(root.get(Link_.userAccount), userAccount));
 		TypedQuery<Link> query = getEntityManager().createQuery(criteria);
 		List<Link> results = query.getResultList();
 		return results;
+	}
+
+	@Override
+	public List<Link> getLinksByUser(UserAccount userAccount, SingularAttribute<Link, ?> attr, boolean ascending,
+			int startRecord, int pageSize) {
+		CriteriaBuilder cBuilder = getEntityManager().getCriteriaBuilder();
+
+		CriteriaQuery<Link> criteria = cBuilder.createQuery(Link.class);
+		Root<Link> root = criteria.from(Link.class);
+
+		criteria.select(root);
+		criteria.where(cBuilder.equal(root.get(Link_.userAccount), userAccount));
+		criteria.orderBy(new OrderImpl(root.get(attr), ascending));
+		TypedQuery<Link> query = getEntityManager().createQuery(criteria);
+		query.setFirstResult(startRecord);
+		query.setMaxResults(pageSize);
+
+		List<Link> results = query.getResultList();
+		return results;
+	}
+
+	@Override
+	public Long getLinksCountByUser(UserAccount userAccount) {
+		CriteriaBuilder cBuilder = getEntityManager().getCriteriaBuilder();
+
+		CriteriaQuery<Long> criteria = cBuilder.createQuery(Long.class);
+		Root<Link> root = criteria.from(Link.class);
+
+		criteria.select(cBuilder.count(root));
+		criteria.where(cBuilder.equal(root.get(Link_.userAccount), userAccount));
+		TypedQuery<Long> query = getEntityManager().createQuery(criteria);
+		Long count = query.getSingleResult();
+		return count;
 	}
 
 }
