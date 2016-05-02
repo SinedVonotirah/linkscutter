@@ -7,14 +7,10 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import by.vonotirah.linkscutter.datamodel.Link;
 
 public class DeleteLinkControllerTest extends AbstractControllerTest {
-
-	private static final Logger LOGGER = LoggerFactory.getLogger(AuthControllerTest.class);
 
 	private Link linkFirstUser;
 
@@ -37,14 +33,12 @@ public class DeleteLinkControllerTest extends AbstractControllerTest {
 
 	@Test
 	public void deleteLinkAsAnon() throws Exception {
-		LOGGER.info("----------------deleteLinkAsAnon()----------------------");
 
 		mockMvc.perform(delete("/links/{id}", linkFirstUser.getId())).andExpect(status().isUnauthorized());
 	}
 
 	@Test
 	public void deleteLink() throws Exception {
-		LOGGER.info("----------------deleteLink()----------------------");
 
 		mockMvc.perform(delete("/links/{id}", linkFirstUser.getId()).with(user(userDetails)))
 				.andExpect(status().isOk());
@@ -52,14 +46,12 @@ public class DeleteLinkControllerTest extends AbstractControllerTest {
 
 	@Test
 	public void deleteNonExistenLink() throws Exception {
-		LOGGER.info("----------------deleteNonExistenLink()----------------------");
 
 		mockMvc.perform(delete("/links/{id}", 0L).with(user(userDetails))).andExpect(status().isNotFound());
 	}
 
 	@Test
 	public void deleteForeignLink() throws Exception {
-		LOGGER.info("----------------deleteForeignLink()----------------------");
 
 		mockMvc.perform(delete("/links/{id}", linkSecondUser.getId()).with(user(userDetails)))
 				.andExpect(status().isLocked());

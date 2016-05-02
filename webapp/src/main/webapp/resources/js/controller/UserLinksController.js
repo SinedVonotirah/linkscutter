@@ -2,8 +2,8 @@
  
 App.controller('UserLinksController', ['$scope', 'UserLinksService', '$state', '$window', function($scope, UserLinksService, $state, $window) {
       var self = this;
-      self.link={id:null,url:'',description:'',tags:[]};
-      self.links=[];
+      self.link={id:null,url:'',description:'', tags:[]};
+      self.links=[];      
       self.createdLink={id:null,url:'',description:'',tags:[]};
             
       $scope.totalItems = 0;
@@ -80,7 +80,7 @@ App.controller('UserLinksController', ['$scope', 'UserLinksService', '$state', '
       self.submit = function() {
     	  self.createdLink={id:null,url:'',description:'',tags:[]};
           if(self.link.id===null){
-              console.log('Saving New Link', self.link);    
+              console.log('Saving New Link', self.link);
               self.createLink(self.link);
           }else{
               self.updateLink(self.link, self.link.id);

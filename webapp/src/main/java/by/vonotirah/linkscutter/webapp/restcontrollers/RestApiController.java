@@ -52,14 +52,15 @@ public class RestApiController {
 
 	@PreAuthorize("hasPermission('Link', 'getAllLinks')")
 	@RequestMapping(value = "/links/", method = RequestMethod.GET, params = "page")
-	public ResponseEntity<LinksModel> getAllLinks(@RequestParam("page") long page) {
+	public ResponseEntity<LinksModel> getAllLinks(@RequestParam("page") int page) {
 		LOGGER.info("REST API --- getAllLinks paggination");
 
 		UserAccount userAccount = getAuthUserAccount();
 		LinksModel linksModel = new LinksModel();
 
 		try {
-			List<Link> links = linkService.getLinksByUser(userAccount, Link_.id, false, (int) ((page - 1) * 10L), 10);
+			int startRecord = (page - 1) * 10;
+			List<Link> links = linkService.getLinksByUser(userAccount, Link_.id, false, startRecord, 10);
 			Long count = linkService.getLinksCountByUser(userAccount);
 			linksModel.setLinks(links);
 			linksModel.setCount(count);
@@ -230,6 +231,16 @@ public class RestApiController {
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		String userLogin = auth.getName();
 		return userService.getUserByLogin(userLogin);
+	}
+
+	@RequestMapping(value = "/test", method = RequestMethod.POST)
+	public ResponseEntity<Link> test(@Valid @RequestBody final Link link) {
+		LOGGER.info("REST API --- TEST");
+		System.out.println(link.getUrl());
+		System.out.println(link.getLinkDetails().getTags().toString());
+		System.out.println(link.getLinkDetails().getCreated());
+
+		return new ResponseEntity<Link>(HttpStatus.OK);
 	}
 
 }

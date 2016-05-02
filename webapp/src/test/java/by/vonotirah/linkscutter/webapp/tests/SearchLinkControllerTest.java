@@ -7,8 +7,6 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.test.web.servlet.MvcResult;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -16,8 +14,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import by.vonotirah.linkscutter.datamodel.Link;
 
 public class SearchLinkControllerTest extends AbstractControllerTest {
-
-	private static final Logger LOGGER = LoggerFactory.getLogger(AuthControllerTest.class);
 
 	private Link link;
 	private String searchUrl;
@@ -35,7 +31,6 @@ public class SearchLinkControllerTest extends AbstractControllerTest {
 
 	@Test
 	public void searchLink() throws Exception {
-		LOGGER.info("----------------searchLink()----------------------");
 
 		MvcResult result = mockMvc.perform(post("/search").contentType(APPLICATION_JSON_UTF8).content(searchUrl))
 				.andExpect(status().isOk()).andReturn();
@@ -49,7 +44,6 @@ public class SearchLinkControllerTest extends AbstractControllerTest {
 
 	@Test
 	public void searchNonExistenLink() throws Exception {
-		LOGGER.info("----------------searchNonExistenLink()----------------------");
 
 		mockMvc.perform(post("/search").contentType(APPLICATION_JSON_UTF8).content("000000"))
 				.andExpect(status().isNotFound());

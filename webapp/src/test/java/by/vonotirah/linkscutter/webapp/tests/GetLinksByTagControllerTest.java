@@ -11,8 +11,6 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.test.web.servlet.MvcResult;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -25,8 +23,6 @@ public class GetLinksByTagControllerTest extends AbstractControllerTest {
 	private Link firstLink;
 	private Link secondLink;
 	private Long sameTagId;
-
-	private static final Logger LOGGER = LoggerFactory.getLogger(GetLinksByTagControllerTest.class);
 
 	@Before
 	public void createLinks() {
@@ -49,7 +45,6 @@ public class GetLinksByTagControllerTest extends AbstractControllerTest {
 
 	@Test
 	public void getLinksByTag() throws Exception {
-		LOGGER.info("----------------getLinksByTag()----------------------");
 
 		System.out.println(sameTagId);
 
@@ -66,7 +61,6 @@ public class GetLinksByTagControllerTest extends AbstractControllerTest {
 
 	@Test
 	public void getLinkByExistenTag() throws Exception {
-		LOGGER.info("----------------getLinkByExistenTag----------------------");
 
 		mockMvc.perform(get("/tag/{tagId}", 0L)).andExpect(status().isNotFound()).andReturn();
 

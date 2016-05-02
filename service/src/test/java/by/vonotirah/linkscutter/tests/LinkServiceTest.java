@@ -37,17 +37,16 @@ public class LinkServiceTest extends AbstractServiceTest {
 
 	@Test(expected = LinkNotFoundException.class)
 	public void linkCrudTest() {
-		LOGGER.info("----------------linkCrudTest()----------------------");
 		UserAccount userAccount = userService.getUserById(1L);
 
-		// -------Create new Link for UserAccount with ID = 1
+		// Create new Link for UserAccount with ID = 1
 		String url = randomString("http://");
 		String userLogin = userAccount.getLogin();
 		String description = randomString("Description ");
 		List<String> tags = getRandomTagsList();
 		Link newLink = linkService.createNewLink(url, userLogin, description, tags);
 
-		// -------Get Link by GenCode
+		// Get Link by GenCode
 		Link extractedLink = linkService.getLinkByCode(newLink.getGenCode());
 		Assert.assertNotNull(extractedLink);
 		Assert.assertEquals(newLink.getGenCode(), extractedLink.getGenCode());
@@ -55,7 +54,7 @@ public class LinkServiceTest extends AbstractServiceTest {
 		Assert.assertEquals(newLink.getLinkDetails().getDescription(), extractedLink.getLinkDetails().getDescription());
 		Assert.assertEquals(newLink.getLinkDetails().getTags(), extractedLink.getLinkDetails().getTags());
 
-		// -------Update Link by UserAccount with ID = 1
+		// Update Link by UserAccount with ID = 1
 		Long linkId = extractedLink.getId();
 		String newDescription = randomString("Description ");
 		List<String> newTags = getRandomTagsList();
@@ -68,7 +67,7 @@ public class LinkServiceTest extends AbstractServiceTest {
 				extractedLink.getLinkDetails().getDescription());
 		Assert.assertNotEquals(updatedLink.getLinkDetails().getTags(), extractedLink.getLinkDetails().getTags());
 
-		// -------Delete Link by ID
+		// Delete Link by ID
 		linkService.deleteLinkById(linkId);
 		Assert.assertNull(linkService.getLinkById(linkId));
 		Assert.assertNull(linkDetailsService.getLinkDetailsById(linkId));
@@ -77,10 +76,9 @@ public class LinkServiceTest extends AbstractServiceTest {
 
 	@Test
 	public void getAllLinksByUserTest() {
-		LOGGER.info("----------------getAllLinksByUserTest()----------------------");
 		UserAccount userAccount = userService.getUserById(1L);
 
-		// -------Create n links for UserAccount with ID = 1
+		// Create n links for UserAccount with ID = 1
 		int linksCount = randomInteger(3, 5);
 		for (int i = 0; i < linksCount; i++) {
 			String url = randomString("http://");
@@ -90,7 +88,7 @@ public class LinkServiceTest extends AbstractServiceTest {
 			linkService.createNewLink(url, userLogin, description, tags);
 		}
 
-		// -------Get All Links by UserAccount with ID = 1
+		// Get All Links by UserAccount with ID = 1
 		List<Link> extractedLinkList = linkService.getLinksByUser(userAccount);
 		for (Link extractedLink : extractedLinkList) {
 			Assert.assertEquals(extractedLink.getUserAccount(), userAccount);
@@ -101,15 +99,14 @@ public class LinkServiceTest extends AbstractServiceTest {
 
 	@Test
 	public void getLinksByTagTest() {
-		LOGGER.info("----------------getLinksByTagTest()----------------------");
 		UserAccount userAccount = userService.getUserById(1L);
 		String sameTag = randomString("Tag");
 		List<Link> createdLinks = new ArrayList<Link>();
 
-		// -------Create n links for UserAccount with ID = 1 and with the same
-		// tag
-		int linksCount = randomInteger(3, 5);
-		for (int i = 0; i < linksCount; i++) {
+		// Create n links for UserAccount with ID = 1 and with the same tag
+
+		int randomLinksCount = randomInteger(3, 5);
+		for (int i = 0; i < randomLinksCount; i++) {
 			String url = randomString("http://");
 			String userLogin = userAccount.getLogin();
 			String description = randomString("Description ");
@@ -119,6 +116,8 @@ public class LinkServiceTest extends AbstractServiceTest {
 			createdLinks.add(linkService.getLinkByCode(createdLink.getGenCode()));
 		}
 
+		// Get links by sameTag
+
 		Tag tag = tagService.getTagByName(sameTag);
 		List<Link> extractedLinks = linkService.getLinksByTag(tag.getId());
 		Assert.assertEquals(createdLinks, extractedLinks);
@@ -126,7 +125,34 @@ public class LinkServiceTest extends AbstractServiceTest {
 		for (Link link : createdLinks) {
 			linkService.deleteLinkById(link.getId());
 		}
+	}
 
+	@Test
+	public void getLinksCountByUser() {
+		UserAccount userAccount = userService.getUserById(1L);
+
+		List<Link> createdLinks = new ArrayList<Link>();
+
+		// Create n links for UserAccount with ID = 1
+
+		int randomLinksCount = randomInteger(3, 5);
+		for (int i = 0; i < randomLinksCount; i++) {
+			String url = randomString("http://");
+			String userLogin = userAccount.getLogin();
+			String description = randomString("Description ");
+			List<String> tags = getRandomTagsList();
+			Link createdLink = linkService.createNewLink(url, userLogin, description, tags);
+			createdLinks.add(linkService.getLinkByCode(createdLink.getGenCode()));
+		}
+
+		// Get links count by userAccount
+
+		Long linksCount = linkService.getLinksCountByUser(userAccount);
+		Assert.assertEquals(linksCount, Long.valueOf(createdLinks.size()));
+
+		for (Link link : createdLinks) {
+			linkService.deleteLinkById(link.getId());
+		}
 	}
 
 }

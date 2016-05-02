@@ -19,17 +19,17 @@ public class UserAccount extends AbstractEntity {
 
 	@Column
 	@NotNull
-	@Size(min = 5, max = 20)
+	@Size(min = 1, max = 20)
 	private String login;
 
 	@Column
 	@NotNull
-	@Size(min = 5, max = 50)
+	@Size(min = 1, max = 50)
 	private String password;
 
 	@Column
 	@NotNull
-	@Size(min = 5, max = 129)
+	@Size(min = 1, max = 129)
 	@Email
 	private String mail;
 

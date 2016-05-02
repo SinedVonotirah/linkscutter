@@ -13,6 +13,7 @@ public class LinkModel {
 	@Size(min = 1)
 	private String url;
 
+	@Size(min = 0, max = 50)
 	private String description;
 
 	private List<String> tags;

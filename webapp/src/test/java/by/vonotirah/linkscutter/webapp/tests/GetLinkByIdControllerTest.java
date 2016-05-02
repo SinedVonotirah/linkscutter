@@ -7,8 +7,6 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.test.web.servlet.MvcResult;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -16,8 +14,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import by.vonotirah.linkscutter.datamodel.Link;
 
 public class GetLinkByIdControllerTest extends AbstractControllerTest {
-
-	private static final Logger LOGGER = LoggerFactory.getLogger(AuthControllerTest.class);
 
 	private Link link;
 
@@ -33,7 +29,6 @@ public class GetLinkByIdControllerTest extends AbstractControllerTest {
 
 	@Test
 	public void getLinkById() throws Exception {
-		LOGGER.info("----------------getLinkByIdTest()----------------------");
 
 		MvcResult result = mockMvc.perform(get("/link/{id}", link.getId())).andExpect(status().isOk()).andReturn();
 
@@ -46,7 +41,6 @@ public class GetLinkByIdControllerTest extends AbstractControllerTest {
 
 	@Test
 	public void getNonExistingLinkById() throws Exception {
-		LOGGER.info("----------------getNonExistenLinkById()----------------------");
 
 		mockMvc.perform(get("/link/{id}", 0L)).andExpect(status().isNotFound());
 

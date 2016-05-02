@@ -7,8 +7,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.test.web.servlet.MvcResult;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -17,8 +15,6 @@ import by.vonotirah.linkscutter.datamodel.Link;
 import by.vonotirah.linkscutter.webapp.models.LinkModel;
 
 public class CreateLinkControllerTest extends AbstractControllerTest {
-
-	private static final Logger LOGGER = LoggerFactory.getLogger(AuthControllerTest.class);
 
 	@Test
 	public void createLinkAsAnon() throws Exception {

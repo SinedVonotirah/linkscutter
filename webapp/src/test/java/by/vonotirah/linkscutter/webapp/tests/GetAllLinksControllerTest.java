@@ -11,8 +11,6 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.test.web.servlet.MvcResult;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -20,8 +18,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import by.vonotirah.linkscutter.datamodel.Link;
 
 public class GetAllLinksControllerTest extends AbstractControllerTest {
-
-	private static final Logger LOGGER = LoggerFactory.getLogger(AuthControllerTest.class);
 
 	private Link firstLink;
 
@@ -43,7 +39,6 @@ public class GetAllLinksControllerTest extends AbstractControllerTest {
 
 	@Test
 	public void getAllLinks() throws Exception {
-		LOGGER.info("----------------getAllLinks()----------------------");
 
 		MvcResult result = mockMvc.perform(get("/links/").with(user(userDetails))).andExpect(status().isOk())
 				.andReturn();
@@ -60,7 +55,6 @@ public class GetAllLinksControllerTest extends AbstractControllerTest {
 
 	@Test
 	public void getAllLinksAsAnon() throws Exception {
-		LOGGER.info("----------------getAllLinksAsAnon()----------------------");
 
 		mockMvc.perform(get("/links/")).andExpect(status().isUnauthorized());
 

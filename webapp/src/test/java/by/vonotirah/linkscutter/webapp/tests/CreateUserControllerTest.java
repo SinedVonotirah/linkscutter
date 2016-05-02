@@ -8,8 +8,6 @@ import javax.inject.Inject;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.test.web.servlet.MvcResult;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -22,8 +20,6 @@ public class CreateUserControllerTest extends AbstractControllerTest {
 	@Inject
 	private UserService userService;
 	private UserAccount userAccount;
-
-	private static final Logger LOGGER = LoggerFactory.getLogger(AuthControllerTest.class);
 
 	@Before
 	public void createUserAccount() {
