@@ -16,6 +16,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -33,7 +34,6 @@ import by.vonotirah.linkscutter.service.exceptions.AccountExistsException;
 import by.vonotirah.linkscutter.service.exceptions.LinkNotFoundException;
 import by.vonotirah.linkscutter.webapp.exceptions.ConflictException;
 import by.vonotirah.linkscutter.webapp.exceptions.NotFoundException;
-import by.vonotirah.linkscutter.webapp.models.LinkModel;
 import by.vonotirah.linkscutter.webapp.models.LinksModel;
 
 @RestController
@@ -85,17 +85,63 @@ public class RestApiController {
 		}
 	}
 
+	@RequestMapping(value = "/tag/{tagId}", method = RequestMethod.GET, params = "page")
+	public ResponseEntity<LinksModel> getLinksByTag(@PathVariable("tagId") final long tagId,
+			@RequestParam("page") int page) {
+		LOGGER.info("REST API --- getLinksByTag");
+		System.out.println(tagId);
+		System.out.println(page);
+
+		LinksModel linksModel = new LinksModel();
+
+		try {
+			int startRecord = (page - 1) * 10;
+			List<Link> links = linkService.getLinksByTag(tagId, Link_.id, false, startRecord, 10);
+			Long count = linkService.getLinksCountByTag(tagId);
+			linksModel.setLinks(links);
+			linksModel.setCount(count);
+
+			return new ResponseEntity<LinksModel>(linksModel, HttpStatus.OK);
+		} catch (LinkNotFoundException exception) {
+			throw new NotFoundException(exception);
+		}
+	}
+
+	@RequestMapping(value = "/tag/{tagId}", method = RequestMethod.GET)
+	public ResponseEntity<List<Link>> getLinksByTag(@PathVariable("tagId") final long tagId) {
+		LOGGER.info("REST API --- getLinksByTag");
+
+		try {
+			List<Link> links = linkService.getLinksByTag(tagId);
+			return new ResponseEntity<List<Link>>(links, HttpStatus.OK);
+		} catch (LinkNotFoundException exception) {
+			throw new NotFoundException(exception);
+		}
+	}
+
+	@RequestMapping(value = "/link/{id}", method = RequestMethod.GET)
+	public ResponseEntity<Link> getLinkById(@PathVariable("id") final long id) {
+		LOGGER.info("REST API --- getLinkById");
+
+		try {
+			Link link = linkService.getLinkById(id);
+			return new ResponseEntity<Link>(link, HttpStatus.OK);
+		} catch (LinkNotFoundException exception) {
+			throw new NotFoundException(exception);
+		}
+
+	}
+
 	@PreAuthorize("hasPermission('Link', 'createLink')")
 	@RequestMapping(value = "/links/", method = RequestMethod.POST)
-	public ResponseEntity<Link> createLink(@Valid @RequestBody LinkModel link) {
+	public ResponseEntity<Link> createLink(@Validated @RequestBody Link link) {
 		LOGGER.info("REST API --- createLink");
 
 		if (link.getUrl() == null || link.getUrl().length() == 0) {
 			return new ResponseEntity<Link>(HttpStatus.NO_CONTENT);
 		} else {
 			UserAccount userAccount = getAuthUserAccount();
-			Link createdLink = linkService.createNewLink(link.getUrl(), userAccount.getLogin(), link.getDescription(),
-					link.getTags());
+			Link createdLink = linkService.createNewLink(link, userAccount.getLogin());
 			return new ResponseEntity<Link>(createdLink, HttpStatus.OK);
 		}
 	}
@@ -119,66 +165,27 @@ public class RestApiController {
 		}
 	}
 
-	@RequestMapping(value = "/link/{id}", method = RequestMethod.GET)
-	public ResponseEntity<Link> getLinkById(@PathVariable("id") final long id) {
-		LOGGER.info("REST API --- getLinkById");
-
-		try {
-			Link link = linkService.getLinkById(id);
-			return new ResponseEntity<Link>(link, HttpStatus.OK);
-		} catch (LinkNotFoundException exception) {
-			throw new NotFoundException(exception);
-		}
-
-	}
-
 	@PreAuthorize("hasPermission('Link', 'updateLink')")
 	@RequestMapping(value = "/links/", method = RequestMethod.PUT)
-	public ResponseEntity<Link> updateLink(@RequestBody final LinkModel linkModel) {
+	public ResponseEntity<Link> updateLink(@Valid @RequestBody final Link link) {
 		LOGGER.info("REST API --- updateLink");
 
-		if (linkModel.getId() == null || linkModel.getId() == 0L) {
+		if (link.getId() == null || link.getId() == 0L) {
 			return new ResponseEntity<Link>(HttpStatus.BAD_REQUEST);
 		}
 
 		UserAccount userAccount = getAuthUserAccount();
 
 		try {
-			Link link = linkService.getLinkById(linkModel.getId());
-			if (!link.getUserAccount().equals(userAccount)) {
+			Link linkFromDB = linkService.getLinkById(link.getId());
+			if (!linkFromDB.getUserAccount().equals(userAccount)) {
 				return new ResponseEntity<Link>(HttpStatus.LOCKED);
 			}
-			linkDetailsService.updateLinkDetails(linkModel.getId(), linkModel.getDescription(), linkModel.getTags());
+			linkDetailsService.updateLinkDetails(link);
 			return new ResponseEntity<Link>(HttpStatus.OK);
 		} catch (LinkNotFoundException exception) {
 			throw new NotFoundException();
 		}
-	}
-
-	@RequestMapping(value = "/tag/{tagId}", method = RequestMethod.GET)
-	public ResponseEntity<List<Link>> getLinksByTag(@PathVariable("tagId") final long tagId) {
-		LOGGER.info("REST API --- getLinksByTag");
-
-		try {
-			List<Link> links = linkService.getLinksByTag(tagId);
-			return new ResponseEntity<List<Link>>(links, HttpStatus.OK);
-		} catch (LinkNotFoundException exception) {
-			throw new NotFoundException(exception);
-		}
-	}
-
-	@RequestMapping(value = "/auth", method = RequestMethod.GET)
-	public ResponseEntity<Object> isAuth() {
-
-		LOGGER.info("REST API --- isAuth");
-
-		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-		if (authentication == null) {
-			return new ResponseEntity<Object>(HttpStatus.UNAUTHORIZED);
-		} else {
-			return new ResponseEntity<Object>(HttpStatus.OK);
-		}
-
 	}
 
 	@RequestMapping(value = "/registration", method = RequestMethod.POST)
@@ -190,6 +197,23 @@ public class RestApiController {
 			return new ResponseEntity<UserAccount>(userAccount, HttpStatus.OK);
 		} catch (AccountExistsException exception) {
 			throw new ConflictException(exception);
+		}
+	}
+
+	@RequestMapping(value = "/search", method = RequestMethod.POST)
+	public ResponseEntity<Link> searchLink(@RequestBody final String searchUrl) {
+		LOGGER.info("REST API --- searchLink");
+
+		try {
+			String linkCode;
+			linkCode = searchUrl.substring(searchUrl.length() - 6);
+			Link link = linkService.getLinkByCode(linkCode);
+			return new ResponseEntity<Link>(link, HttpStatus.OK);
+		} catch (StringIndexOutOfBoundsException e) {
+			e.printStackTrace();
+			return new ResponseEntity<Link>(HttpStatus.BAD_REQUEST);
+		} catch (LinkNotFoundException exception) {
+			throw new NotFoundException(exception);
 		}
 	}
 
@@ -210,37 +234,24 @@ public class RestApiController {
 
 	}
 
-	@RequestMapping(value = "/search", method = RequestMethod.POST)
-	public ResponseEntity<Link> searchLink(@RequestBody final String searchUrl) {
-		LOGGER.info("REST API --- searchLink");
+	@RequestMapping(value = "/auth", method = RequestMethod.GET)
+	public ResponseEntity<Object> isAuth() {
 
-		try {
-			String linkCode;
-			linkCode = searchUrl.substring(searchUrl.length() - 6);
-			Link link = linkService.getLinkByCode(linkCode);
-			return new ResponseEntity<Link>(link, HttpStatus.OK);
-		} catch (StringIndexOutOfBoundsException e) {
-			e.printStackTrace();
-			return new ResponseEntity<Link>(HttpStatus.BAD_REQUEST);
-		} catch (LinkNotFoundException exception) {
-			throw new NotFoundException(exception);
+		LOGGER.info("REST API --- isAuth");
+
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		if (authentication == null) {
+			return new ResponseEntity<Object>(HttpStatus.UNAUTHORIZED);
+		} else {
+			return new ResponseEntity<Object>(HttpStatus.OK);
 		}
+
 	}
 
 	private UserAccount getAuthUserAccount() {
 		Authentication auth = SecurityContextHolder.getContext().getAuthentication();
 		String userLogin = auth.getName();
 		return userService.getUserByLogin(userLogin);
-	}
-
-	@RequestMapping(value = "/test", method = RequestMethod.POST)
-	public ResponseEntity<Link> test(@Valid @RequestBody final Link link) {
-		LOGGER.info("REST API --- TEST");
-		System.out.println(link.getUrl());
-		System.out.println(link.getLinkDetails().getTags().toString());
-		System.out.println(link.getLinkDetails().getCreated());
-
-		return new ResponseEntity<Link>(HttpStatus.OK);
 	}
 
 }

@@ -40,11 +40,9 @@ public class LinkServiceTest extends AbstractServiceTest {
 		UserAccount userAccount = userService.getUserById(1L);
 
 		// Create new Link for UserAccount with ID = 1
-		String url = randomString("http://");
-		String userLogin = userAccount.getLogin();
-		String description = randomString("Description ");
-		List<String> tags = getRandomTagsList();
-		Link newLink = linkService.createNewLink(url, userLogin, description, tags);
+
+		Link link = getRandomLink();
+		Link newLink = linkService.createNewLink(link, userAccount.getLogin());
 
 		// Get Link by GenCode
 		Link extractedLink = linkService.getLinkByCode(newLink.getGenCode());
@@ -55,10 +53,10 @@ public class LinkServiceTest extends AbstractServiceTest {
 		Assert.assertEquals(newLink.getLinkDetails().getTags(), extractedLink.getLinkDetails().getTags());
 
 		// Update Link by UserAccount with ID = 1
-		Long linkId = extractedLink.getId();
-		String newDescription = randomString("Description ");
-		List<String> newTags = getRandomTagsList();
-		linkDetailsService.updateLinkDetails(linkId, newDescription, newTags);
+		Link linkForUpdate = getRandomLink();
+		linkForUpdate.setId(extractedLink.getId());
+		linkForUpdate.setUrl(extractedLink.getUrl());
+		linkDetailsService.updateLinkDetails(linkForUpdate);
 		Link updatedLink = linkService.getLinkByCode(extractedLink.getGenCode());
 		Assert.assertNotNull(updatedLink);
 		Assert.assertEquals(updatedLink.getGenCode(), extractedLink.getGenCode());
@@ -68,9 +66,9 @@ public class LinkServiceTest extends AbstractServiceTest {
 		Assert.assertNotEquals(updatedLink.getLinkDetails().getTags(), extractedLink.getLinkDetails().getTags());
 
 		// Delete Link by ID
-		linkService.deleteLinkById(linkId);
-		Assert.assertNull(linkService.getLinkById(linkId));
-		Assert.assertNull(linkDetailsService.getLinkDetailsById(linkId));
+		linkService.deleteLinkById(updatedLink.getId());
+		Assert.assertNull(linkService.getLinkById(updatedLink.getId()));
+		Assert.assertNull(linkDetailsService.getLinkDetailsById(updatedLink.getId()));
 
 	}
 
@@ -81,11 +79,9 @@ public class LinkServiceTest extends AbstractServiceTest {
 		// Create n links for UserAccount with ID = 1
 		int linksCount = randomInteger(3, 5);
 		for (int i = 0; i < linksCount; i++) {
-			String url = randomString("http://");
-			String userLogin = userAccount.getLogin();
-			String description = randomString("Description ");
-			List<String> tags = getRandomTagsList();
-			linkService.createNewLink(url, userLogin, description, tags);
+			Link link = getRandomLink();
+
+			linkService.createNewLink(link, userAccount.getLogin());
 		}
 
 		// Get All Links by UserAccount with ID = 1
@@ -100,25 +96,23 @@ public class LinkServiceTest extends AbstractServiceTest {
 	@Test
 	public void getLinksByTagTest() {
 		UserAccount userAccount = userService.getUserById(1L);
-		String sameTag = randomString("Tag");
+		Tag sameTag = new Tag();
+		sameTag.setName(randomString("Tag"));
 		List<Link> createdLinks = new ArrayList<Link>();
 
 		// Create n links for UserAccount with ID = 1 and with the same tag
 
 		int randomLinksCount = randomInteger(3, 5);
 		for (int i = 0; i < randomLinksCount; i++) {
-			String url = randomString("http://");
-			String userLogin = userAccount.getLogin();
-			String description = randomString("Description ");
-			List<String> tags = getRandomTagsList();
-			tags.add(sameTag);
-			Link createdLink = linkService.createNewLink(url, userLogin, description, tags);
+			Link link = getRandomLink();
+			link.getLinkDetails().getTags().add(sameTag);
+			Link createdLink = linkService.createNewLink(link, userAccount.getLogin());
 			createdLinks.add(linkService.getLinkByCode(createdLink.getGenCode()));
 		}
 
 		// Get links by sameTag
 
-		Tag tag = tagService.getTagByName(sameTag);
+		Tag tag = tagService.getTagByName(sameTag.getName());
 		List<Link> extractedLinks = linkService.getLinksByTag(tag.getId());
 		Assert.assertEquals(createdLinks, extractedLinks);
 
@@ -137,11 +131,8 @@ public class LinkServiceTest extends AbstractServiceTest {
 
 		int randomLinksCount = randomInteger(3, 5);
 		for (int i = 0; i < randomLinksCount; i++) {
-			String url = randomString("http://");
-			String userLogin = userAccount.getLogin();
-			String description = randomString("Description ");
-			List<String> tags = getRandomTagsList();
-			Link createdLink = linkService.createNewLink(url, userLogin, description, tags);
+			Link link = getRandomLink();
+			Link createdLink = linkService.createNewLink(link, userAccount.getLogin());
 			createdLinks.add(linkService.getLinkByCode(createdLink.getGenCode()));
 		}
 

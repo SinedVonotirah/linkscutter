@@ -1,6 +1,5 @@
 package by.vonotirah.linkscutter.service;
 
-import java.util.List;
 import java.util.Set;
 
 import by.vonotirah.linkscutter.datamodel.Tag;
@@ -13,8 +12,8 @@ public interface TagService {
 
 	Tag getTagByName(String name);
 
-	Set<Tag> tagsProcessing(List<String> tags);
-
 	void deleteTagById(Long id);
+
+	Set<Tag> tagsProcessing(Set<Tag> newTags);
 
 }

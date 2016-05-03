@@ -23,13 +23,18 @@ public interface LinkService {
 
 	void deleteLinkById(Long id);
 
-	Link createNewLink(String url, String login, String description, List<String> tags);
-
-	List<Link> getLinksByTag(Long tagId);
-
 	List<Link> getLinksByUser(UserAccount userAccount, SingularAttribute<Link, ?> attr, boolean ascending,
 			int startRecord, int pageSize);
 
 	Long getLinksCountByUser(UserAccount userAccount);
+
+	Link createNewLink(Link link, String login);
+
+	List<Link> getLinksByTag(Long tagId, SingularAttribute<Link, ?> attr, boolean ascending, int startRecord,
+			int pageSize);
+
+	List<Link> getLinksByTag(Long tagId);
+
+	Long getLinksCountByTag(Long tagId);
 
 }

@@ -2,9 +2,9 @@ package by.vonotirah.linkscutter.webapp.tests;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.HashSet;
 import java.util.Random;
+import java.util.Set;
 
 import javax.annotation.Resource;
 import javax.inject.Inject;
@@ -31,9 +31,10 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import by.vonotirah.linkscutter.datamodel.Link;
+import by.vonotirah.linkscutter.datamodel.LinkDetails;
+import by.vonotirah.linkscutter.datamodel.Tag;
 import by.vonotirah.linkscutter.datamodel.UserAccount;
 import by.vonotirah.linkscutter.service.LinkService;
-import by.vonotirah.linkscutter.webapp.models.LinkModel;
 import by.vonotirah.linkscutter.webapp.restcontrollers.RestApiController;
 import by.vonotirah.linkscutter.webapp.security.CustomUserDetailsService;
 
@@ -99,29 +100,41 @@ public abstract class AbstractControllerTest {
 		return String.format("%s-%s", new Object[] { prefix, randomString() });
 	}
 
-	public List<String> getRandomTagsList() {
-		List<String> tags = new ArrayList<String>();
-		for (int i = 0; i < 3; i++) {
-			tags.add(randomString("Tag"));
+	public static int randomInteger() {
+		return randomInteger(0, 9999);
+	}
+
+	public static int randomInteger(final int lower, final int upper) {
+		return RANDOM_DATA.nextInt(lower, upper);
+	}
+
+	public Link getRandomLink() {
+		Link link = new Link();
+		link.setUrl(randomString("http://URL"));
+		LinkDetails linkDetails = new LinkDetails();
+		linkDetails.setDescription(randomString("Description"));
+		linkDetails.setTags(getRandomTags());
+		link.setLinkDetails(linkDetails);
+		return link;
+	}
+
+	public Set<Tag> getRandomTags() {
+		int tagsCounter = randomInteger(0, 10);
+		Set<Tag> tags = new HashSet<Tag>();
+		for (int i = 0; i < tagsCounter; i++) {
+			Tag tag = new Tag();
+			tag.setName(randomString("Tag"));
+			tags.add(tag);
 		}
-		tags.add("sameTag");
+		Tag tag = new Tag();
+		tag.setName("sameTag");
+		tags.add(tag);
 		return tags;
 	}
 
-	protected LinkModel getLinkModel() {
-		LinkModel linkModel = new LinkModel();
-
-		linkModel.setUrl(randomString("http://UrlL"));
-		linkModel.setDescription(randomString("Descrition"));
-		linkModel.setTags(getRandomTagsList());
-
-		return linkModel;
-	}
-
 	protected Link createRandomLink(final String login) {
-		LinkModel linkModel = getLinkModel();
-		Link link = linkService.createNewLink(linkModel.getUrl(), login, linkModel.getDescription(),
-				linkModel.getTags());
+		Link linkForCreate = getRandomLink();
+		Link link = linkService.createNewLink(linkForCreate, login);
 		return link;
 	}
 

@@ -36,12 +36,7 @@ App.config(['$stateProvider', '$urlRouterProvider',  function($stateProvider, $u
     .state('details.linksbytag', {
 	    url: '/{tagId:[0-9]{1,9}}',
 	    templateUrl: function(params){ return 'link/2/'+params.tagId; },
-	    controller : "TagController as ctrl",
-        resolve: {
-        	async: ['UserLinksService', '$stateParams', function(UserLinksService, $stateParams) {
-        		return UserLinksService.fetchLinksByTag($stateParams.tagId);
-	        }]
-	    }	    
+	    controller : "TagController as ctrl"
     })
 
 

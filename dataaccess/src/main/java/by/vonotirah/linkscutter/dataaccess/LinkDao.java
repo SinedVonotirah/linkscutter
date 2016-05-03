@@ -23,4 +23,9 @@ public interface LinkDao extends AbstractDao<Long, Link> {
 			int startRecord, int pageSize);
 
 	Long getLinksCountByUser(UserAccount userAccount);
+
+	List<Link> getLinksByTag(Long tagId, SingularAttribute<Link, ?> attr, boolean ascending, int startRecord,
+			int pageSize);
+
+	Long getLinksCountByTag(Long tagId);
 }

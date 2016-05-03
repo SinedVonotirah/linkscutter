@@ -10,11 +10,10 @@ import org.junit.Before;
 import org.junit.Test;
 
 import by.vonotirah.linkscutter.datamodel.Link;
-import by.vonotirah.linkscutter.webapp.models.LinkModel;
 
 public class UpdateLinkControllerTest extends AbstractControllerTest {
 
-	private LinkModel linkModel;
+	private Link link;
 
 	private Link firstLink;
 
@@ -22,7 +21,7 @@ public class UpdateLinkControllerTest extends AbstractControllerTest {
 
 	@Before
 	public void createLinks() {
-		linkModel = getLinkModel();
+		link = getRandomLink();
 		firstLink = createRandomLink(FIRST_TEST_LOGIN);
 		secondLink = createRandomLink(SECOND_TEST_LOGIN);
 	}
@@ -36,9 +35,9 @@ public class UpdateLinkControllerTest extends AbstractControllerTest {
 	@Test
 	public void updateLink() throws Exception {
 
-		linkModel.setId(firstLink.getId());
+		link.setId(firstLink.getId());
 
-		mockMvc.perform(put("/links/").contentType(APPLICATION_JSON_UTF8).content(convertObjectToJsonBytes(linkModel))
+		mockMvc.perform(put("/links/").contentType(APPLICATION_JSON_UTF8).content(convertObjectToJsonBytes(link))
 				.with(user(userDetails))).andExpect(status().isOk());
 
 		Link updatedLink = linkService.getLinkById(firstLink.getId());
@@ -51,23 +50,23 @@ public class UpdateLinkControllerTest extends AbstractControllerTest {
 	@Test
 	public void updateLinkAsAnon() throws Exception {
 
-		mockMvc.perform(put("/links/").contentType(APPLICATION_JSON_UTF8).content(convertObjectToJsonBytes(linkModel)))
+		mockMvc.perform(put("/links/").contentType(APPLICATION_JSON_UTF8).content(convertObjectToJsonBytes(link)))
 				.andExpect(status().isUnauthorized());
 	}
 
 	@Test
 	public void updateForeignLink() throws Exception {
 
-		linkModel.setId(secondLink.getId());
+		link.setId(secondLink.getId());
 
-		mockMvc.perform(put("/links/").contentType(APPLICATION_JSON_UTF8).content(convertObjectToJsonBytes(linkModel))
+		mockMvc.perform(put("/links/").contentType(APPLICATION_JSON_UTF8).content(convertObjectToJsonBytes(link))
 				.with(user(userDetails))).andExpect(status().isLocked());
 	}
 
 	@Test
 	public void updateLinkWithoutId() throws Exception {
 
-		mockMvc.perform(put("/links/").contentType(APPLICATION_JSON_UTF8).content(convertObjectToJsonBytes(linkModel))
+		mockMvc.perform(put("/links/").contentType(APPLICATION_JSON_UTF8).content(convertObjectToJsonBytes(link))
 				.with(user(userDetails))).andExpect(status().isBadRequest());
 	}
 }

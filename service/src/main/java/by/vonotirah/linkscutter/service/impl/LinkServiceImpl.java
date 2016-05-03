@@ -41,26 +41,14 @@ public class LinkServiceImpl implements LinkService {
 
 	@Override
 	@Transactional
-	public Link createNewLink(String url, String login, String description, List<String> tags) {
-		final Link link = new Link();
-		final LinkDetails linkDetails = linkDetailsService.createLinkDetails(description, tags);
+	public Link createNewLink(Link link, String login) {
+		final LinkDetails linkDetails = linkDetailsService.createLinkDetails(link);
 		link.setLinkDetails(linkDetails);
-		link.setUrl(urlVerification(url));
+		link.setUrl(urlVerification(link.getUrl()));
 		link.setGenCode(generateLinkCode());
 		link.setUserAccount(userService.getUserByLogin(login));
 		linkDao.insertEntity(link);
 		LOGGER.info("Link successfuly created");
-		return link;
-	}
-
-	@Override
-	@Transactional
-	public Link getLinkById(Long id) {
-		Link link = linkDao.getEntityById(id);
-		if (link == null) {
-			throw new LinkNotFoundException("Link with Id - " + id + " not found");
-		}
-		LOGGER.info("Link with 'ID' - " + id + " successfully extracted");
 		return link;
 	}
 
@@ -77,15 +65,37 @@ public class LinkServiceImpl implements LinkService {
 
 	@Override
 	@Transactional
-	public Link getLinkByCode(String code) {
-		try {
-			Link link = linkDao.getLinkByCode(code);
-			LOGGER.info("Link with 'GenCode' - " + code + " successfully extracted");
-			return link;
-		} catch (NoResultException exception) {
-			throw new LinkNotFoundException("Link with Code - " + code + " not found");
-		}
+	public List<Link> getLinksByUser(UserAccount userAccount, SingularAttribute<Link, ?> attr, boolean ascending,
+			int startRecord, int pageSize) {
 
+		List<Link> links = linkDao.getLinksByUser(userAccount, attr, ascending, startRecord, pageSize);
+		if (links.isEmpty()) {
+			throw new LinkNotFoundException("Links by User with login" + userAccount.getLogin() + "not found");
+		}
+		LOGGER.info("Links by User - " + userAccount.getLogin() + " successfully extracted");
+		return links;
+	}
+
+	@Override
+	@Transactional
+	public Long getLinksCountByUser(UserAccount userAccount) {
+		Long count = linkDao.getLinksCountByUser(userAccount);
+		if (count == null) {
+			throw new LinkNotFoundException("Links by User with login" + userAccount.getLogin() + "not found");
+		}
+		LOGGER.info("LinksCount by User - " + userAccount.getLogin() + " successfully extracted");
+		return count;
+	}
+
+	@Override
+	@Transactional
+	public Long getLinksCountByTag(Long tagId) {
+		Long count = linkDao.getLinksCountByTag(tagId);
+		if (count == null) {
+			throw new LinkNotFoundException("Links by Tag with ID" + tagId + "not found");
+		}
+		LOGGER.info("LinksCount by TagID - " + tagId + " successfully extracted");
+		return count;
 	}
 
 	@Override
@@ -96,6 +106,40 @@ public class LinkServiceImpl implements LinkService {
 			throw new LinkNotFoundException("Links by TagId - " + tagId + "not found");
 		}
 		return links;
+	}
+
+	@Override
+	public List<Link> getLinksByTag(Long tagId, SingularAttribute<Link, ?> attr, boolean ascending, int startRecord,
+			int pageSize) {
+
+		List<Link> links = linkDao.getLinksByTag(tagId, attr, ascending, startRecord, pageSize);
+		if (links.isEmpty()) {
+			throw new LinkNotFoundException("Links by TagId - " + tagId + "not found");
+		}
+		return links;
+	}
+
+	@Override
+	@Transactional
+	public Link getLinkByCode(String code) {
+		try {
+			Link link = linkDao.getLinkByCode(code);
+			LOGGER.info("Link with 'GenCode' - " + code + " successfully extracted");
+			return link;
+		} catch (NoResultException exception) {
+			throw new LinkNotFoundException("Link with Code - " + code + " not found");
+		}
+	}
+
+	@Override
+	@Transactional
+	public Link getLinkById(Long id) {
+		Link link = linkDao.getEntityById(id);
+		if (link == null) {
+			throw new LinkNotFoundException("Link with Id - " + id + " not found");
+		}
+		LOGGER.info("Link with 'ID' - " + id + " successfully extracted");
+		return link;
 	}
 
 	@Override
@@ -147,30 +191,6 @@ public class LinkServiceImpl implements LinkService {
 			e.printStackTrace();
 		}
 		return url;
-	}
-
-	@Override
-	@Transactional
-	public List<Link> getLinksByUser(UserAccount userAccount, SingularAttribute<Link, ?> attr, boolean ascending,
-			int startRecord, int pageSize) {
-
-		List<Link> links = linkDao.getLinksByUser(userAccount, attr, ascending, startRecord, pageSize);
-		if (links.isEmpty()) {
-			throw new LinkNotFoundException("Links by User with login" + userAccount.getLogin() + "not found");
-		}
-		LOGGER.info("Links by User - " + userAccount.getLogin() + " successfully extracted");
-		return links;
-	}
-
-	@Override
-	@Transactional
-	public Long getLinksCountByUser(UserAccount userAccount) {
-		Long count = linkDao.getLinksCountByUser(userAccount);
-		if (count == null) {
-			throw new LinkNotFoundException("Links by User with login" + userAccount.getLogin() + "not found");
-		}
-		LOGGER.info("LinksCount by User - " + userAccount.getLogin() + " successfully extracted");
-		return count;
 	}
 
 }

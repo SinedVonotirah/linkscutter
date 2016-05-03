@@ -6,8 +6,10 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.GregorianCalendar;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
+import java.util.Set;
 
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.commons.math3.random.RandomData;
@@ -17,6 +19,9 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import by.vonotirah.linkscutter.datamodel.Link;
+import by.vonotirah.linkscutter.datamodel.LinkDetails;
+import by.vonotirah.linkscutter.datamodel.Tag;
 import by.vonotirah.linkscutter.datamodel.UserAccount;
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -91,6 +96,27 @@ public abstract class AbstractServiceTest {
 		userAccount.setPassword(randomString("Password - "));
 		userAccount.setMail(randomString("Mail - "));
 		return userAccount;
+	}
+
+	public Link getRandomLink() {
+		Link link = new Link();
+		link.setUrl(randomString("http://URL"));
+		LinkDetails linkDetails = new LinkDetails();
+		linkDetails.setDescription(randomString("Description"));
+		linkDetails.setTags(getRandomTags());
+		link.setLinkDetails(linkDetails);
+		return link;
+	}
+
+	public Set<Tag> getRandomTags() {
+		int tagsCounter = randomInteger(0, 10);
+		Set<Tag> tags = new HashSet<Tag>();
+		for (int i = 0; i < tagsCounter; i++) {
+			Tag tag = new Tag();
+			tag.setName(randomString("Tag"));
+			tags.add(tag);
+		}
+		return tags;
 	}
 
 	public List<String> getRandomTagsList() {

@@ -20,6 +20,23 @@ App.factory('UserLinksService', ['$http', '$q', function($http, $q){
                         }
                 );
         },
+        
+        fetchLinksByTag: function(id, page){
+        	return $http.get('http://localhost:8080/webapp/tag/'+id, {
+	                params: {
+	                    page: page
+	                }
+	             })
+        		.then(
+        				function(response){
+        					return response.data;
+        				},
+        				function(errResponse){
+        					console.error('Error while fetch links by tag');
+                            return $q.reject(errResponse);            					
+        				}  
+        		);
+        },
             
         fetchLinkById: function(id) {
             return $http.get('http://localhost:8080/webapp/link/'+id)
@@ -71,20 +88,9 @@ App.factory('UserLinksService', ['$http', '$q', function($http, $q){
                             return $q.reject(errResponse);
                         }
                 );
-        },
-        
-        fetchLinksByTag: function(id){
-        	return $http.get('http://localhost:8080/webapp/tag/'+id)
-        		.then(
-        				function(response){
-        					return response.data;
-        				},
-        				function(errResponse){
-        					console.error('Error while fetch links by tag');
-                            return $q.reject(errResponse);            					
-        				}  
-        		);
         }
+        
+
          
     };
  

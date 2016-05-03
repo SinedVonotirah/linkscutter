@@ -1,7 +1,6 @@
 package by.vonotirah.linkscutter.service.impl;
 
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
 import javax.inject.Inject;
@@ -21,14 +20,12 @@ public class TagServiceImpl implements TagService {
 
 	@Override
 	@Transactional
-	public Set<Tag> tagsProcessing(List<String> tags) {
+	public Set<Tag> tagsProcessing(Set<Tag> newTags) {
 		HashSet<Tag> tagSet = new HashSet<Tag>();
-		for (String s : tags) {
-			if (this.tagExist(s)) {
-				tagSet.add(this.getTagByName(s));
+		for (Tag tag : newTags) {
+			if (this.tagExist(tag.getName())) {
+				tagSet.add(this.getTagByName(tag.getName()));
 			} else {
-				Tag tag = new Tag();
-				tag.setName(s);
 				this.saveOrUpdate(tag);
 				tagSet.add(tag);
 			}

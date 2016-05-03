@@ -13,6 +13,8 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
+import javax.validation.Valid;
+import javax.validation.constraints.Size;
 
 @Entity
 public class LinkDetails extends AbstractEntity {
@@ -22,6 +24,7 @@ public class LinkDetails extends AbstractEntity {
 	private Long id;
 
 	@Column
+	@Size(min = 0, max = 50)
 	private String description;
 
 	@Column
@@ -33,6 +36,8 @@ public class LinkDetails extends AbstractEntity {
 	@JoinTable(name = "link_details_2_tag", joinColumns = {
 			@JoinColumn(name = "link_details_id") }, inverseJoinColumns = { @JoinColumn(name = "tag_id") })
 	@ManyToMany(targetEntity = Tag.class, fetch = FetchType.EAGER)
+	@Size(min = 0, max = 10)
+	@Valid
 	private Set<Tag> tags = new TreeSet<Tag>();
 
 	public Long getId() {
