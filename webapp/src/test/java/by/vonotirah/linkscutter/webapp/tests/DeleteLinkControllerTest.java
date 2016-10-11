@@ -18,8 +18,9 @@ public class DeleteLinkControllerTest extends AbstractControllerTest {
 
 	@Before
 	public void createLinkForTest() {
-		linkFirstUser = createRandomLink("testLogin");
-		linkSecondUser = createRandomLink("testLogin2");
+		linkFirstUser = createRandomLink(firstUserAccount4Tests);
+		linkSecondUser = createRandomLink(secondUserAccount4Tests);
+
 	}
 
 	@After

@@ -17,6 +17,8 @@ import by.vonotirah.linkscutter.service.exceptions.AccountExistsException;
 @Service
 public class UserServiceImpl implements UserService {
 
+	// TODO implements new interface UserService4Tests
+
 	@Inject
 	private UserAccountDao userAccountDao;
 

@@ -22,6 +22,9 @@ public class LinkDetailsServiceImpl implements LinkDetailsService {
 	@Inject
 	private TagService tagService;
 
+	// TODO implements 2 new interfaces
+	// LinkDetailsService4LinkService & LinkDetailsService4Rest
+
 	@Override
 	@Transactional
 	public LinkDetails createLinkDetails(Link link) {

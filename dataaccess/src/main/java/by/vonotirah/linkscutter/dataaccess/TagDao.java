@@ -6,6 +6,6 @@ public interface TagDao extends AbstractDao<Long, Tag> {
 
 	boolean tagExist(String name);
 
-	Tag gatTagByName(String name);
+	Tag getTagByName(String name);
 
 }

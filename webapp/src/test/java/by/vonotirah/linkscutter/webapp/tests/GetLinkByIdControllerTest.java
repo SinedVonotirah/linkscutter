@@ -19,7 +19,7 @@ public class GetLinkByIdControllerTest extends AbstractControllerTest {
 
 	@Before
 	public void createLink() {
-		link = createRandomLink("testLogin");
+		link = createRandomLink(firstUserAccount4Tests);
 	}
 
 	@After

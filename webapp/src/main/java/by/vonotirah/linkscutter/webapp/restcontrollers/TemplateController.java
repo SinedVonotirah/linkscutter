@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class TamplateController {
+public class TemplateController {
 
 	@RequestMapping(value = "/login")
 	public String getLoginTemplate() {

@@ -33,6 +33,7 @@ public class TagServiceImpl implements TagService {
 		return tagSet;
 	}
 
+	// TODO private
 	@Override
 	@Transactional
 	public void saveOrUpdate(Tag tag) {
@@ -43,6 +44,7 @@ public class TagServiceImpl implements TagService {
 		}
 	}
 
+	// TODO private
 	@Override
 	@Transactional
 	public boolean tagExist(String name) {
@@ -52,7 +54,7 @@ public class TagServiceImpl implements TagService {
 	@Override
 	@Transactional
 	public Tag getTagByName(String name) {
-		return tagDao.gatTagByName(name);
+		return tagDao.getTagByName(name);
 	}
 
 	@Override

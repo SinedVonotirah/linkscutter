@@ -45,7 +45,7 @@ public class CreateUserControllerTest extends AbstractControllerTest {
 
 	@Test
 	public void createUserWithExistingLogin() throws Exception {
-		userAccount.setLogin(FIRST_TEST_LOGIN);
+		userAccount.setLogin(firstUserAccount4Tests.getLogin());
 
 		mockMvc.perform(post("/registration/").contentType(APPLICATION_JSON_UTF8)
 				.content(convertObjectToJsonBytes(userAccount))).andExpect(status().isConflict());
@@ -53,7 +53,7 @@ public class CreateUserControllerTest extends AbstractControllerTest {
 
 	@Test
 	public void createUserWithExistingMail() throws Exception {
-		userAccount.setLogin(FIRST_TEST_LOGIN);
+		userAccount.setLogin(firstUserAccount4Tests.getLogin());
 
 		mockMvc.perform(post("/registration/").contentType(APPLICATION_JSON_UTF8)
 				.content(convertObjectToJsonBytes(userAccount))).andExpect(status().isConflict());

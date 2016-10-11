@@ -31,7 +31,7 @@ public class TagDaoImpl extends AbstractDaoImpl<Long, Tag> implements TagDao {
 	}
 
 	@Override
-	public Tag gatTagByName(final String name) {
+	public Tag getTagByName(final String name) {
 		CriteriaBuilder cBuilder = getEntityManager().getCriteriaBuilder();
 		CriteriaQuery<Tag> criteria = cBuilder.createQuery(Tag.class);
 		Root<Tag> root = criteria.from(Tag.class);

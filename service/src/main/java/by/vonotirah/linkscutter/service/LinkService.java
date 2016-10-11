@@ -17,6 +17,7 @@ public interface LinkService {
 
 	URI linkRedirect(String code) throws URISyntaxException;
 
+	// test only
 	boolean chekLinkExistByCode(String code);
 
 	List<Link> getLinksByUser(UserAccount userAccount);
@@ -28,7 +29,7 @@ public interface LinkService {
 
 	Long getLinksCountByUser(UserAccount userAccount);
 
-	Link createNewLink(Link link, String login);
+	Link createNewLink(Link link, UserAccount userAccount);
 
 	List<Link> getLinksByTag(Long tagId, SingularAttribute<Link, ?> attr, boolean ascending, int startRecord,
 			int pageSize);

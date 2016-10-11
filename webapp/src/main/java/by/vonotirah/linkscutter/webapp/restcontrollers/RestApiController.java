@@ -141,7 +141,7 @@ public class RestApiController {
 			return new ResponseEntity<Link>(HttpStatus.NO_CONTENT);
 		} else {
 			UserAccount userAccount = getAuthUserAccount();
-			Link createdLink = linkService.createNewLink(link, userAccount.getLogin());
+			Link createdLink = linkService.createNewLink(link, userAccount);
 			return new ResponseEntity<Link>(createdLink, HttpStatus.OK);
 		}
 	}

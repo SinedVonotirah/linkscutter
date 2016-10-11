@@ -12,6 +12,7 @@ import javax.inject.Inject;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.commons.math3.random.RandomData;
 import org.apache.commons.math3.random.RandomDataImpl;
+import org.junit.After;
 import org.junit.Before;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -35,6 +36,7 @@ import by.vonotirah.linkscutter.datamodel.LinkDetails;
 import by.vonotirah.linkscutter.datamodel.Tag;
 import by.vonotirah.linkscutter.datamodel.UserAccount;
 import by.vonotirah.linkscutter.service.LinkService;
+import by.vonotirah.linkscutter.service.UserService;
 import by.vonotirah.linkscutter.webapp.restcontrollers.RestApiController;
 import by.vonotirah.linkscutter.webapp.security.CustomUserDetailsService;
 
@@ -59,13 +61,16 @@ public abstract class AbstractControllerTest {
 	@Inject
 	protected CustomUserDetailsService userDetailsService;
 
+	@Inject
+	protected UserService userService;
+
 	protected MockMvc mockMvc;
 
 	protected UserDetails userDetails;
 
-	protected static final String FIRST_TEST_LOGIN = "testLogin";
+	protected UserAccount firstUserAccount4Tests;
 
-	protected static final String SECOND_TEST_LOGIN = "testLogin2";
+	protected UserAccount secondUserAccount4Tests;
 
 	protected static final MediaType APPLICATION_JSON_UTF8 = new MediaType(MediaType.APPLICATION_JSON.getType(),
 			MediaType.APPLICATION_JSON.getSubtype(), Charset.forName("utf8"));
@@ -83,7 +88,16 @@ public abstract class AbstractControllerTest {
 		mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).addFilter(springSecurityFilterChain)
 				.build();
 
-		userDetails = userDetailsService.loadUserByUsername(FIRST_TEST_LOGIN);
+		firstUserAccount4Tests = createRandomUserAccount();
+		secondUserAccount4Tests = createRandomUserAccount();
+		userDetails = userDetailsService.loadUserByUsername(firstUserAccount4Tests.getLogin());
+	}
+
+	@After
+	public void endTest() {
+		userService.deleteUser(firstUserAccount4Tests);
+		userService.deleteUser(secondUserAccount4Tests);
+
 	}
 
 	public static byte[] convertObjectToJsonBytes(final Object object) throws IOException {
@@ -132,9 +146,9 @@ public abstract class AbstractControllerTest {
 		return tags;
 	}
 
-	protected Link createRandomLink(final String login) {
+	protected Link createRandomLink(UserAccount userAccount) {
 		Link linkForCreate = getRandomLink();
-		Link link = linkService.createNewLink(linkForCreate, login);
+		Link link = linkService.createNewLink(linkForCreate, userAccount);
 		return link;
 	}
 
@@ -144,6 +158,12 @@ public abstract class AbstractControllerTest {
 		userAccount.setLogin(randomString("Login "));
 		userAccount.setMail(randomString("Mail@"));
 		userAccount.setPassword(randomString("Password "));
+		return userAccount;
+	}
+
+	protected UserAccount createRandomUserAccount() {
+		UserAccount userAccount = getRandomUserAccount();
+		userService.createNewUser(userAccount);
 		return userAccount;
 	}
 }

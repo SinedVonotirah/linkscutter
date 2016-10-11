@@ -20,7 +20,7 @@ public class SearchLinkControllerTest extends AbstractControllerTest {
 
 	@Before
 	public void createLink() {
-		link = createRandomLink("testLogin");
+		link = createRandomLink(firstUserAccount4Tests);
 		searchUrl = randomString().concat(link.getGenCode());
 	}
 

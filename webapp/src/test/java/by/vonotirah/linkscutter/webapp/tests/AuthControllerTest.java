@@ -20,13 +20,14 @@ public class AuthControllerTest extends AbstractControllerTest {
 
 	@Test
 	public void loginWithCorrectCredentials() throws Exception {
-		mockMvc.perform(post("/login").contentType(MediaType.APPLICATION_FORM_URLENCODED).param("username", "testLogin")
-				.param("password", "testPassword")).andExpect(status().isOk());
+		mockMvc.perform(post("/login").contentType(MediaType.APPLICATION_FORM_URLENCODED)
+				.param("username", firstUserAccount4Tests.getLogin())
+				.param("password", firstUserAccount4Tests.getPassword())).andExpect(status().isOk());
 	}
 
 	@Test
 	public void logout() throws Exception {
-		UserDetails UserDetails = userDetailsService.loadUserByUsername("testLogin");
+		UserDetails UserDetails = userDetailsService.loadUserByUsername(firstUserAccount4Tests.getLogin());
 
 		mockMvc.perform(get("/logout").with(user(UserDetails))).andExpect(status().isOk());
 	}

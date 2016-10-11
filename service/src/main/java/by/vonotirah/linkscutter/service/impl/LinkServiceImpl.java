@@ -20,7 +20,6 @@ import by.vonotirah.linkscutter.datamodel.LinkDetails;
 import by.vonotirah.linkscutter.datamodel.UserAccount;
 import by.vonotirah.linkscutter.service.LinkDetailsService;
 import by.vonotirah.linkscutter.service.LinkService;
-import by.vonotirah.linkscutter.service.UserService;
 import by.vonotirah.linkscutter.service.exceptions.LinkNotFoundException;
 
 @Service
@@ -32,21 +31,18 @@ public class LinkServiceImpl implements LinkService {
 	@Inject
 	private LinkDetailsService linkDetailsService;
 
-	@Inject
-	private UserService userService;
-
 	private static final Logger LOGGER = LoggerFactory.getLogger(LinkServiceImpl.class);
 
 	private static final int RANDOM_STRING_SIZE = 6;
 
 	@Override
 	@Transactional
-	public Link createNewLink(Link link, String login) {
+	public Link createNewLink(Link link, UserAccount userAccount) {
 		final LinkDetails linkDetails = linkDetailsService.createLinkDetails(link);
 		link.setLinkDetails(linkDetails);
 		link.setUrl(urlVerification(link.getUrl()));
 		link.setGenCode(generateLinkCode());
-		link.setUserAccount(userService.getUserByLogin(login));
+		link.setUserAccount(userAccount);
 		linkDao.insertEntity(link);
 		LOGGER.info("Link successfuly created");
 		return link;
@@ -154,6 +150,7 @@ public class LinkServiceImpl implements LinkService {
 		return linkDao.checkCodeExist(code);
 	}
 
+	// TODO separate class "Redirector" + interface
 	@Override
 	@Transactional
 	public URI linkRedirect(String code) throws URISyntaxException {
@@ -163,6 +160,7 @@ public class LinkServiceImpl implements LinkService {
 		return uri;
 	}
 
+	// TODO separate class "Redirector" + interface
 	@Transactional
 	private void incRedirectCounter(Link link) {
 		Long linkCounter = link.getLinkDetails().getCounter();
@@ -171,6 +169,7 @@ public class LinkServiceImpl implements LinkService {
 		linkDao.updateEntity(link);
 	}
 
+	// TODO separate class + interface
 	@Transactional
 	private String generateLinkCode() {
 		String genCode;
@@ -180,6 +179,7 @@ public class LinkServiceImpl implements LinkService {
 		return genCode;
 	}
 
+	// TODO separate class + interface
 	private String urlVerification(String url) {
 		try {
 			URI uri = new URI(url);
@@ -192,5 +192,4 @@ public class LinkServiceImpl implements LinkService {
 		}
 		return url;
 	}
-
 }

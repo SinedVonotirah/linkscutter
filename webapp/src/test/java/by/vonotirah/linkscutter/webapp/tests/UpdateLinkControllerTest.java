@@ -22,8 +22,8 @@ public class UpdateLinkControllerTest extends AbstractControllerTest {
 	@Before
 	public void createLinks() {
 		link = getRandomLink();
-		firstLink = createRandomLink(FIRST_TEST_LOGIN);
-		secondLink = createRandomLink(SECOND_TEST_LOGIN);
+		firstLink = createRandomLink(firstUserAccount4Tests);
+		secondLink = createRandomLink(secondUserAccount4Tests);
 	}
 
 	@After

@@ -26,8 +26,8 @@ public class GetLinksByTagControllerTest extends AbstractControllerTest {
 
 	@Before
 	public void createLinks() {
-		firstLink = createRandomLink(FIRST_TEST_LOGIN);
-		secondLink = createRandomLink(SECOND_TEST_LOGIN);
+		firstLink = createRandomLink(firstUserAccount4Tests);
+		secondLink = createRandomLink(secondUserAccount4Tests);
 		Set<Tag> tags = firstLink.getLinkDetails().getTags();
 		for (Tag tag : tags) {
 			if (tag.getName().equals("sameTag")) {

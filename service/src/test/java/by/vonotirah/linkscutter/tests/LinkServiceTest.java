@@ -42,7 +42,7 @@ public class LinkServiceTest extends AbstractServiceTest {
 		// Create new Link for UserAccount with ID = 1
 
 		Link link = getRandomLink();
-		Link newLink = linkService.createNewLink(link, userAccount.getLogin());
+		Link newLink = linkService.createNewLink(link, userAccount);
 
 		// Get Link by GenCode
 		Link extractedLink = linkService.getLinkByCode(newLink.getGenCode());
@@ -81,7 +81,7 @@ public class LinkServiceTest extends AbstractServiceTest {
 		for (int i = 0; i < linksCount; i++) {
 			Link link = getRandomLink();
 
-			linkService.createNewLink(link, userAccount.getLogin());
+			linkService.createNewLink(link, userAccount);
 		}
 
 		// Get All Links by UserAccount with ID = 1
@@ -106,7 +106,7 @@ public class LinkServiceTest extends AbstractServiceTest {
 		for (int i = 0; i < randomLinksCount; i++) {
 			Link link = getRandomLink();
 			link.getLinkDetails().getTags().add(sameTag);
-			Link createdLink = linkService.createNewLink(link, userAccount.getLogin());
+			Link createdLink = linkService.createNewLink(link, userAccount);
 			createdLinks.add(linkService.getLinkByCode(createdLink.getGenCode()));
 		}
 
@@ -132,7 +132,7 @@ public class LinkServiceTest extends AbstractServiceTest {
 		int randomLinksCount = randomInteger(3, 5);
 		for (int i = 0; i < randomLinksCount; i++) {
 			Link link = getRandomLink();
-			Link createdLink = linkService.createNewLink(link, userAccount.getLogin());
+			Link createdLink = linkService.createNewLink(link, userAccount);
 			createdLinks.add(linkService.getLinkByCode(createdLink.getGenCode()));
 		}
 
