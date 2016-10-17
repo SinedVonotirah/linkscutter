@@ -21,7 +21,6 @@ import by.vonotirah.linkscutter.datamodel.UserAccount;
 import by.vonotirah.linkscutter.service.LinkDetailsService;
 import by.vonotirah.linkscutter.service.LinkService;
 import by.vonotirah.linkscutter.service.exceptions.LinkNotFoundException;
-
 @Service
 public class LinkServiceImpl implements LinkService {
 
@@ -169,6 +168,7 @@ public class LinkServiceImpl implements LinkService {
 		return linkDao.checkCodeExist(code);
 	}
 
+	// TODO separate class "Redirector" + interface
 	@Override
 	@Transactional
 	public URI linkRedirect(String code) throws URISyntaxException {
@@ -178,6 +178,7 @@ public class LinkServiceImpl implements LinkService {
 		return uri;
 	}
 
+	// TODO separate class "Redirector" + interface
 	@Transactional
 	private void incRedirectCounter(Link link) {
 		Long linkCounter = link.getLinkDetails().getCounter();
@@ -186,6 +187,7 @@ public class LinkServiceImpl implements LinkService {
 		linkDao.updateEntity(link);
 	}
 
+	// TODO separate class + interface
 	@Transactional
 	private String generateLinkCode() {
 		String genCode;
@@ -195,6 +197,7 @@ public class LinkServiceImpl implements LinkService {
 		return genCode;
 	}
 
+	// TODO separate class + interface
 	private String urlVerification(String url) {
 		try {
 			URI uri = new URI(url);

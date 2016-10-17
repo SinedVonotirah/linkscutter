@@ -24,15 +24,16 @@ public interface LinkService {
 
 	void deleteLinkById(Long id);
 
-	List<Link> getLinksByUser(UserAccount userAccount, SingularAttribute<Link, ?> attr, boolean ascending,
+	List<Link> getLinksByUser(UserAccount userAccount,
+			SingularAttribute<Link, ?> attr, boolean ascending,
 			int startRecord, int pageSize);
 
 	Long getLinksCountByUser(UserAccount userAccount);
 
 	Link createNewLink(Link link, UserAccount userAccount);
 
-	List<Link> getLinksByTag(Long tagId, SingularAttribute<Link, ?> attr, boolean ascending, int startRecord,
-			int pageSize);
+	List<Link> getLinksByTag(Long tagId, SingularAttribute<Link, ?> attr,
+			boolean ascending, int startRecord, int pageSize);
 
 	List<Link> getLinksByTag(Long tagId);
 

@@ -6,8 +6,10 @@ import by.vonotirah.linkscutter.datamodel.Tag;
 
 public interface TagService {
 
+	// TODO delete
 	void saveOrUpdate(Tag tag);
 
+	// TODO delete
 	boolean tagExist(String name);
 
 	Tag getTagByName(String name);
