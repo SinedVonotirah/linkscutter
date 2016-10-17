@@ -31,14 +31,16 @@ public class LinkServiceImpl implements LinkService {
 	@Inject
 	private LinkDetailsService linkDetailsService;
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(LinkServiceImpl.class);
+	private static final Logger LOGGER = LoggerFactory
+			.getLogger(LinkServiceImpl.class);
 
 	private static final int RANDOM_STRING_SIZE = 6;
 
 	@Override
 	@Transactional
 	public Link createNewLink(Link link, UserAccount userAccount) {
-		final LinkDetails linkDetails = linkDetailsService.createLinkDetails(link);
+		final LinkDetails linkDetails = linkDetailsService
+				.createLinkDetails(link);
 		link.setLinkDetails(linkDetails);
 		link.setUrl(urlVerification(link.getUrl()));
 		link.setGenCode(generateLinkCode());
@@ -53,22 +55,28 @@ public class LinkServiceImpl implements LinkService {
 	public List<Link> getLinksByUser(UserAccount userAccount) {
 		List<Link> links = linkDao.getLinksByUser(userAccount);
 		if (links.isEmpty()) {
-			throw new LinkNotFoundException("Links by User with login" + userAccount.getLogin() + "not found");
+			throw new LinkNotFoundException("Links by User with login"
+					+ userAccount.getLogin() + "not found");
 		}
-		LOGGER.info("Links by User - " + userAccount.getLogin() + " successfully extracted");
+		LOGGER.info("Links by User - " + userAccount.getLogin()
+				+ " successfully extracted");
 		return links;
 	}
 
 	@Override
 	@Transactional
-	public List<Link> getLinksByUser(UserAccount userAccount, SingularAttribute<Link, ?> attr, boolean ascending,
+	public List<Link> getLinksByUser(UserAccount userAccount,
+			SingularAttribute<Link, ?> attr, boolean ascending,
 			int startRecord, int pageSize) {
 
-		List<Link> links = linkDao.getLinksByUser(userAccount, attr, ascending, startRecord, pageSize);
+		List<Link> links = linkDao.getLinksByUser(userAccount, attr, ascending,
+				startRecord, pageSize);
 		if (links.isEmpty()) {
-			throw new LinkNotFoundException("Links by User with login" + userAccount.getLogin() + "not found");
+			throw new LinkNotFoundException("Links by User with login"
+					+ userAccount.getLogin() + "not found");
 		}
-		LOGGER.info("Links by User - " + userAccount.getLogin() + " successfully extracted");
+		LOGGER.info("Links by User - " + userAccount.getLogin()
+				+ " successfully extracted");
 		return links;
 	}
 
@@ -77,9 +85,11 @@ public class LinkServiceImpl implements LinkService {
 	public Long getLinksCountByUser(UserAccount userAccount) {
 		Long count = linkDao.getLinksCountByUser(userAccount);
 		if (count == null) {
-			throw new LinkNotFoundException("Links by User with login" + userAccount.getLogin() + "not found");
+			throw new LinkNotFoundException("Links by User with login"
+					+ userAccount.getLogin() + "not found");
 		}
-		LOGGER.info("LinksCount by User - " + userAccount.getLogin() + " successfully extracted");
+		LOGGER.info("LinksCount by User - " + userAccount.getLogin()
+				+ " successfully extracted");
 		return count;
 	}
 
@@ -88,9 +98,11 @@ public class LinkServiceImpl implements LinkService {
 	public Long getLinksCountByTag(Long tagId) {
 		Long count = linkDao.getLinksCountByTag(tagId);
 		if (count == null) {
-			throw new LinkNotFoundException("Links by Tag with ID" + tagId + "not found");
+			throw new LinkNotFoundException("Links by Tag with ID" + tagId
+					+ "not found");
 		}
-		LOGGER.info("LinksCount by TagID - " + tagId + " successfully extracted");
+		LOGGER.info("LinksCount by TagID - " + tagId
+				+ " successfully extracted");
 		return count;
 	}
 
@@ -99,18 +111,22 @@ public class LinkServiceImpl implements LinkService {
 	public List<Link> getLinksByTag(Long tagId) {
 		List<Link> links = linkDao.getLinksByTag(tagId);
 		if (links.isEmpty()) {
-			throw new LinkNotFoundException("Links by TagId - " + tagId + "not found");
+			throw new LinkNotFoundException("Links by TagId - " + tagId
+					+ "not found");
 		}
 		return links;
 	}
 
 	@Override
-	public List<Link> getLinksByTag(Long tagId, SingularAttribute<Link, ?> attr, boolean ascending, int startRecord,
-			int pageSize) {
+	public List<Link> getLinksByTag(Long tagId,
+			SingularAttribute<Link, ?> attr, boolean ascending,
+			int startRecord, int pageSize) {
 
-		List<Link> links = linkDao.getLinksByTag(tagId, attr, ascending, startRecord, pageSize);
+		List<Link> links = linkDao.getLinksByTag(tagId, attr, ascending,
+				startRecord, pageSize);
 		if (links.isEmpty()) {
-			throw new LinkNotFoundException("Links by TagId - " + tagId + "not found");
+			throw new LinkNotFoundException("Links by TagId - " + tagId
+					+ "not found");
 		}
 		return links;
 	}
@@ -120,10 +136,12 @@ public class LinkServiceImpl implements LinkService {
 	public Link getLinkByCode(String code) {
 		try {
 			Link link = linkDao.getLinkByCode(code);
-			LOGGER.info("Link with 'GenCode' - " + code + " successfully extracted");
+			LOGGER.info("Link with 'GenCode' - " + code
+					+ " successfully extracted");
 			return link;
 		} catch (NoResultException exception) {
-			throw new LinkNotFoundException("Link with Code - " + code + " not found");
+			throw new LinkNotFoundException("Link with Code - " + code
+					+ " not found");
 		}
 	}
 
@@ -132,7 +150,8 @@ public class LinkServiceImpl implements LinkService {
 	public Link getLinkById(Long id) {
 		Link link = linkDao.getEntityById(id);
 		if (link == null) {
-			throw new LinkNotFoundException("Link with Id - " + id + " not found");
+			throw new LinkNotFoundException("Link with Id - " + id
+					+ " not found");
 		}
 		LOGGER.info("Link with 'ID' - " + id + " successfully extracted");
 		return link;
@@ -150,7 +169,6 @@ public class LinkServiceImpl implements LinkService {
 		return linkDao.checkCodeExist(code);
 	}
 
-	// TODO separate class "Redirector" + interface
 	@Override
 	@Transactional
 	public URI linkRedirect(String code) throws URISyntaxException {
@@ -160,7 +178,6 @@ public class LinkServiceImpl implements LinkService {
 		return uri;
 	}
 
-	// TODO separate class "Redirector" + interface
 	@Transactional
 	private void incRedirectCounter(Link link) {
 		Long linkCounter = link.getLinkDetails().getCounter();
@@ -169,7 +186,6 @@ public class LinkServiceImpl implements LinkService {
 		linkDao.updateEntity(link);
 	}
 
-	// TODO separate class + interface
 	@Transactional
 	private String generateLinkCode() {
 		String genCode;
@@ -179,7 +195,6 @@ public class LinkServiceImpl implements LinkService {
 		return genCode;
 	}
 
-	// TODO separate class + interface
 	private String urlVerification(String url) {
 		try {
 			URI uri = new URI(url);

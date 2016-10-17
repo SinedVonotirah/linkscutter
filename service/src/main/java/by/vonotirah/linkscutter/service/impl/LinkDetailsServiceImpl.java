@@ -22,9 +22,6 @@ public class LinkDetailsServiceImpl implements LinkDetailsService {
 	@Inject
 	private TagService tagService;
 
-	// TODO implements 2 new interfaces
-	// LinkDetailsService4LinkService & LinkDetailsService4Rest
-
 	@Override
 	@Transactional
 	public LinkDetails createLinkDetails(Link link) {
@@ -32,7 +29,8 @@ public class LinkDetailsServiceImpl implements LinkDetailsService {
 		linkDetails.setDescription(link.getLinkDetails().getDescription());
 		linkDetails.setCounter(0L);
 		linkDetails.setCreated(new Date());
-		linkDetails.setTags(tagService.tagsProcessing(link.getLinkDetails().getTags()));
+		linkDetails.setTags(tagService.tagsProcessing(link.getLinkDetails()
+				.getTags()));
 		return linkDetails;
 	}
 
@@ -41,7 +39,8 @@ public class LinkDetailsServiceImpl implements LinkDetailsService {
 	public void updateLinkDetails(Link link) {
 		LinkDetails linkDetails = this.getLinkDetailsById(link.getId());
 		linkDetails.setDescription(link.getLinkDetails().getDescription());
-		linkDetails.setTags(tagService.tagsProcessing(link.getLinkDetails().getTags()));
+		linkDetails.setTags(tagService.tagsProcessing(link.getLinkDetails()
+				.getTags()));
 		linkDetailsDao.updateEntity(linkDetails);
 	}
 

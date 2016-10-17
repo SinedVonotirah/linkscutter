@@ -17,17 +17,17 @@ import by.vonotirah.linkscutter.service.exceptions.AccountExistsException;
 @Service
 public class UserServiceImpl implements UserService {
 
-	// TODO implements new interface UserService4Tests
-
 	@Inject
 	private UserAccountDao userAccountDao;
 
-	private static final Logger LOGGER = LoggerFactory.getLogger(UserServiceImpl.class);
+	private static final Logger LOGGER = LoggerFactory
+			.getLogger(UserServiceImpl.class);
 
 	@Override
 	@Transactional
 	public UserAccount createNewUser(UserAccount userAccount) {
-		Validate.isTrue(userAccount.getId() == null, "'createNewUser' method did not pass validation");
+		Validate.isTrue(userAccount.getId() == null,
+				"'createNewUser' method did not pass validation");
 
 		if (userAccountDao.chekUserLoginExist(userAccount.getLogin())) {
 			throw new AccountExistsException("Login exist");
@@ -53,9 +53,11 @@ public class UserServiceImpl implements UserService {
 	public UserAccount getUserByLogin(String login) {
 		UserAccount userAccount = userAccountDao.getUserByLogin(login);
 		if (userAccount == null) {
-			throw new AccountDoesNotExistException("UserAccount with Login - " + login + " does not exist");
+			throw new AccountDoesNotExistException("UserAccount with Login - "
+					+ login + " does not exist");
 		}
-		LOGGER.info("UserAccount with 'LOGIN' - " + login + " successfully extracted");
+		LOGGER.info("UserAccount with 'LOGIN' - " + login
+				+ " successfully extracted");
 		return userAccount;
 	}
 
@@ -70,7 +72,8 @@ public class UserServiceImpl implements UserService {
 	@Transactional
 	public void deleteUser(UserAccount userAccount) {
 		userAccountDao.deleteEntityById(userAccount.getId());
-		LOGGER.info("UserAccount with 'ID' - " + userAccount.getId() + " successfully deleted");
+		LOGGER.info("UserAccount with 'ID' - " + userAccount.getId()
+				+ " successfully deleted");
 	}
 
 }
